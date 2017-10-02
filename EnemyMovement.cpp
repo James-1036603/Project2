@@ -11,11 +11,28 @@ EnemyMovement::~EnemyMovement()
     //dtor
 }
 
-void EnemyMovement::MoveEnemy(sf::Vector2f& enemyPos, const float& speed, const float& elapsedTime, const float& rotation)
-{
-    enemyPos.x += -(speed*elapsedTime) * std::cos(rotation);
-    enemyPos.y += -(speed*elapsedTime) * std::sin(rotation);
-    std::cout<<"Enemy has moved: "<<enemyPos.x<<'\t'<<enemyPos.y<<'\n';
-
+void EnemyMovement::MoveEnemyScout(sf::Vector2f& enemyPos, const float& speed, const float& elapsedTime,float& rotation)
+{   
+	enemyPos.x += -(speed*elapsedTime) * std::cos(rotation);
+	enemyPos.y += -(speed*elapsedTime) * std::sin(rotation);
 }
 
+void EnemyMovement::MoveEnemySoldier(sf::Vector2f& enemyPos, const float& speed, const float& elapsedTime,float& rotation)
+{
+	enemyPos.x += -(speed*elapsedTime) * std::cos(rotation);
+	enemyPos.y += -(speed*elapsedTime) * std::sin(rotation);
+	
+}
+
+void EnemyMovement::MoveEnemyRogue(sf::Vector2f& enemyPos, const float& speed, const float& elapsedTime,float& rotation)
+{
+	auto x = enemyPos.x-960;
+	auto y = enemyPos.y-540;
+	auto mod = sqrt((y*y)+(x*x));
+	mod += speed*elapsedTime;
+	std::cout<<"Mod: "<<mod<<"\n";
+	rotation += 0.033;
+	enemyPos.x = mod*std::cos(rotation)+960;
+	enemyPos.y = mod*std::sin(rotation)+540;
+	std::cout<<"X: "<<enemyPos.x<<"\tY: "<<enemyPos.y<<"\n";
+}

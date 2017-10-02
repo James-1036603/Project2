@@ -14,6 +14,9 @@ void EnemyManager::spawnEnemies(int& currentLevel)//First spawn one enemy, then 
 {
     _curEnemies.clear();//Delete all enemies from vector
     sf::Vector2f displaySize(1920,1080);
+	Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::ROGUE);
+	_curEnemies.push_back(aNewEnemy);
+   /*     _curEnemies.push_back(aNewEnemy);
     for(auto i = 0; i<10-currentLevel; i++)
     {
         Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::SCOUT);
@@ -28,14 +31,9 @@ void EnemyManager::spawnEnemies(int& currentLevel)//First spawn one enemy, then 
     {
         Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::ROGUE);
         _curEnemies.push_back(aNewEnemy);
-    }
+    }*/
 
-//
-//    Enemy aNewEnemy2(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::SOLDIER);
-//    _curEnemies.push_back(aNewEnemy2);
-//
-//    Enemy aNewEnemy3(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::ROGUE);
-//    _curEnemies.push_back(aNewEnemy3);
+
 
 }
 

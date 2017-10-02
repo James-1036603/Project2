@@ -1,7 +1,7 @@
 #ifndef ENEMYMANAGER_H
 #define ENEMYMANAGER_H
 #include <vector>
-#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include "Enemy.h"
 #include "EnemyMovement.h"
 #include "BulletManager.h"

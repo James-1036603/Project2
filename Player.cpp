@@ -55,8 +55,7 @@ void Player::stopLeft()
 void Player::Shoot(float& elapsedTime)
 {
     if(elapsedTime>0.01)
-    {
-        std::cout<<"Player: "<<_curPosition.x<<"\t"<<_curPosition.y<<"\n";
+    {        
         Bullet bulletShot(_curPosition,  _curAngle);//Create a new bullet
         _playerBullets.push_back(bulletShot);
     }
@@ -71,8 +70,7 @@ void Player::update(const float& elapsedTime)
     if(_leftPressed) Player::moveCounterClockwise(elapsedTime);
 
     _objSprite.setPosition(_curPosition);
-    _objSprite.setRotation((_curAngle * (180/PI)));//Rotate the sprite (degrees)
-    std::cout<<"Moved Player: "<<_curPosition.x<<"\t"<<_curPosition.y<<'\n';
+    _objSprite.setRotation((_curAngle * (180/PI)));//Rotate the sprite (degrees)   
 
     Player::updateBullets(elapsedTime);//Update the bullets
 

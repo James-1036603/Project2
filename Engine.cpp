@@ -6,7 +6,11 @@ Engine::Engine():
     _bulletManager(),
     _gameLevels()
 {
-
+	//Window Settings
+    _window.setVerticalSyncEnabled(true);
+    _window.setMouseCursorVisible(false);
+    _window.setFramerateLimit(60);
+	
     Engine::drawSplashScreen();
     if(!_backgroundTexture.loadFromFile("background.png")) throw FileNotFound();//Load background texture)
     _backgroundSprite.setTexture(_backgroundTexture);//Set background texture
@@ -15,10 +19,7 @@ Engine::Engine():
     _gameMusic.loadFromFile("theme.wav");
     _gameMusic.play();
 
-    //Window Settings
-    _window.setVerticalSyncEnabled(true);
-    _window.setMouseCursorVisible(false);
-    _window.setFramerateLimit(60);
+    
     //Spawn the enemies
     auto level = _gameLevels.currentLevel();
     _theEnemies.spawnEnemies(level);
@@ -49,6 +50,7 @@ void Engine::start()
 void Engine::drawSplashScreen()
 {
     sf::RenderWindow splashScreen(sf::VideoMode(1920,1080), "Splash Screen", sf::Style::Default);
+	splashScreen.setMouseCursorVisible(false);
     sf::Texture splashImage;
     if(!splashImage.loadFromFile("splashscreen.png")) throw FileNotFound();
     sf::Sprite splashscreenSprite;

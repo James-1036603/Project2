@@ -1,7 +1,7 @@
 #ifndef ENGINE_H
 #define ENGINE_H
-#include<SFML/Graphics.hpp>
-#include<SFML/Audio.hpp>
+#include <SFML/Graphics.hpp>
+
 #include <iostream>
 #include "GameMusic.h"
 #include "PlayerManager.h"

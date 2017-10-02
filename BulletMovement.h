@@ -1,6 +1,6 @@
 #ifndef BULLETMOVEMENT_H
 #define BULLETMOVEMENT_H
-#include <SFML/Graphics.hpp>
+#include <SFML/System.hpp>
 #include <cmath>
 #define CENTER_X 960
 #define CENTER_Y 540//Center of the circle, x and y. This is known due to fixed resolution
