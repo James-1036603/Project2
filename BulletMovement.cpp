@@ -28,20 +28,8 @@ float BulletMovement::yIntercept()
 
 void BulletMovement::MovePlayerBullet(sf::Vector2f* curPos, const float& elapsedTime, bool& bulletSatus)
 {
-    auto newX = 0.0f;
-    if(curPos->x>CENTER_X) newX = curPos->x - 0.01*(curPos->x);
-    if(curPos->x<CENTER_X) newX = curPos->x + 0.01*(curPos->x);
-    if(newX > 950&&newX<970)//20 pixel radius for where the bullet cant go
-    {
-        newX = 960;
-        bulletSatus =0;//Bullet is inactive once it reaches the center
-    }
-
-
-    auto newY = _gradient*newX + _yIntercept;
-
-    curPos->x = newX;
-    curPos->y = newY;
+	
+    
 }
 void BulletMovement::MoveEnemyBullet(sf::Vector2f* curPos, const float& elapsedTime, bool& bulletSatus, const float& rotation, const float& speed)
 {

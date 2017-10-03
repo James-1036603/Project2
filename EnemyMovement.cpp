@@ -30,9 +30,7 @@ void EnemyMovement::MoveEnemyRogue(sf::Vector2f& enemyPos, const float& speed, c
 	auto y = enemyPos.y-540;
 	auto mod = sqrt((y*y)+(x*x));
 	mod += speed*elapsedTime;
-	std::cout<<"Mod: "<<mod<<"\n";
 	rotation += 0.033;
 	enemyPos.x = mod*std::cos(rotation)+960;
 	enemyPos.y = mod*std::sin(rotation)+540;
-	std::cout<<"X: "<<enemyPos.x<<"\tY: "<<enemyPos.y<<"\n";
 }

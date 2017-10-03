@@ -103,9 +103,10 @@ void Enemy::update(const float& elapsedTime)
         break;
     case EnemyType::ROGUE:
         _moveEnemy->MoveEnemyRogue(_curPosition,_speed,elapsedTime, _rotation);
+		
         break;
     }
-	_objSprite.setRotation(_rotation*(-180/PI));//Rotate the sprite, in case of rotated movement
+	_objSprite.setRotation(_rotation*(180/PI));//Rotate the sprite, in case of rotated movement
     Enemy::checkBounds();
     _objSprite.setPosition(_curPosition);
     //Enemy Shoot
@@ -141,7 +142,7 @@ void Enemy::Shoot()
     int steps = _stepsTaken;
     if(steps == 50)//Shoot a bullet after every X amount of steps
     {
-        Bullet newBullet(_curPosition, _rotation, _damageForBullet);
+        Bullet newBullet(_curPosition, _rotation,Owner::ENEMY, _damageForBullet);
         _enemyBullets.push_back(newBullet);
         _stepsTaken = 0;
     }

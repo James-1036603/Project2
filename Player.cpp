@@ -56,7 +56,7 @@ void Player::Shoot(float& elapsedTime)
 {
     if(elapsedTime>0.01)
     {        
-        Bullet bulletShot(_curPosition,  _curAngle);//Create a new bullet
+        Bullet bulletShot(_curPosition,  _curAngle,  Owner::PLAYER);//Create a new bullet
         _playerBullets.push_back(bulletShot);
     }
 
@@ -105,7 +105,7 @@ std::vector<Bullet> Player::getPlayerBullets()
 
 void Player::moveClockwise(const float& elapsedTime)
 {
-    double angle = _curAngle - ((_speed*elapsedTime)/100);
+    auto angle = _curAngle - ((_speed*elapsedTime)/100);
 
     _curPosition.y = _circleRadius * std::sin(angle)+540;
     _curPosition.x = _circleRadius * std::cos(angle)+960;

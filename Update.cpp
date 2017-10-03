@@ -17,9 +17,9 @@ void Engine::progressGame()
     if(!_thePlayer.playerIsAlive())//if the player is dead, end the game
     {
         _window.close();
-        Engine::loseScreen();
+        Engine::drawScreen(ScreenType::LOSE);
     }
-    if(_theEnemies.allEnemiesKilled())//No more enemies are on the screen
+    if(_theEnemies.allEnemiesKilled() && !_gameLevels.maxLevel())//No more enemies are on the screen
     {
         _gameLevels.nextLevel();
         auto currentLevel = _gameLevels.currentLevel();//spawn enemies was giving problems if not implemented this way
@@ -30,6 +30,6 @@ void Engine::progressGame()
     if(_gameLevels.maxLevel())
     {
         _window.close();
-        Engine::winScreen();
+        Engine::drawScreen(ScreenType::WIN);
     }
 }

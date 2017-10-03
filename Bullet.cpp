@@ -1,17 +1,19 @@
 #include "Bullet.h"
 Bullet Bullet::_default {};
 
-Bullet::Bullet():_bulletMovement(sf::Vector2f(0,0))
+Bullet::Bullet()
 {
     _isAlive = 1;
     _speed = 1000;
+	_bulletOwner = Owner::PLAYER;
     if(!_bulletTexture.loadFromFile("Bullet.png")) throw bullet_FileNotFound();
     _bulletSprite.setTexture(_bulletTexture);
 }
 
-Bullet::Bullet(const sf::Vector2f& startingPos, const float& rotation, int damage): _bulletMovement(startingPos)
+Bullet::Bullet(const sf::Vector2f& startingPos, const float& rotation,Owner BulletOwner, int damage )
 {
     //ctor
+	_bulletOwner = BulletOwner;
     _speed=_default._speed;
     _damage = damage;
     _isAlive = _default._isAlive;
@@ -19,6 +21,7 @@ Bullet::Bullet(const sf::Vector2f& startingPos, const float& rotation, int damag
     _bulletSprite=_default.getSprite();
     _bulletPos = startingPos;
     _bulletSprite.setRotation((rotation*180/3.14)+90);
+	
 }
 
 Bullet::~Bullet()
@@ -33,16 +36,37 @@ bool Bullet::bulletIsAlive()
 
 void Bullet::updatePlayerBullet(const float& elapsedTime)
 {
-    std::cout<<"New Bullet Position: "<<_bulletPos.x<<"\t"<<_bulletPos.y<<'\t'<<_isAlive<<"\n";
-    _bulletMovement.MovePlayerBullet(&_bulletPos, elapsedTime, _isAlive);//Move the player bullet
+    
+    Bullet::move(elapsedTime);
     _bulletSprite.setPosition(_bulletPos);
-    std::cout<<"New Bullet Position: "<<_bulletPos.x<<"\t"<<_bulletPos.y<<'\t'<<_isAlive<<"\n";
+    
 }
 
 void Bullet::updateEnemyBullet(const float& elapsedTime)
 {
-    _bulletMovement.MoveEnemyBullet(&_bulletPos, elapsedTime, _isAlive, _rotation, _speed);//Move the enemy bullet
+    Bullet::move(elapsedTime);
     _bulletSprite.setPosition(_bulletPos);
+}
+
+void Bullet::move(const float& elapsedTime)
+{
+	_bulletPos.x += -(_speed*elapsedTime) * std::cos(_rotation);
+		_bulletPos.y += -(_speed*elapsedTime) * std::sin(_rotation);
+	switch (_bulletOwner)
+	{
+		
+		case Owner::PLAYER:
+			
+			if(_bulletPos.x > 950 && _bulletPos.x < 970) _isAlive = 0; //If the bullet is at the center of the screen, set inactive
+			break;
+		case Owner::ENEMY:
+		//	_bulletPos.x += -(_speed*elapsedTime) * std::cos(_rotation);
+		//	_bulletPos.y += -(_speed*elapsedTime) * std::sin(_rotation);
+			if(_bulletPos.x > 1920 || _bulletPos.x <0 || _bulletPos.y > 1080 || _bulletPos.y < 0) _isAlive = 0; //If the bullet is at the center of the screen, set inactive
+			break;
+		
+	}
+		
 }
 
 sf::Sprite Bullet::getSprite()

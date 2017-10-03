@@ -11,7 +11,7 @@ Engine::Engine():
     _window.setMouseCursorVisible(false);
     _window.setFramerateLimit(60);
 	
-    Engine::drawSplashScreen();
+    Engine::drawScreen(ScreenType::SPLASH);//Draw the splashscreen
     if(!_backgroundTexture.loadFromFile("background.png")) throw FileNotFound();//Load background texture)
     _backgroundSprite.setTexture(_backgroundTexture);//Set background texture
     _backgroundSprite.setScale(1.8f,1.6f);
@@ -47,23 +47,34 @@ void Engine::start()
     }
 }
 
-void Engine::drawSplashScreen()
+void Engine::drawScreen(ScreenType typeOfScreen)
 {
-    sf::RenderWindow splashScreen(sf::VideoMode(1920,1080), "Splash Screen", sf::Style::Default);
-	splashScreen.setMouseCursorVisible(false);
-    sf::Texture splashImage;
-    if(!splashImage.loadFromFile("splashscreen.png")) throw FileNotFound();
-    sf::Sprite splashscreenSprite;
-    splashscreenSprite.setTexture(splashImage);
+    sf::RenderWindow Screen(sf::VideoMode(1920,1080), "Splash Screen", sf::Style::Default);
+	Screen.setMouseCursorVisible(false);
+    sf::Texture screenImage;
+	switch(typeOfScreen)//Identify the type of image which has to be loaded
+	{
+		case ScreenType::SPLASH:
+			if(!screenImage.loadFromFile("splashscreen.png")) throw FileNotFound();
+			break;
+		case ScreenType::WIN:
+			if(!screenImage.loadFromFile("WinScreen.png")) throw FileNotFound();
+			break;
+		case ScreenType::LOSE:
+			if(!screenImage.loadFromFile("LoseScreen.png")) throw FileNotFound();
+	}
+    
+    sf::Sprite screenSprite;
+    screenSprite.setTexture(screenImage);
 
-    while(splashScreen.isOpen())
+    while(Screen.isOpen())
     {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) splashScreen.close();
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)) Screen.close();
         else
         {
-            splashScreen.clear();
-            splashScreen.draw(splashscreenSprite);
-            splashScreen.display();
+            Screen.clear();
+            Screen.draw(screenSprite);
+            Screen.display();
         }
     }
 
@@ -71,42 +82,3 @@ void Engine::drawSplashScreen()
 }
 
 
-void Engine::winScreen()
-{
-    sf::RenderWindow splashScreen(sf::VideoMode(1920,1080), "Win Screen", sf::Style::Default);
-    sf::Texture splashImage;
-    if(!splashImage.loadFromFile("WinScreen.png")) throw FileNotFound();
-    sf::Sprite splashscreenSprite;
-    splashscreenSprite.setTexture(splashImage);
-
-    while(splashScreen.isOpen())
-    {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)) splashScreen.close();
-        else
-        {
-            splashScreen.clear();
-            splashScreen.draw(splashscreenSprite);
-            splashScreen.display();
-        }
-    }
-}
-
-void Engine::loseScreen()
-{
-sf::RenderWindow splashScreen(sf::VideoMode(1920,1080), "Lose Screen", sf::Style::Default);
-    sf::Texture splashImage;
-    if(!splashImage.loadFromFile("LoseScreen.png")) throw FileNotFound();
-    sf::Sprite splashscreenSprite;
-    splashscreenSprite.setTexture(splashImage);
-
-    while(splashScreen.isOpen())
-    {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)) splashScreen.close();
-        else
-        {
-            splashScreen.clear();
-            splashScreen.draw(splashscreenSprite);
-            splashScreen.display();
-        }
-    }
-}

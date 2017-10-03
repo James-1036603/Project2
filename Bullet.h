@@ -2,16 +2,17 @@
 #define BULLET_H
 #include "BulletMovement.h"
 #include <SFML/Graphics.hpp>
-#include <iostream>
+#include <cmath>
 
 
+enum class Owner{PLAYER, ENEMY};//Who owns the shot bullet
 class bullet_FileNotFound {};
-//enum class Owner {PLAYER, ENEMY}//Who owns the shot bullet
+
 class Bullet
 {
 public:
 
-    Bullet(const sf::Vector2f& startingPos,  const float& rotation, int damage = 1);//Bullet will start at players position
+    Bullet(const sf::Vector2f& startingPos,  const float& rotation, Owner BulletOwner, int damage = 1);//Bullet will start at players position
     virtual ~Bullet();
     sf::Sprite getSprite();
 
@@ -20,6 +21,7 @@ public:
     bool bulletIsAlive();
     int getBulletDamage();//Bullet Damage
     void setInActive();//Disable the bullet
+	void move(const float& elapsedTime);//Move the 
 
     sf::Vector2f getBulletPos() const
     {
@@ -45,7 +47,8 @@ private:
     float _rotation;
     int _damage;//The bullet will deal a certain amount of damage
     bool _isAlive;
-    BulletMovement _bulletMovement;//Object to move the current bullet
+	Owner _bulletOwner;//Who owns the bullet
+    
     static Bullet _default;//Default bullet, so only load from file once.
 
     sf::Vector2f _displaySize;
