@@ -14,12 +14,12 @@ void EnemyManager::spawnEnemies(int& currentLevel)//First spawn one enemy, then 
 {
     _curEnemies.clear();//Delete all enemies from vector
     sf::Vector2f displaySize(1920,1080);
-	//Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::ROGUE);
-	//_curEnemies.push_back(aNewEnemy);
+	Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::TANK);
+	_curEnemies.push_back(aNewEnemy);
 	
-    for(auto i = 0; i<10-currentLevel; i++)
+   for(auto i = 0; i<10-currentLevel; i++)
     {
-        Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::SCOUT);
+        Enemy aNewEnemy(displaySize, &_enemyBulletManager,  &_enemyMover,EnemyType::SCOUT);
         _curEnemies.push_back(aNewEnemy);
     }
     for(auto i = 0; i<currentLevel; i++)
@@ -29,7 +29,7 @@ void EnemyManager::spawnEnemies(int& currentLevel)//First spawn one enemy, then 
     }
     for(auto i = 0; i<currentLevel/2; i++)
     {
-        Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::ROGUE);
+        Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover,  EnemyType::ROGUE);
         _curEnemies.push_back(aNewEnemy);
     }
 
@@ -84,16 +84,5 @@ void EnemyManager::checkEnemyBulletsToPlayer(Player& thePlayer)
                      _curEnemies[i]._enemyBullets[j].setInActive();
                  }
           }
-
-//        for(auto j = 0u; j != thePlayer.getPlayerBullets().size(); j++)
-//        {
-//            if(_curEnemies[i].getSprite().getGlobalBounds().contains(thePlayer.getPlayerBullets().at(j).getBulletPos()))
-//            {
-//                _curEnemies[i].getShot();
-//                thePlayer.getPlayerBullets().at(j).setInActive();//Bullet is set inactive after it hits an enemy
-//                std::cout<<"ENEMY WAS HIT!"<<'\n';
-//                std::cout<<"Bullet status that just hit an enemy: "<<thePlayer.getPlayerBullets().at(j).bulletIsAlive()<<"\n";
-//            }
-//        }
     }
 }

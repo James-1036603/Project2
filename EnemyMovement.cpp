@@ -34,3 +34,9 @@ void EnemyMovement::MoveEnemyRogue(sf::Vector2f& enemyPos, const float& speed, c
 	enemyPos.x = mod*std::cos(rotation)+960;
 	enemyPos.y = mod*std::sin(rotation)+540;
 }
+
+void EnemyMovement::MoveEnemyTank(sf::Vector2f& enemyPos, const float& speed, const float& elapsedTime, float& rotation)
+{
+	enemyPos.x += -(speed*elapsedTime) * std::cos(rotation);
+	enemyPos.y += -(speed*elapsedTime) * std::sin(rotation);
+}

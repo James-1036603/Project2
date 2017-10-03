@@ -85,7 +85,9 @@ void PlayerManager::checkEnemyPositionToPlayer(const std::vector<Enemy>& curEnem
     {
         if(curEnemy.getSprite().getGlobalBounds().contains(_curPlayer.getPlayerPos()))
         {
-            _curPlayer.getShot(1);
+			if(curEnemy.typeOfEnemy() == EnemyType::TANK) _curPlayer.getShot(10);//Tanks do substantial damage to player
+			else _curPlayer.getShot(1);
+            
         }
     }
 

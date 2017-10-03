@@ -4,6 +4,7 @@
 Enemy Enemy::_defaultScout {EnemyType::SCOUT};
 Enemy Enemy::_defaultSoldier {EnemyType::SOLDIER};
 Enemy Enemy::_defaultRogue {EnemyType::ROGUE};
+Enemy Enemy::_defaultTank {EnemyType::TANK};
 
 Enemy::Enemy(EnemyType enemyType)
 {
@@ -29,6 +30,12 @@ Enemy::Enemy(EnemyType enemyType)
         _typeOfEnemy = EnemyType::ROGUE;
         _damageForBullet = 3;
         break;
+	case EnemyType::TANK:
+		if(!_objTexture.loadFromFile("EnemyTank.png")) throw enemy_FileNotFound();
+		_speed = 50;
+		_typeOfEnemy = EnemyType::TANK;
+		_damageForBullet = 0;
+		break;
     }
 
     _objSprite.setTexture(_objTexture);
@@ -61,6 +68,12 @@ Enemy::Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMoveme
         _typeOfEnemy = _defaultRogue._typeOfEnemy;
         _damageForBullet = _defaultRogue._damageForBullet;
         break;
+	case EnemyType::TANK:
+		_objSprite = _defaultTank._objSprite;
+        _speed = _defaultTank._speed;
+        _typeOfEnemy = _defaultTank._typeOfEnemy;
+        _damageForBullet = _defaultTank._damageForBullet;
+        break;
     }
 
     //All the other enemies start at the same center position and use the same other methods, thus we can use any of the default objects
@@ -78,6 +91,8 @@ Enemy::Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMoveme
 
 
 }
+
+
 
 Enemy::~Enemy()
 {
@@ -99,12 +114,13 @@ void Enemy::update(const float& elapsedTime)
         _moveEnemy->MoveEnemyScout(_curPosition,_speed,elapsedTime, _rotation);
         break;
     case EnemyType::SOLDIER:
-        _moveEnemy->MoveEnemySoldier(_curPosition,_speed,elapsedTime, _rotation);		
+        _moveEnemy->MoveEnemySoldier(_curPosition,_speed,elapsedTime, _rotation);
         break;
     case EnemyType::ROGUE:
-        _moveEnemy->MoveEnemyRogue(_curPosition,_speed,elapsedTime, _rotation);
-		
+        _moveEnemy->MoveEnemyRogue(_curPosition,_speed,elapsedTime, _rotation);	
         break;
+	case EnemyType::TANK:
+		_moveEnemy->MoveEnemyTank(_curPosition,_speed,elapsedTime,_rotation);
     }
 	_objSprite.setRotation(_rotation*(180/PI));//Rotate the sprite, in case of rotated movement
     Enemy::checkBounds();
@@ -133,14 +149,16 @@ void Enemy::checkBounds()
         _curPosition.y = 540;//Reset if out of bounds y
         Enemy::generateRotation();//Another random line once moved off screen
         _objSprite.setRotation(_rotation *(180/PI) );
-    }
+		if(_typeOfEnemy==EnemyType::TANK) _isAlive = false; //If an enemy tank moves off the screen and can't be respawned at center, set inactive
+    } 
+	
 
 }
 
 void Enemy::Shoot()
 {
     int steps = _stepsTaken;
-    if(steps == 50)//Shoot a bullet after every X amount of steps
+    if(steps == 50 && _typeOfEnemy!=EnemyType::TANK)//Shoot a bullet after every X amount of steps, and tanks dont shoot!
     {
         Bullet newBullet(_curPosition, _rotation,Owner::ENEMY, _damageForBullet);
         _enemyBullets.push_back(newBullet);
@@ -172,7 +190,7 @@ std::vector<Bullet> Enemy::getEnemyBullets() const
 
 void Enemy::getShot()
 {
-    _isAlive = false;
+   if(_typeOfEnemy!=EnemyType::TANK) _isAlive = false;
 }
 
 bool Enemy::isAlive() const

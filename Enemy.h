@@ -10,7 +10,7 @@
 #include <iostream>
 
 class enemy_FileNotFound {};
-enum class EnemyType {SCOUT,SOLDIER,ROGUE}; //Three enemy types
+enum class EnemyType {SCOUT,SOLDIER,ROGUE,TANK}; //Three enemy types
 
 class Enemy
 {
@@ -70,8 +70,10 @@ private:
     static Enemy _defaultScout;//Static enemy for Scout
     static Enemy _defaultSoldier;//Static enemy for Soldier
     static Enemy _defaultRogue;//Static enemy for Rogue
-    BulletManager* _BulletManager;
-    EnemyMovement* _moveEnemy;
+	static Enemy _defaultTank;//Static enemy for Tank
+	
+	EnemyMovement* _moveEnemy;
+    BulletManager* _BulletManager;    
 
     sf::Vector2f _displaySize;//When the enemy goes off the screen
 

@@ -69,7 +69,7 @@ void Engine::drawScreen(ScreenType typeOfScreen)
 
     while(Screen.isOpen())
     {
-        if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)) Screen.close();
+        if(sf::Keyboard::isKeyPressed(sf::Keyboard::X) || sf::Keyboard::isKeyPressed(sf::Keyboard::BackSpace)) Screen.close();
         else
         {
             Screen.clear();
