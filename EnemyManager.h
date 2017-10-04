@@ -20,11 +20,16 @@ public:
     void checkEnemyBulletsToPlayer(Player& thePlayer);
     bool allEnemiesKilled();//If all the enemies are killed,
     std::vector<Enemy>& theEnemies();//Defined as a reference for correct passing to other functions
+	void randomEvents(const float& elapsedTime);//Any random any events which need to take place will fall under here
 private:
     std::vector<Enemy> _curEnemies;//The current enemies on display
     EnemyMovement _enemyMover;
     BulletManager _enemyBulletManager;
     std::vector<Enemy> removeInactiveEnemies();
+	float _elapsedClockTime;
+	float _generatedClockTime;	
+	void generateRandomTime();//Generate a number for which the clock has to count to before a event
+	void spawnEnemyTank(const float& elapsedTime);
 };
 
 #endif // ENEMYMANAGER_H

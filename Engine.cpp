@@ -1,7 +1,7 @@
 #include "Engine.h"
 
 Engine::Engine():
-    _window(sf::VideoMode(1920,1080),"Game", sf::Style::Default),
+    _window(sf::VideoMode(1920,1080),"Game", sf::Style::Fullscreen),
     _thePlayer(static_cast<sf::Vector2f>(_window.getSize()), 400, &_bulletManager),
     _bulletManager(),
     _gameLevels()

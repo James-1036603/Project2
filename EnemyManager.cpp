@@ -3,6 +3,8 @@
 EnemyManager::EnemyManager()
 {
     //ctor
+	_elapsedClockTime = 0;
+	EnemyManager::generateRandomTime();
 }
 
 EnemyManager::~EnemyManager()
@@ -85,4 +87,28 @@ void EnemyManager::checkEnemyBulletsToPlayer(Player& thePlayer)
                  }
           }
     }
+}
+
+void EnemyManager::randomEvents(const float& elapsedTime)
+{
+	EnemyManager::spawnEnemyTank(elapsedTime);
+}
+
+void EnemyManager::spawnEnemyTank(const float& elapsedTime)//Generate a tanak based on the level, using a random number and modulus 11 (less occuring divisor)
+{
+	_elapsedClockTime += elapsedTime;	
+	if(_elapsedClockTime > _generatedClockTime){
+		sf::Vector2f displaySize(1920,1080);
+		Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::TANK);
+		_curEnemies.push_back(aNewEnemy);
+		EnemyManager::generateRandomTime();//Generate a new random time
+		_elapsedClockTime = 0;//Reset the elapsed clock time		
+	}
+
+}
+
+void EnemyManager::generateRandomTime()
+{
+	_generatedClockTime = rand()%5+1;//Generate a number between 1 and 5
+	_generatedClockTime = _generatedClockTime*10;//Multiply by 20 to give larger increments	
 }

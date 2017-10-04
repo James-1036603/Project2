@@ -83,7 +83,7 @@ Enemy::Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMoveme
     _stepsTaken = _defaultScout._stepsTaken;
     _objSprite.setRotation(_rotation*(180/PI));
     _objSprite.setPosition(_curPosition);
-
+	_isAlive = true;
 
     _BulletManager = BulMan;
     _moveEnemy = EnemyMover;
@@ -136,7 +136,7 @@ void Enemy::update(const float& elapsedTime)
 
 void Enemy::generateRotation()
 {
-    float random = rand()%100;
+	double random = rand()%100;
     _rotation = 2 * PI * (random/100);
 }
 
