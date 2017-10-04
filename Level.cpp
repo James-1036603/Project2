@@ -39,7 +39,7 @@ void Level::setTextAndFont()
     text.setCharacterSize(24);
     text.setPosition(0,0);
     text.setStyle(sf::Text::Regular);
-//    text.setFillColor(sf::Color::Red);
+    //text.setFillColor(sf::Color::Red);
 }
 
 void Level::drawLevelsToWindow(sf::RenderWindow* currentWindow)

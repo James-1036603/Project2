@@ -1,35 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Project Name="Game_Project" Version="10.0.0" InternalType="Console">
+  <Plugins>
+    <Plugin Name="qmake">
+      <![CDATA[00010001N0005Debug000000000000]]>
+    </Plugin>
+  </Plugins>
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp" ExcludeProjConfig=""/>
+    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
     <File Name="Bullet.cpp"/>
-    <File Name="Bullet.h"/>
     <File Name="BulletManager.cpp"/>
-    <File Name="BulletManager.h"/>
-    <File Name="BulletMovement.cpp"/>
-    <File Name="BulletMovement.h"/>
     <File Name="Draw.cpp"/>
     <File Name="Enemy.cpp"/>
-    <File Name="Enemy.h"/>
     <File Name="EnemyManager.cpp"/>
-    <File Name="EnemyManager.h"/>
     <File Name="EnemyMovement.cpp"/>
-    <File Name="EnemyMovement.h"/>
     <File Name="Engine.cpp"/>
-    <File Name="Engine.h"/>
     <File Name="GameMusic.cpp"/>
-    <File Name="GameMusic.h"/>
-    <File Name="GameTests.cpp" ExcludeProjConfig="Debug"/>
     <File Name="Include.cpp"/>
     <File Name="Level.cpp"/>
-    <File Name="Level.h"/>
     <File Name="Player.cpp"/>
-    <File Name="Player.h"/>
     <File Name="PlayerManager.cpp"/>
-    <File Name="PlayerManager.h"/>
     <File Name="Update.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="Headers">
+    <File Name="Bullet.h"/>
+    <File Name="BulletManager.h"/>
+    <File Name="Enemy.h"/>
+    <File Name="EnemyManager.h"/>
+    <File Name="EnemyMovement.h"/>
+    <File Name="Engine.h"/>
+    <File Name="GameMusic.h"/>
+    <File Name="Level.h"/>
+    <File Name="Player.h"/>
+    <File Name="PlayerManager.h"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="TestCode">
+    <File Name="GameTests.cpp" ExcludeProjConfig=""/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

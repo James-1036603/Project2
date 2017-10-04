@@ -18,8 +18,8 @@ void Engine::progressGame()
 {
     if(!_thePlayer.playerIsAlive())//if the player is dead, end the game
     {
-        //_window.close();
-        //Engine::drawScreen(ScreenType::LOSE);
+        _window.close();
+        Engine::drawScreen(ScreenType::LOSE);
     }
     if(_theEnemies.allEnemiesKilled() && !_gameLevels.maxLevel())//No more enemies are on the screen
     {

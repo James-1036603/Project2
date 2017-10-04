@@ -13,7 +13,7 @@ TEST_CASE("Bullet Initialised Correctly")
 {
     sf::Vector2f position(500.0f, 500.0f);
     auto speed = 1000.0;
-    Bullet bullet1(position, 0);
+    Bullet bullet1(position, 0, Owner::PLAYER);
 
 
     CHECK(bullet1.getBulletPos() == position);
@@ -24,19 +24,13 @@ TEST_CASE("Bullet Initialised Correctly")
 
 TEST_CASE("Bullet Texture Found")
 {
-    CHECK_NOTHROW(Bullet bullet1(sf::Vector2f(50.0f,50.0f),0));
+    CHECK_NOTHROW(Bullet bullet1(sf::Vector2f(50.0f,50.0f),0, Owner::PLAYER));
 }
-//Test bullet line calculations
-TEST_CASE("Correct gradient and intercept are found")
-{
-    BulletMovement movable(sf::Vector2f(1060,640));
-    CHECK(movable.getGradient() == 1);
-    CHECK(movable.getIntercept() == -420);
-}
+
 //Bullet Movement
 TEST_CASE("Player Bullet Moved Correct Amount")
 {
-    Bullet bullet1(sf::Vector2f(50.0f,50.0f),0);
+    Bullet bullet1(sf::Vector2f(50.0f,50.0f),0, Owner::PLAYER);
     bullet1.updatePlayerBullet(1);
     CHECK(bullet1.getBulletPos().x == doctest::Approx(50.5));
     CHECK(bullet1.getBulletPos().y == doctest::Approx(50.2692));
@@ -44,7 +38,7 @@ TEST_CASE("Player Bullet Moved Correct Amount")
 
 TEST_CASE("Enemy Bullet Moved Correct Amount")
 {
-Bullet bullet1(sf::Vector2f(50.0f,50.0f),0);
+Bullet bullet1(sf::Vector2f(50.0f,50.0f),0, Owner::ENEMY);
     bullet1.updateEnemyBullet(1);
     CHECK(bullet1.getBulletPos().x == doctest::Approx(-950.0));
     CHECK(bullet1.getBulletPos().y == doctest::Approx(50.0));
@@ -147,6 +141,26 @@ TEST_CASE("Enemy Can Shoot")
     CHECK(bulletsCur.size()==1);
 }
 
+TEST_CASE("Enemy Soldier Moves Correctly")
+{
+    
+}
+
+TEST_CASE("Enemy Soldier moves correctly along path of 60 degrees")
+{
+    
+}
+
+TEST_CASE("Enemy Rogue moves correctly along path of 60 degrees")
+{
+    
+}
+
+TEST_CASE("Enemy Tank moves correctly")
+{
+    
+}
+
 TEST_CASE("Enemy moves correctly along path of 65 degrees (Testing Soldier)")
 {
     sf::Vector2f displaySize(1920,1080);
@@ -158,4 +172,19 @@ TEST_CASE("Enemy moves correctly along path of 65 degrees (Testing Soldier)")
     CHECK(Soldier.getEnemyPos().y==doctest::Approx(632.896));
 }
 
+// Player/Enemy interaction
 
+TEST_CASE("Player bullet impacts enemy, enemy takes damage or is killed")
+{
+    
+}
+
+TEST_CASE("Enemy bullet impacts player, player takes damage or is killed")
+{
+    
+}
+
+TEST_CASE("Enemy colliding with player will damage the player")
+{
+    
+}

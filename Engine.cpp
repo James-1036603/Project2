@@ -14,7 +14,7 @@ Engine::Engine():
     Engine::drawScreen(ScreenType::SPLASH);//Draw the splashscreen
     if(!_backgroundTexture.loadFromFile("background.png")) throw FileNotFound();//Load background texture)
     _backgroundSprite.setTexture(_backgroundTexture);//Set background texture
-    _backgroundSprite.setScale(1.8f,1.6f);
+    _backgroundSprite.setScale(1.0f,1.0f);
     //Music
     _gameMusic.loadFromFile("theme.wav");
     _gameMusic.play();
@@ -32,8 +32,7 @@ Engine::~Engine()
 
 void Engine::start()
 {
-    //Timing
-    std::cout<<"Window getSize: "<<_window.getSize().x<<"\n";
+    //Timing    
     sf::Clock sysClock;
     while(_window.isOpen())
     {
@@ -49,7 +48,7 @@ void Engine::start()
 
 void Engine::drawScreen(ScreenType typeOfScreen)
 {
-    sf::RenderWindow Screen(sf::VideoMode(1920,1080), "Splash Screen", sf::Style::Default);
+    sf::RenderWindow Screen(sf::VideoMode(1920,1080), "Splash Screen", sf::Style::Fullscreen);
 	Screen.setMouseCursorVisible(false);
     sf::Texture screenImage;
 	switch(typeOfScreen)//Identify the type of image which has to be loaded
