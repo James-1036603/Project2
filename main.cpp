@@ -6,7 +6,6 @@ int main()
 {
     srand(time(NULL));
     Engine myEngine;
-    myEngine.start();
-    cout << "Hello world!" << endl;
+    myEngine.start();    
     return 0;
 }

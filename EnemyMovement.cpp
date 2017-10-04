@@ -21,6 +21,7 @@ void EnemyMovement::MoveEnemySoldier(sf::Vector2f& enemyPos, const float& speed,
 {
 	enemyPos.x += -(speed*elapsedTime) * std::cos(rotation);
 	enemyPos.y += -(speed*elapsedTime) * std::sin(rotation);
+	rotation += 0.05;
 	
 }
 
