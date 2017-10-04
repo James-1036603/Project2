@@ -1,6 +1,5 @@
 Debug/GameTests.cpp.o: GameTests.cpp \
  C:\Users\DrDoom\Documents\Default\doctest/doctest.h \
- C:\SFML\include/SFML/Graphics.hpp C:\SFML\include/SFML/Window.hpp \
  C:\SFML\include/SFML/System.hpp C:\SFML\include/SFML/Config.hpp \
  C:\SFML\include/SFML/System/Clock.hpp \
  C:\SFML\include/SFML/System/Export.hpp \
@@ -23,7 +22,8 @@ Debug/GameTests.cpp.o: GameTests.cpp \
  C:\SFML\include/SFML/System/Vector2.hpp \
  C:\SFML\include/SFML/System/Vector2.inl \
  C:\SFML\include/SFML/System/Vector3.hpp \
- C:\SFML\include/SFML/System/Vector3.inl \
+ C:\SFML\include/SFML/System/Vector3.inl Engine.h \
+ C:\SFML\include/SFML/Graphics.hpp C:\SFML\include/SFML/Window.hpp \
  C:\SFML\include/SFML/Window/Context.hpp \
  C:\SFML\include/SFML/Window/Export.hpp \
  C:\SFML\include/SFML/Window/GlResource.hpp \
@@ -64,7 +64,7 @@ Debug/GameTests.cpp.o: GameTests.cpp \
  C:\SFML\include/SFML/Graphics/RenderWindow.hpp \
  C:\SFML\include/SFML/Graphics/Shader.hpp \
  C:\SFML\include/SFML/Graphics/Sprite.hpp \
- C:\SFML\include/SFML/Graphics/Text.hpp Engine.h GameMusic.h \
+ C:\SFML\include/SFML/Graphics/Text.hpp GameMusic.h \
  C:\SFML\include/SFML/Audio.hpp \
  C:\SFML\include/SFML/Audio/InputSoundFile.hpp \
  C:\SFML\include/SFML/Audio/Export.hpp \
@@ -86,10 +86,6 @@ Debug/GameTests.cpp.o: GameTests.cpp \
  EnemyManager.h Level.h
 
 C:\Users\DrDoom\Documents\Default\doctest/doctest.h:
-
-C:\SFML\include/SFML/Graphics.hpp:
-
-C:\SFML\include/SFML/Window.hpp:
 
 C:\SFML\include/SFML/System.hpp:
 
@@ -142,6 +138,12 @@ C:\SFML\include/SFML/System/Vector2.inl:
 C:\SFML\include/SFML/System/Vector3.hpp:
 
 C:\SFML\include/SFML/System/Vector3.inl:
+
+Engine.h:
+
+C:\SFML\include/SFML/Graphics.hpp:
+
+C:\SFML\include/SFML/Window.hpp:
 
 C:\SFML\include/SFML/Window/Context.hpp:
 
@@ -224,8 +226,6 @@ C:\SFML\include/SFML/Graphics/Shader.hpp:
 C:\SFML\include/SFML/Graphics/Sprite.hpp:
 
 C:\SFML\include/SFML/Graphics/Text.hpp:
-
-Engine.h:
 
 GameMusic.h:
 

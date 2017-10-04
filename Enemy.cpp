@@ -107,7 +107,6 @@ sf::Sprite Enemy::getSprite() const
 void Enemy::update(const float& elapsedTime)
 {
     //Move the enemy
-//    _moveEnemy->MoveEnemy(_curPosition,_speed,elapsedTime, _rotation);
  switch(_typeOfEnemy)//Identify the correct type of enemy for the correct sprite and speed
     {
     case EnemyType::SCOUT:

@@ -50,21 +50,17 @@ void Bullet::updateEnemyBullet(const float& elapsedTime)
 
 void Bullet::move(const float& elapsedTime)
 {
-	_bulletPos.x += -(_speed*elapsedTime) * std::cos(_rotation);
-		_bulletPos.y += -(_speed*elapsedTime) * std::sin(_rotation);
+        _bulletPos.x += -(_speed*elapsedTime) * std::cos(_rotation);
+		_bulletPos.y += -(_speed*elapsedTime) * std::sin(_rotation);        
 	switch (_bulletOwner)
 	{
-		
 		case Owner::PLAYER:
-			
 			if(_bulletPos.x > 950 && _bulletPos.x < 970) _isAlive = 0; //If the bullet is at the center of the screen, set inactive
 			break;
-		case Owner::ENEMY:
-		//	_bulletPos.x += -(_speed*elapsedTime) * std::cos(_rotation);
-		//	_bulletPos.y += -(_speed*elapsedTime) * std::sin(_rotation);
+            
+		case Owner::ENEMY:        
 			if(_bulletPos.x > 1920 || _bulletPos.x <0 || _bulletPos.y > 1080 || _bulletPos.y < 0) _isAlive = 0; //If the bullet is at the center of the screen, set inactive
-			break;
-		
+			break;		
 	}
 		
 }
