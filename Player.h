@@ -42,6 +42,7 @@ public:
     {
         return _speed;   //ONLY FOR TESTS
     }
+	
 
 private:
     bool isAlive() const;//Is the player still alive, ie if lives are not 0

@@ -155,43 +155,47 @@ TEST_CASE("Enemy Can Shoot")
 
 TEST_CASE("Enemy Soldier Moves Correctly")
 {
+	std::cout<<"Test 14"<<"\n";
     sf::Vector2f displaySize(1920,1080);
-    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::SCOUT);
+    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::SCOUT);	
     aEnemy.setRotation(60);
     aEnemy.update(1);
-    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(978.508));
-    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(586.448));
+    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(1007.62));
+    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(555.240));
     
 }
 
 TEST_CASE("Enemy Soldier moves correctly along path of 60 degrees")
 {
+	std::cout<<"Test 15"<<"\n";
     sf::Vector2f displaySize(1920,1080);
-    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::SOLDIER);
+    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::SOLDIER);	
     aEnemy.setRotation(60);
     aEnemy.update(1);
-    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(953.345));
-    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(440.202));
+    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(1055.241));
+    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(570.481));
 }
 
 TEST_CASE("Enemy Rogue moves correctly along path of 60 degrees")
 {
+	std::cout<<"Test 16"<<"\n";
     sf::Vector2f displaySize(1920,1080);
-    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::ROGUE);
+    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::ROGUE);	
     aEnemy.setRotation(60);
     aEnemy.update(1);
-    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(992.590));
-    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(393.583));
+    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(818.723));
+    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(489.589));
 }
 
 TEST_CASE("Enemy Tank moves correctly")
 {
+	std::cout<<"Test 17"<<"\n";
     sf::Vector2f displaySize(1920,1080);
-    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::TANK);
+    Enemy aEnemy(displaySize, NULL, NULL, EnemyType::TANK);	
     aEnemy.setRotation(60);
     aEnemy.update(1);
-    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(1025.790));
-    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(576.010));
+    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(1031.430));
+    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(562.860));
 }
 
 
@@ -199,7 +203,17 @@ TEST_CASE("Enemy Tank moves correctly")
 
 TEST_CASE("Player bullet impacts enemy, enemy takes damage or is killed")
 {
-    
+	std::cout<<"Test 18"<<"\n";
+	sf::Vector2f displaySize(1920,1080);
+	
+	PlayerManager playerManager1(displaySize, 0, NULL);	
+	Enemy enemy1(displaySize,NULL,NULL, EnemyType::SCOUT);
+	enemy1.setRotation(0);
+	enemy1.setEnemyPosition(50, 540);
+	std::vector <Enemy> curEnemies;
+	curEnemies.push_back(enemy1);
+	//playerManager1.checkPlayerBulletsToEnemy(curEnemies);
+	playerManager1.checkEnemyPositionToPlayer(curEnemies);
 }
 
 TEST_CASE("Enemy bullet impacts player, player takes damage or is killed")

@@ -65,15 +65,9 @@ void PlayerManager::checkPlayerBulletsToEnemy(std::vector<Enemy>& curEnemies)//T
             {
                 _curPlayer._playerBullets[j].setInActive();//Set the player bullet to inactive once it has hit an enemy
                 curEnemies.at(i).getShot();//Enemy was shot
-            }
+				std::cout<<"Enemy was shot"<<"\n";
+            } else std::cout<<"Enemy was not shot"<<"\n";
 
-
-
-//            if(_curPlayer.getSprite().getGlobalBounds().contains(curBullet->getBulletPos()))//global bounds considers the rotation of the sprite
-//            {
-//                _curPlayer.getShot(curBullet->getBulletDamage());
-//                curBullet->setInActive();//Disable the bullet once it has hit the player
-//            }
         }
     }
     //Note, the bullets are not being set inactive yet, thus causing more damage than once to the player. This is likely due to the fact that the returned vectors are CONSTANT, thus no changes to the bullet can be made
@@ -87,6 +81,8 @@ void PlayerManager::checkEnemyPositionToPlayer(const std::vector<Enemy>& curEnem
         {
 			if(curEnemy.typeOfEnemy() == EnemyType::TANK) _curPlayer.getShot(10);//Tanks do substantial damage to player
 			else _curPlayer.getShot(1);
+			std::cout<<"Enemy and player collided"<<"\n";
+			
             
         }
     }

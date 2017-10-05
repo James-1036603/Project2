@@ -45,10 +45,17 @@ public:
     {
         _stepsTaken = num;//ONLY FOR TESTS
     }
-    void setRotation(int num)
+    void setRotation(float num)
     {
         _objSprite.setRotation(num);//ONLY FOR TESTS
-    }
+		_rotation=num;
+	}
+	
+	void setEnemyPosition(float x, float y)
+	{
+		_curPosition.x = x;//ONLY FOR TESTS
+		_curPosition.y = y;
+	}
 
 
 private:

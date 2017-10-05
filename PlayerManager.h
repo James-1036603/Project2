@@ -23,7 +23,17 @@ public:
     bool playerIsAlive() const;
     void movePlayer(MoveDirection dirToMove);//Move the player
     Player& theCurrentPlayer();//Return the active player. needed for collision checking in enemy
-
+	
+	void setPlayerPosition(float x, float y)//ONLY FOR TESTS
+	{
+		_curPlayer._curPosition.x = x;
+		_curPlayer._curPosition.y = y;
+	}
+	
+	sf::Vector2f getFirstBulletPos()//ONLY FOR TESTS
+	{
+		return _curPlayer.getPlayerBullets().at(0).getBulletPos();
+	}
 private:
     Player _curPlayer;
     sf::Font font;//For lives to the screen

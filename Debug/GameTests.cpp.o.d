@@ -1,5 +1,5 @@
 Debug/GameTests.cpp.o: GameTests.cpp \
- C:\Users\DrDoom\Documents\Default\doctest/doctest.h \
+ C:\Users\JamesLaptop\Documents\Default\doctest/doctest.h \
  C:\SFML\include/SFML/System.hpp C:\SFML\include/SFML/Config.hpp \
  C:\SFML\include/SFML/System/Clock.hpp \
  C:\SFML\include/SFML/System/Export.hpp \
@@ -85,7 +85,7 @@ Debug/GameTests.cpp.o: GameTests.cpp \
  Bullet.h BulletMovement.h BulletManager.h Enemy.h EnemyMovement.h \
  EnemyManager.h Level.h
 
-C:\Users\DrDoom\Documents\Default\doctest/doctest.h:
+C:\Users\JamesLaptop\Documents\Default\doctest/doctest.h:
 
 C:\SFML\include/SFML/System.hpp:
 

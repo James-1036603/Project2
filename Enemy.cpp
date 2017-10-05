@@ -32,7 +32,7 @@ Enemy::Enemy(EnemyType enemyType)
         break;
 	case EnemyType::TANK:
 		if(!_objTexture.loadFromFile("EnemyTank.png")) throw enemy_FileNotFound();
-		_speed = 75;
+		_speed = 300;
 		_typeOfEnemy = EnemyType::TANK;
 		_damageForBullet = 0;
 		break;

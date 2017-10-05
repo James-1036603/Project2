@@ -3,6 +3,7 @@
 #include "BulletMovement.h"
 #include <SFML/Graphics.hpp>
 #include <cmath>
+#include <iostream>
 
 
 enum class Owner{PLAYER, ENEMY};//Who owns the shot bullet
