@@ -57,8 +57,7 @@ void Bullet::move(const float& elapsedTime)
 		case Owner::PLAYER:
 			if(_bulletPos.x > 950 && _bulletPos.x < 970)
 			{
-				_isAlive = 0; //If the bullet is at the center of the screen, set inactive
-				std::cout<<"Set player bullet to inactive"<<"\n";
+				_isAlive = 0; //If the bullet is at the center of the screen, set inactive				
 			}
 			break;
             

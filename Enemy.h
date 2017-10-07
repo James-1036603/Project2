@@ -29,6 +29,8 @@ public:
     std::vector<Bullet> getEnemyBullets() const;
     void drawBullets(sf::RenderWindow* currentWindow);
 
+
+
     sf::Vector2f getEnemyPos() const
     {
         return _curPosition;   //ONLY FOR TESTS
@@ -55,8 +57,13 @@ public:
 	{
 		_curPosition.x = x;//ONLY FOR TESTS
 		_curPosition.y = y;
+        _objSprite.setPosition(_curPosition);
 	}
-
+    
+    void setPositionOfBullet(int indexOfBullet, float x, float y)//ONLY FOR TESTS
+    {
+        _enemyBullets[indexOfBullet].setBulletPosition(x,y);
+    }
 
 private:
     sf::Vector2f _curPosition;//Where is the current object

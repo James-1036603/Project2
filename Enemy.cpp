@@ -123,12 +123,13 @@ void Enemy::update(const float& elapsedTime)
     }
 	_objSprite.setRotation(_rotation*(180/PI));//Rotate the sprite, in case of rotated movement
     Enemy::checkBounds();
-    _objSprite.setPosition(_curPosition);
+    _objSprite.setPosition(_curPosition);     
     //Enemy Shoot
     _stepsTaken++;
     Enemy::Shoot();
+    
     //Update Bullets
-    Enemy::updateBullets(elapsedTime);
+    Enemy::updateBullets(elapsedTime);   
 
 
 }

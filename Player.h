@@ -42,6 +42,24 @@ public:
     {
         return _speed;   //ONLY FOR TESTS
     }
+    void setPositionOfBullet(int indexOfBullet, float x, float y)
+    {
+        _playerBullets[indexOfBullet].setBulletPosition(x,y);
+    }
+    
+    void setPositionOfPlayer(float x, float y)//ONLY FOR TESTS
+    {
+        _curPosition.x = x;
+        _curPosition.y = y;
+        _objSprite.setPosition(_curPosition);
+        
+    }
+    
+    unsigned int getHealth()//ONLY FOR TESTS
+    {
+        return _playerLives;
+    }
+    
 	
 
 private:

@@ -64,9 +64,8 @@ void PlayerManager::checkPlayerBulletsToEnemy(std::vector<Enemy>& curEnemies)//T
             if(curEnemies.at(i).getSprite().getGlobalBounds().contains(_curPlayer.getPlayerBullets().at(j).getBulletPos()))
             {
                 _curPlayer._playerBullets[j].setInActive();//Set the player bullet to inactive once it has hit an enemy
-                curEnemies.at(i).getShot();//Enemy was shot
-				std::cout<<"Enemy was shot"<<"\n";
-            } else std::cout<<"Enemy was not shot"<<"\n";
+                curEnemies.at(i).getShot();//Enemy was shot	
+            } 
 
         }
     }
@@ -80,10 +79,7 @@ void PlayerManager::checkEnemyPositionToPlayer(const std::vector<Enemy>& curEnem
         if(curEnemy.getSprite().getGlobalBounds().contains(_curPlayer.getPlayerPos()))
         {
 			if(curEnemy.typeOfEnemy() == EnemyType::TANK) _curPlayer.getShot(10);//Tanks do substantial damage to player
-			else _curPlayer.getShot(1);
-			std::cout<<"Enemy and player collided"<<"\n";
-			
-            
+			else _curPlayer.getShot(1);            
         }
     }
 
