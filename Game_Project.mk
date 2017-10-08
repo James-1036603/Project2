@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=DrDoom
-Date                   :=07/10/2017
+Date                   :=08/10/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,8 +62,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/BulletManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameMusic.cpp$(ObjectSuffix) $(IntermediateDirectory)/Include.cpp$(ObjectSuffix) $(IntermediateDirectory)/Level.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/BulletManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameMusic.cpp$(ObjectSuffix) $(IntermediateDirectory)/Include.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Level.cpp$(ObjectSuffix) $(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) 
 
 
 
@@ -94,6 +94,14 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/DrDoom/Documents/Project/Game_Project/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
+
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
 $(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix): Bullet.cpp $(IntermediateDirectory)/Bullet.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/DrDoom/Documents/Project/Game_Project/Bullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Bullet.cpp$(DependSuffix): Bullet.cpp
@@ -197,14 +205,6 @@ $(IntermediateDirectory)/Update.cpp$(DependSuffix): Update.cpp
 
 $(IntermediateDirectory)/Update.cpp$(PreprocessSuffix): Update.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Update.cpp$(PreprocessSuffix) Update.cpp
-
-$(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix): GameTests.cpp $(IntermediateDirectory)/GameTests.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/DrDoom/Documents/Project/Game_Project/GameTests.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/GameTests.cpp$(DependSuffix): GameTests.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GameTests.cpp$(DependSuffix) -MM GameTests.cpp
-
-$(IntermediateDirectory)/GameTests.cpp$(PreprocessSuffix): GameTests.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GameTests.cpp$(PreprocessSuffix) GameTests.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

@@ -100,7 +100,7 @@ void EnemyManager::spawnEnemyTank(const float& elapsedTime)//Generate a tanak ba
 	if(_elapsedClockTime > _generatedClockTime){
 		sf::Vector2f displaySize(1920,1080);
 		Enemy aNewEnemy(displaySize, &_enemyBulletManager, &_enemyMover, EnemyType::TANK);
-		_curEnemies.push_back(aNewEnemy);
+		_curEnemies.push_back(aNewEnemy);        
 		EnemyManager::generateRandomTime();//Generate a new random time
 		_elapsedClockTime = 0;//Reset the elapsed clock time		
 	}

@@ -42,6 +42,11 @@ public:
         _curEnemies.push_back(theEnemy);
     }
     
+    void setGeneratedClockTime(float clockTime)//ONLY FOR TESTS
+    {
+        _generatedClockTime = clockTime;
+    }
+    
     
 private:
     std::vector<Enemy> _curEnemies;//The current enemies on display
