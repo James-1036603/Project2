@@ -12,8 +12,17 @@ OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=DrDoom
+<<<<<<< HEAD
+User                   :=JamesLaptop
 Date                   :=08/10/2017
+=======
+User                   :=DrDoom
+<<<<<<< HEAD
+Date                   :=08/10/2017
+=======
+Date                   :=07/10/2017
+>>>>>>> 220281dcb3c1a9abfb0e3eba8e3dff54fb879765
+>>>>>>> a7851baf6251bd9b2d15ffad3c10416c4a5621e1
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
