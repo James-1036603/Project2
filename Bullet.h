@@ -36,6 +36,12 @@ public:
     {
         _isAlive = val;   //ONLY FOR TESTING
     }
+    void setBulletPosition(float x, float y)
+    {
+        _bulletPos.x = x; //ONLY FOR TESTING
+        _bulletPos.y = y;
+        _bulletSprite.setPosition(_bulletPos);
+    }
 
 
 private:

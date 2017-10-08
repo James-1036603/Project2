@@ -193,9 +193,9 @@ TEST_CASE("Enemy Tank moves correctly")
     sf::Vector2f displaySize(1920,1080);
     Enemy aEnemy(displaySize, NULL, NULL, EnemyType::TANK);	
     aEnemy.setRotation(60);
-    aEnemy.update(1);
-    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(1031.430));
-    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(562.860));
+    aEnemy.update(1);    
+    CHECK(aEnemy.getEnemyPos().x == doctest::Approx(1245.720));
+    CHECK(aEnemy.getEnemyPos().y == doctest::Approx(631.443));
 }
 
 
@@ -204,24 +204,54 @@ TEST_CASE("Enemy Tank moves correctly")
 TEST_CASE("Player bullet impacts enemy, enemy takes damage or is killed")
 {
 	std::cout<<"Test 18"<<"\n";
-	sf::Vector2f displaySize(1920,1080);
-	
-	PlayerManager playerManager1(displaySize, 0, NULL);	
+	sf::Vector2f displaySize(1920,1080);	
+    auto elapsedTime = 1.0f;
+	PlayerManager playerManager1(displaySize, 0, NULL);	    
+    playerManager1.playerShoot(elapsedTime);
+    playerManager1.setFirstBulletPos(500,500);
 	Enemy enemy1(displaySize,NULL,NULL, EnemyType::SCOUT);
 	enemy1.setRotation(0);
-	enemy1.setEnemyPosition(50, 540);
+    enemy1.setEnemyPosition(500,500);
 	std::vector <Enemy> curEnemies;
 	curEnemies.push_back(enemy1);
-	//playerManager1.checkPlayerBulletsToEnemy(curEnemies);
-	playerManager1.checkEnemyPositionToPlayer(curEnemies);
+    CHECK(curEnemies.at(0).isAlive() == true);
+	playerManager1.checkPlayerBulletsToEnemy(curEnemies);    
+    CHECK(curEnemies.at(0).isAlive() == false);
+	
 }
 
 TEST_CASE("Enemy bullet impacts player, player takes damage or is killed")
 {
+    std::cout<<"Test 19"<<"\n";
+	sf::Vector2f displaySize(1920,1080);
+    Enemy enemy1(displaySize,NULL,NULL, EnemyType::SCOUT);
+	enemy1.setRotation(0);
+    enemy1.setEnemyPosition(0,0);
+    enemy1.setStepsTaken(50);
+    enemy1.Shoot();
+    enemy1.setPositionOfBullet(0, 500, 500);
+    EnemyManager aEnemyManager;
+    aEnemyManager.addEnemyToVector(enemy1);    
+    Player player1(displaySize, 400, NULL);
+    player1.setPositionOfPlayer(500,500);
+    CHECK(player1.getHealth() == 100);
+    aEnemyManager.checkEnemyBulletsToPlayer(player1);
+    CHECK(player1.getHealth() == 99);    
     
 }
 
 TEST_CASE("Enemy colliding with player will damage the player")
-{
-    
+{    
+    std::cout<<"Test 20"<<"\n";
+	sf::Vector2f displaySize(1920,1080);    
+	PlayerManager playerManager1(displaySize, 0, NULL);	    
+    playerManager1.setPlayerPosition(500,500);    
+	Enemy enemy1(displaySize,NULL,NULL, EnemyType::SCOUT);
+	enemy1.setRotation(0);
+    enemy1.setEnemyPosition(500,500);
+	std::vector <Enemy> curEnemies;
+	curEnemies.push_back(enemy1);
+    CHECK(playerManager1.getPlayerHealth() == 100);
+    playerManager1.checkEnemyPositionToPlayer(curEnemies);
+    CHECK(playerManager1.getPlayerHealth() == 99); 
 }

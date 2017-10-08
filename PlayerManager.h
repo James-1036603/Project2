@@ -34,6 +34,14 @@ public:
 	{
 		return _curPlayer.getPlayerBullets().at(0).getBulletPos();
 	}
+    void setFirstBulletPos(float x, float y)//ONLY FOR TESTS
+    {
+        _curPlayer.setPositionOfBullet(0, x, y);
+    }
+    unsigned int getPlayerHealth()//ONLY FOR TESTS
+    {
+        return _curPlayer._playerLives;
+    }
 private:
     Player _curPlayer;
     sf::Font font;//For lives to the screen

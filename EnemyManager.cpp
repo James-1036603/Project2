@@ -83,7 +83,7 @@ void EnemyManager::checkEnemyBulletsToPlayer(Player& thePlayer)
               if(thePlayer.getSprite().getGlobalBounds().contains(_curEnemies[i]._enemyBullets[j].getBulletPos()))
                  {
                      thePlayer.getShot(_curEnemies[i]._enemyBullets[j].getBulletDamage());
-                     _curEnemies[i]._enemyBullets[j].setInActive();
+                     _curEnemies[i]._enemyBullets[j].setInActive();                     
                  }
           }
     }

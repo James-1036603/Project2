@@ -21,6 +21,28 @@ public:
     bool allEnemiesKilled();//If all the enemies are killed,
     std::vector<Enemy>& theEnemies();//Defined as a reference for correct passing to other functions
 	void randomEvents(const float& elapsedTime);//Any random any events which need to take place will fall under here
+    
+    
+    void setFirstEnemyPosition(float x, float y)//ONLY FOR TESTS
+	{
+		_curEnemies[0].setEnemyPosition(x,y);
+	}
+	
+	sf::Vector2f getFirstBulletPos()//ONLY FOR TESTS
+	{
+		return _curEnemies[0]._enemyBullets[0].getBulletPos();
+	}
+    void setFirstBulletPos(float x, float y)//ONLY FOR TESTS
+    {
+        _curEnemies[0]._enemyBullets[0].setBulletPosition(x,y);
+    }
+    
+    void addEnemyToVector(Enemy theEnemy)//ONLY FOR TESTS
+    {
+        _curEnemies.push_back(theEnemy);
+    }
+    
+    
 private:
     std::vector<Enemy> _curEnemies;//The current enemies on display
     EnemyMovement _enemyMover;
