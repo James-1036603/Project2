@@ -62,7 +62,7 @@ Debug/Player.cpp.o: Player.cpp Player.h C:\SFML\include/SFML/System.hpp \
  C:\SFML\include/SFML/Graphics/RenderWindow.hpp \
  C:\SFML\include/SFML/Graphics/Shader.hpp \
  C:\SFML\include/SFML/Graphics/Sprite.hpp \
- C:\SFML\include/SFML/Graphics/Text.hpp BulletManager.h
+ C:\SFML\include/SFML/Graphics/Text.hpp BulletManager.h PlayerMovement.h
 
 Player.h:
 
@@ -209,3 +209,5 @@ C:\SFML\include/SFML/Graphics/Sprite.hpp:
 C:\SFML\include/SFML/Graphics/Text.hpp:
 
 BulletManager.h:
+
+PlayerMovement.h:

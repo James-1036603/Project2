@@ -1,7 +1,9 @@
 #include "PlayerManager.h"
 
-PlayerManager::PlayerManager(const sf::Vector2f& windowSize, const float& radius, BulletManager* bullet_manager):
-    _curPlayer(windowSize, radius, bullet_manager)
+PlayerManager::PlayerManager(const sf::Vector2f& windowSize, const float& radius):
+	_curPlayer(windowSize, radius, &_playerBulletMananger, &_playerMover),
+	_playerBulletMananger()
+	
 {
     //ctor
     PlayerManager::SetTextAndFont();
@@ -15,13 +17,12 @@ PlayerManager::~PlayerManager()
 
 void PlayerManager::movePlayer(MoveDirection dirToMove)//Move the player
 {
-    if(dirToMove == MoveDirection::RIGHT) _curPlayer.moveRight();
-    else if(dirToMove == MoveDirection::STOP_RIGHT) _curPlayer.stopRight();
+    if(dirToMove == MoveDirection::RIGHT) _curPlayer.moveClockwise();
+    else if(dirToMove == MoveDirection::STOP_RIGHT) _curPlayer.stopClockwise();
 
-    if(dirToMove == MoveDirection::LEFT) _curPlayer.moveLeft();
-    else if(dirToMove == MoveDirection::STOP_LEFT) _curPlayer.stopLeft();
+    if(dirToMove == MoveDirection::LEFT) _curPlayer.moveCounterClockwise();
+    else if(dirToMove == MoveDirection::STOP_LEFT) _curPlayer.stopCounterClockwise();
 
-    //const sf::Keyboard::Key& curPressedKey
 }
 
 void PlayerManager::updatePlayer(const float& elapsedTime)

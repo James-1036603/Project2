@@ -3,6 +3,13 @@
 #include<SFML/Audio.hpp>
 
 class Music_FileNotFound {};
+/**
+ * @class GameMusic
+ * @author James Phillips (1036603)
+ * @file GameMusic.h
+ * @brief The background music for the game. This class adds for extra functionality than the SFML music library, such as pause
+ */
+
 class GameMusic
 {
 public:

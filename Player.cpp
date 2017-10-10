@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan)//IMPLEMENT THESE BETTER!
+Player::Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan, PlayerMovement* playerMover)//IMPLEMENT THESE BETTER!
 {
     //ctor
     _speed = 200;//How fast should the character move
@@ -9,15 +9,14 @@ Player::Player(const sf::Vector2f& displaySize, const float& radius, BulletManag
     _objSprite.setTexture(_objTexture);//set object texture
 
     //Starting position
-//    _curPosition.x = displaySize.x/2-radius;
-//    _curPosition.y = displaySize.y/2;
-    _curPosition.x = 960-400;
+    _curPosition.x = 960-radius;
     _curPosition.y = 540;
 
     _circleRadius = radius;
     _curAngle = PI;
 
     _playerBulletManager = *BulMan;
+	_playerMover = playerMover;
 
 
 }
@@ -32,22 +31,22 @@ sf::Sprite Player::getSprite()
     return _objSprite;
 }
 
-void Player::moveRight()
+void Player::moveClockwise()
 {
     _rightPressed = true;
 }
 
-void Player::moveLeft()
+void Player::moveCounterClockwise()
 {
     _leftPressed = true;
 }
 
-void Player::stopRight()
+void Player::stopClockwise()
 {
     _rightPressed = false;
 }
 
-void Player::stopLeft()
+void Player::stopCounterClockwise()
 {
     _leftPressed = false;
 }
@@ -65,9 +64,9 @@ void Player::Shoot(float& elapsedTime)
 void Player::update(const float& elapsedTime)
 {
     //Update the player postion
-    if(_rightPressed) Player::moveClockwise(elapsedTime);
+    if(_rightPressed) _playerMover->MovePlayerClockwise(_curPosition, _speed, elapsedTime, _circleRadius, _curAngle);
 
-    if(_leftPressed) Player::moveCounterClockwise(elapsedTime);
+    if(_leftPressed) _playerMover->MovePlayerCounterClockwise(_curPosition, _speed, elapsedTime, _circleRadius, _curAngle);
 
     _objSprite.setPosition(_curPosition);
     _objSprite.setRotation((_curAngle * (180/PI)));//Rotate the sprite (degrees)   
@@ -103,23 +102,6 @@ std::vector<Bullet> Player::getPlayerBullets()
     return _playerBullets;
 }
 
-void Player::moveClockwise(const float& elapsedTime)
-{
-    auto angle = _curAngle - ((_speed*elapsedTime)/100);
-
-    _curPosition.y = _circleRadius * std::sin(angle)+540;
-    _curPosition.x = _circleRadius * std::cos(angle)+960;
-    _curAngle = angle;
-}
-
-void Player::moveCounterClockwise(const float& elapsedTime)
-{
-    auto angle = _curAngle + ((_speed*elapsedTime)/100);
-
-    _curPosition.y = _circleRadius * std::sin(angle)+540;
-    _curPosition.x = _circleRadius * std::cos(angle)+960;
-    _curAngle = angle;
-}
 
 
 void Player::drawBullets(sf::RenderWindow* currentWindow)

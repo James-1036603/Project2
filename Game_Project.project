@@ -8,7 +8,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp" ExcludeProjConfig=""/>
+    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
     <File Name="Bullet.cpp"/>
     <File Name="BulletManager.cpp"/>
     <File Name="Draw.cpp"/>
@@ -22,6 +22,7 @@
     <File Name="Player.cpp"/>
     <File Name="PlayerManager.cpp"/>
     <File Name="Update.cpp"/>
+    <File Name="PlayerMovement.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Headers">
     <File Name="Bullet.h"/>
@@ -34,9 +35,10 @@
     <File Name="Level.h"/>
     <File Name="Player.h"/>
     <File Name="PlayerManager.h"/>
+    <File Name="PlayerMovement.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="TestCode">
-    <File Name="GameTests.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameTests.cpp" ExcludeProjConfig=""/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -52,7 +54,7 @@
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
         <IncludePath Value="C:\SFML\include"/>
-        <IncludePath Value="C:\Users\DrDoom\Documents\Project\doctest"/>
+        <IncludePath Value="C:\Users\JamesLaptop\Documents\Default\doctest"/>
       </Compiler>
       <Linker Options="" Required="yes">
         <LibraryPath Value="C:\SFML\lib"/>

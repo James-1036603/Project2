@@ -4,14 +4,21 @@
 #include <sstream>
 
 class level_FileNotFound{};
+/**
+ * @class Level
+ * @author James Phillips (1036603)
+ * @file Level.h
+ * @brief The levels for the game as an integer type, up to a certain maximum level
+ */
+
 class Level
 {
 public:
     Level();
     virtual ~Level();
-    int currentLevel();//What is the current level?
-    void nextLevel();//Get the next level
-    bool maxLevel();//Maximum amount of levels reached
+    int currentLevel();
+    void nextLevel();
+    bool maxLevel();
     void drawLevelsToWindow(sf::RenderWindow* currentWindow);
 private:
     int _currentLevel;

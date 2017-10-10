@@ -11,6 +11,12 @@
 
 class enemy_FileNotFound {};
 enum class EnemyType {SCOUT,SOLDIER,ROGUE,TANK}; //Three enemy types
+/**
+ * @class Enemy
+ * @author James Phillips (1036603)
+ * @file Enemy.h
+ * @brief Enemy class, which has 4 types of enemies. Each enemy has a postion, sprite, speed, rotation, bullet damage and the amount of steps taken. The enemy is moved based on its current type
+ */
 
 class Enemy
 {

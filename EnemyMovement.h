@@ -5,6 +5,12 @@
 #include <cmath>
 #include <iostream>
 
+/**
+ * @class EnemyMovement
+ * @author James Phillips (1036603)
+ * @file EnemyMovement.h
+ * @brief This will move a specific enemy, based on it's type
+ */
 
 class EnemyMovement
 {

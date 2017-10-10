@@ -8,11 +8,17 @@
 #include <sstream>
 
 enum class MoveDirection {RIGHT, LEFT, STOP_RIGHT, STOP_LEFT};
+/**
+ * @class PlayerManager
+ * @author James Phillips (1036603)
+ * @file PlayerManager.h
+ * @brief The playermanager will maintain all updates and events to the player, such as player input, collision detection, drawing the player to the active window
+ */
 
 class PlayerManager
 {
 public:
-    PlayerManager(const sf::Vector2f& windowSize, const float& radius, BulletManager* bullet_manager);
+    PlayerManager(const sf::Vector2f& windowSize, const float& radius);
     virtual ~PlayerManager();
     void updatePlayer(const float& elapsedTime);//Update the player
     void checkPlayerBulletsToEnemy(std::vector<Enemy>& curEnemies);//Check if the player is shoots an enemy
@@ -46,7 +52,9 @@ private:
     Player _curPlayer;
     sf::Font font;//For lives to the screen
     sf::Text text;
-
+	PlayerMovement _playerMover;
+	BulletManager _playerBulletMananger;
+	
     void SetTextAndFont();
 
 

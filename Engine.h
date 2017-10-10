@@ -4,11 +4,16 @@
 #include "GameMusic.h"
 #include "PlayerManager.h"
 #include "EnemyManager.h"
-#include "BulletManager.h"
 #include "Level.h"
 
 enum class ScreenType{SPLASH,WIN,LOSE};
 class FileNotFound {};
+/**
+ * @class Engine
+ * @author James Phillips (1036603)
+ * @file Engine.h
+ * @brief The engine is an instance of the game itself. The engine is the interface to the player, with the play window and player input
+ */
 
 class Engine
 {
@@ -25,7 +30,6 @@ private:
 
     PlayerManager _thePlayer;//Instance for player
     EnemyManager _theEnemies;//Instance of all enemies
-    BulletManager _bulletManager;
     Level _gameLevels;
 
     const int _height = sf::VideoMode::getDesktopMode().height;

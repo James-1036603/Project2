@@ -9,6 +9,13 @@
 enum class Owner{PLAYER, ENEMY};//Who owns the shot bullet
 class bullet_FileNotFound {};
 
+
+/**
+ * @class Bullet
+ * @author James Phillips (1036603)
+ * @file Bullet.h
+ * @brief A class that will contain the characteristics of the needed bullet, such as its position, damage, speed, rotation, sprite, owner and so forth.
+ */
 class Bullet
 {
 public:

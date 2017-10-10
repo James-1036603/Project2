@@ -6,24 +6,32 @@
 #include <SFML/System.hpp>
 #include "Bullet.h"
 #include "BulletManager.h"
+#include "PlayerMovement.h"
 #include <cmath>
 
 #include <iostream>
 
 class player_FileNotFound {};
+/**
+ * @class Player
+ * @author James Phillips (1036603)
+ * @date 10/10/2017
+ * @file Player.h
+ * @brief Player class has the needed member functions for the player, such as their position, sprite, speed, rotation and their bullets active on the screen. The player's movement is determined by the current input. THe player is able to shoot as well
+ */
 
 class Player
 {
 public:
-    Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan);
+    Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan, PlayerMovement* playerMover);
     virtual ~Player();
     sf::Sprite getSprite();//Get a copy of the current sprite
 
 
-    void moveLeft();//Move the object left
-    void moveRight();//Move the object right
-    void stopLeft();//Stop moving left
-    void stopRight();//Stop moving right
+    void moveCounterClockwise();//Move the object left
+    void moveClockwise();//Move the object right
+    void stopCounterClockwise();//Stop moving left
+    void stopClockwise();//Stop moving right
 
 
 
@@ -64,9 +72,6 @@ public:
 
 private:
     bool isAlive() const;//Is the player still alive, ie if lives are not 0
-
-    void moveClockwise(const float& elapsedTime);//Move player clockwise along the circle
-    void moveCounterClockwise(const float& elapsedTime);//Move player anti-clockwise along the circle
     void updateBullets(const float& elapsedTime);
 
 
@@ -82,11 +87,11 @@ private:
 
     float _circleRadius;
     float _curAngle;
+	PlayerMovement* _playerMover;
 
     std::vector<Bullet> _playerBullets;
-
-
     BulletManager _playerBulletManager;
+	
 
 
     sf::Vector2f _displaySize;//The resolution of the display. Ensure that out player does not go out of bounds (This will not be needed for the angular movement)

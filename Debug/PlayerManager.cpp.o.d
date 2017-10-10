@@ -63,8 +63,8 @@ Debug/PlayerManager.cpp.o: PlayerManager.cpp PlayerManager.h Player.h \
  C:\SFML\include/SFML/Graphics/RenderWindow.hpp \
  C:\SFML\include/SFML/Graphics/Shader.hpp \
  C:\SFML\include/SFML/Graphics/Sprite.hpp \
- C:\SFML\include/SFML/Graphics/Text.hpp BulletManager.h Enemy.h \
- EnemyMovement.h
+ C:\SFML\include/SFML/Graphics/Text.hpp BulletManager.h PlayerMovement.h \
+ Enemy.h EnemyMovement.h
 
 PlayerManager.h:
 
@@ -213,6 +213,8 @@ C:\SFML\include/SFML/Graphics/Sprite.hpp:
 C:\SFML\include/SFML/Graphics/Text.hpp:
 
 BulletManager.h:
+
+PlayerMovement.h:
 
 Enemy.h:
 

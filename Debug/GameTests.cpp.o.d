@@ -1,5 +1,5 @@
 Debug/GameTests.cpp.o: GameTests.cpp \
- C:\Users\DrDoom\Documents\Project\doctest/doctest.h \
+ C:\Users\JamesLaptop\Documents\Default\doctest/doctest.h \
  C:\SFML\include/SFML/System.hpp C:\SFML\include/SFML/Config.hpp \
  C:\SFML\include/SFML/System/Clock.hpp \
  C:\SFML\include/SFML/System/Export.hpp \
@@ -82,10 +82,10 @@ Debug/GameTests.cpp.o: GameTests.cpp \
  C:\SFML\include/SFML/Audio/SoundFileFactory.inl \
  C:\SFML\include/SFML/Audio/SoundFileReader.hpp \
  C:\SFML\include/SFML/Audio/SoundFileWriter.hpp PlayerManager.h Player.h \
- Bullet.h BulletMovement.h BulletManager.h Enemy.h EnemyMovement.h \
- EnemyManager.h Level.h
+ Bullet.h BulletMovement.h BulletManager.h PlayerMovement.h Enemy.h \
+ EnemyMovement.h EnemyManager.h Level.h
 
-C:\Users\DrDoom\Documents\Project\doctest/doctest.h:
+C:\Users\JamesLaptop\Documents\Default\doctest/doctest.h:
 
 C:\SFML\include/SFML/System.hpp:
 
@@ -272,6 +272,8 @@ Bullet.h:
 BulletMovement.h:
 
 BulletManager.h:
+
+PlayerMovement.h:
 
 Enemy.h:
 

@@ -2,12 +2,10 @@
 
 Engine::Engine():
     _window(sf::VideoMode(1920,1080),"Game", sf::Style::Fullscreen),
-    _thePlayer(static_cast<sf::Vector2f>(_window.getSize()), 400, &_bulletManager),
-    _bulletManager(),
+    _thePlayer(static_cast<sf::Vector2f>(_window.getSize()), 400),
     _gameLevels()
 {
 	//Window Settings
-    _window.setVerticalSyncEnabled(true);
     _window.setMouseCursorVisible(false);
     _window.setFramerateLimit(60);
 	
@@ -37,7 +35,6 @@ void Engine::start()
     while(_window.isOpen())
     {
         sf::Time dt = sysClock.restart();
-
         float dtAsSeconds = dt.asSeconds();
         input(dtAsSeconds);
         update(dtAsSeconds);

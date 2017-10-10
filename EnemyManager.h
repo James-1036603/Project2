@@ -7,6 +7,12 @@
 #include "BulletManager.h"
 #include "Player.h"
 
+/**
+ * @class EnemyManager
+ * @author James Phillips (1036603)
+ * @file EnemyManager.h
+ * @brief Manager class for an enemy. This class will maintain the amount of enemies in the game, the enemy's bullets, and the enemy's bullets to the player.
+ */
 
 class EnemyManager
 {
