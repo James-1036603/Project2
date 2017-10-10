@@ -24,8 +24,8 @@ public:
     virtual ~Bullet();
     sf::Sprite getSprite();
 
-    void updatePlayerBullet(const float& elapsedTime);//Player Bullet update
-    void updateEnemyBullet(const float& elapsedTime);//Enemy bullet update (different movement to the player)
+    
+    void updateBullet(const float& elapsedTime);
     bool bulletIsAlive();
     int getBulletDamage();//Bullet Damage
     void setInActive();//Disable the bullet

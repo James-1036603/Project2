@@ -62,8 +62,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/BulletManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameMusic.cpp$(ObjectSuffix) $(IntermediateDirectory)/Include.cpp$(ObjectSuffix) $(IntermediateDirectory)/Level.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/BulletManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameMusic.cpp$(ObjectSuffix) $(IntermediateDirectory)/Level.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) 
 
 
 
@@ -94,6 +94,14 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/JamesLaptop/Documents/Default/Game_Project/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
+
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
 $(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix): Bullet.cpp $(IntermediateDirectory)/Bullet.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/JamesLaptop/Documents/Default/Game_Project/Bullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Bullet.cpp$(DependSuffix): Bullet.cpp
@@ -158,14 +166,6 @@ $(IntermediateDirectory)/GameMusic.cpp$(DependSuffix): GameMusic.cpp
 $(IntermediateDirectory)/GameMusic.cpp$(PreprocessSuffix): GameMusic.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GameMusic.cpp$(PreprocessSuffix) GameMusic.cpp
 
-$(IntermediateDirectory)/Include.cpp$(ObjectSuffix): Include.cpp $(IntermediateDirectory)/Include.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/JamesLaptop/Documents/Default/Game_Project/Include.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Include.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Include.cpp$(DependSuffix): Include.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Include.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Include.cpp$(DependSuffix) -MM Include.cpp
-
-$(IntermediateDirectory)/Include.cpp$(PreprocessSuffix): Include.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Include.cpp$(PreprocessSuffix) Include.cpp
-
 $(IntermediateDirectory)/Level.cpp$(ObjectSuffix): Level.cpp $(IntermediateDirectory)/Level.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/JamesLaptop/Documents/Default/Game_Project/Level.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Level.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Level.cpp$(DependSuffix): Level.cpp
@@ -206,13 +206,13 @@ $(IntermediateDirectory)/PlayerMovement.cpp$(DependSuffix): PlayerMovement.cpp
 $(IntermediateDirectory)/PlayerMovement.cpp$(PreprocessSuffix): PlayerMovement.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlayerMovement.cpp$(PreprocessSuffix) PlayerMovement.cpp
 
-$(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix): GameTests.cpp $(IntermediateDirectory)/GameTests.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/JamesLaptop/Documents/Default/Game_Project/GameTests.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/GameTests.cpp$(DependSuffix): GameTests.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GameTests.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GameTests.cpp$(DependSuffix) -MM GameTests.cpp
+$(IntermediateDirectory)/Input.cpp$(ObjectSuffix): Input.cpp $(IntermediateDirectory)/Input.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/JamesLaptop/Documents/Default/Game_Project/Input.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Input.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Input.cpp$(DependSuffix): Input.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Input.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Input.cpp$(DependSuffix) -MM Input.cpp
 
-$(IntermediateDirectory)/GameTests.cpp$(PreprocessSuffix): GameTests.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GameTests.cpp$(PreprocessSuffix) GameTests.cpp
+$(IntermediateDirectory)/Input.cpp$(PreprocessSuffix): Input.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Input.cpp$(PreprocessSuffix) Input.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

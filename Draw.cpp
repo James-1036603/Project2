@@ -2,9 +2,9 @@
 
 void Engine::draw()
 {
-    _window.clear(sf::Color::White);
-
+    _window.clear(sf::Color::Black);
     _window.draw(_backgroundSprite);
+	
     //Draw the player
     _thePlayer.drawPlayerToWindow(&_window);
     _thePlayer.drawPlayerBullets(&_window);

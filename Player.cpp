@@ -1,11 +1,11 @@
 #include "Player.h"
 
-Player::Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan, PlayerMovement* playerMover)//IMPLEMENT THESE BETTER!
+Player::Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan, PlayerMovement* playerMover)
 {
     //ctor
-    _speed = 200;//How fast should the character move
-    _playerLives = 100;//Player starts with 3 lives. Can be changed if needed
-    if(!_objTexture.loadFromFile("PlayerCharacterSmall.png")) throw player_FileNotFound();//load texture
+    _speed = 200;/
+    _playerLives = 100;
+    if(!_objTexture.loadFromFile("PlayerCharacterSmall.png")) throw player_FileNotFound();
     _objSprite.setTexture(_objTexture);//set object texture
 
     //Starting position
@@ -55,7 +55,7 @@ void Player::Shoot(float& elapsedTime)
 {
     if(elapsedTime>0.01)
     {        
-        Bullet bulletShot(_curPosition,  _curAngle,  Owner::PLAYER);//Create a new bullet
+        Bullet bulletShot(_curPosition,  _curAngle, Owner::PLAYER);
         _playerBullets.push_back(bulletShot);
     }
 
@@ -69,9 +69,9 @@ void Player::update(const float& elapsedTime)
     if(_leftPressed) _playerMover->MovePlayerCounterClockwise(_curPosition, _speed, elapsedTime, _circleRadius, _curAngle);
 
     _objSprite.setPosition(_curPosition);
-    _objSprite.setRotation((_curAngle * (180/PI)));//Rotate the sprite (degrees)   
+    _objSprite.setRotation((_curAngle * (180/PI))); 
 
-    Player::updateBullets(elapsedTime);//Update the bullets
+    Player::updateBullets(elapsedTime);
 
 
 }
@@ -81,17 +81,17 @@ void Player::updateBullets(const float& elapsedTime)
     //Update the bullets position
     for(auto i = 0u; i != _playerBullets.size(); i++)
     {
-        _playerBullets.at(i).updatePlayerBullet(elapsedTime);
+        _playerBullets.at(i).updateBullet(elapsedTime);
     }
-    _playerBullets =  _playerBulletManager.deleteInactiveBullets(&_playerBullets);//Delete inactive Bullets
+    _playerBullets =  _playerBulletManager.deleteInactiveBullets(&_playerBullets);
 }
 
-void Player::getShot(int bulletDamage)//The player was shot
+void Player::getShot(int bulletDamage)/
 {
     _playerLives -= bulletDamage;
 }
 
-bool Player::isAlive() const//Check player lives and evaluate if is alive or not
+bool Player::isAlive() const
 {
     if(_playerLives == 0 || _playerLives > 100) return false;
     else return true;

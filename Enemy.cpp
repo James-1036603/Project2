@@ -48,7 +48,7 @@ Enemy::Enemy(EnemyType enemyType)
 Enemy::Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMovement* EnemyMover, EnemyType enemyType)
 {
 
-    switch(enemyType)//Identify the correct type of enemy for the correct sprite and speed
+    switch(enemyType)
     {
     case EnemyType::SCOUT:
         _objSprite = _defaultScout._objSprite;
@@ -70,7 +70,7 @@ Enemy::Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMoveme
         break;
 	case EnemyType::TANK:
 		_objSprite = _defaultTank._objSprite;
-        _speed = _defaultTank._speed;
+		_speed = _defaultTank._speed;
         _typeOfEnemy = _defaultTank._typeOfEnemy;
         _damageForBullet = _defaultTank._damageForBullet;
         break;
@@ -107,7 +107,7 @@ sf::Sprite Enemy::getSprite() const
 void Enemy::update(const float& elapsedTime)
 {
     //Move the enemy
- switch(_typeOfEnemy)//Identify the correct type of enemy for the correct sprite and speed
+ switch(_typeOfEnemy)
     {
     case EnemyType::SCOUT:
         _moveEnemy->MoveEnemyScout(_curPosition,_speed,elapsedTime, _rotation);
@@ -171,7 +171,7 @@ void Enemy::updateBullets(const float& elapsedTime)
 {
     for(auto i = 0u; i != _enemyBullets.size(); i++)
     {
-        _enemyBullets[i].updateEnemyBullet(elapsedTime);
+        _enemyBullets[i].updateBullet(elapsedTime);
     }
     _enemyBullets = _BulletManager->deleteInactiveBullets(&_enemyBullets);
 

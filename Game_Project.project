@@ -8,7 +8,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="main.cpp" ExcludeProjConfig=""/>
     <File Name="Bullet.cpp"/>
     <File Name="BulletManager.cpp"/>
     <File Name="Draw.cpp"/>
@@ -17,12 +17,12 @@
     <File Name="EnemyMovement.cpp"/>
     <File Name="Engine.cpp"/>
     <File Name="GameMusic.cpp"/>
-    <File Name="Include.cpp"/>
     <File Name="Level.cpp"/>
     <File Name="Player.cpp"/>
     <File Name="PlayerManager.cpp"/>
     <File Name="Update.cpp"/>
     <File Name="PlayerMovement.cpp"/>
+    <File Name="Input.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Headers">
     <File Name="Bullet.h"/>
@@ -38,7 +38,7 @@
     <File Name="PlayerMovement.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="TestCode">
-    <File Name="GameTests.cpp" ExcludeProjConfig=""/>
+    <File Name="GameTests.cpp" ExcludeProjConfig="Debug"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

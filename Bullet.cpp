@@ -34,15 +34,8 @@ bool Bullet::bulletIsAlive()
     return _isAlive;
 };
 
-void Bullet::updatePlayerBullet(const float& elapsedTime)
-{
-    
-    Bullet::move(elapsedTime);
-    _bulletSprite.setPosition(_bulletPos);
-    
-}
 
-void Bullet::updateEnemyBullet(const float& elapsedTime)
+void Bullet::updateBullet(const float& elapsedTime)
 {
     Bullet::move(elapsedTime);
     _bulletSprite.setPosition(_bulletPos);

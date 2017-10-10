@@ -2,23 +2,19 @@
 
 EnemyManager::EnemyManager()
 {
-    //ctor
 	_elapsedClockTime = 0;
 	EnemyManager::generateRandomTime();
 }
 
 EnemyManager::~EnemyManager()
 {
-    //dtor
+    
 }
 
-void EnemyManager::spawnEnemies(int& currentLevel)//First spawn one enemy, then 10 later, then use a level seed
+void EnemyManager::spawnEnemies(int& currentLevel)
 {
-    _curEnemies.clear();//Delete all enemies from vector
+    _curEnemies.clear();
     sf::Vector2f displaySize(1920,1080);
-	//Enemy aNewEnemy(displaySize, &_enemyBulletManager,  &_enemyMover,EnemyType::SCOUT);
-	//aNewEnemy.setRotation(0.02);
-	//_curEnemies.push_back(aNewEnemy);
   for(auto i = 0; i<10-currentLevel; i++)
     {
         Enemy aNewEnemy(displaySize, &_enemyBulletManager,  &_enemyMover,EnemyType::SCOUT);
@@ -35,25 +31,23 @@ void EnemyManager::spawnEnemies(int& currentLevel)//First spawn one enemy, then 
         _curEnemies.push_back(aNewEnemy);
     }
 
-
-
 }
 
 void EnemyManager::updateEnemies(const float& elapsedTime)
 {
-    for(auto i = 0u; i != _curEnemies.size(); i++) _curEnemies[i].update(elapsedTime); //Update all the enemies in the vector
+    for(auto i = 0u; i != _curEnemies.size(); i++) _curEnemies[i].update(elapsedTime);
     _curEnemies =  EnemyManager::removeInactiveEnemies();
 }
 
 void EnemyManager::drawEnemies(sf::RenderWindow* _curWindow)
 {
-    for(auto curEnemy : _curEnemies) _curWindow->draw(curEnemy.getSprite());//Draw all enemies in the vector to the screen
+    for(auto curEnemy : _curEnemies) _curWindow->draw(curEnemy.getSprite());
 
 }
 
 void EnemyManager::drawEnemyBullets(sf::RenderWindow* _curWindow)
 {
-    for(auto curEnemy : _curEnemies) curEnemy.drawBullets(_curWindow);//Draw all enemy's in the vector to the screen
+    for(auto curEnemy : _curEnemies) curEnemy.drawBullets(_curWindow);
 }
 
 std::vector<Enemy>& EnemyManager::theEnemies()
