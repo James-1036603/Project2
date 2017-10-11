@@ -36,7 +36,7 @@ TEST_CASE("Player Bullet Moved Correct Amount")
 {
     std::cout<<"Test 3"<<"\n";
     Bullet bullet1(sf::Vector2f(50.0f,50.0f),0, Owner::PLAYER);
-    bullet1.updatePlayerBullet(1);
+    bullet1.updateBullet(1);
     CHECK(bullet1.getBulletPos().x == doctest::Approx(-950.0));
     CHECK(bullet1.getBulletPos().y == doctest::Approx(50.0));
 }
@@ -45,7 +45,7 @@ TEST_CASE("Enemy Bullet Moved Correct Amount")
 {
     std::cout<<"Test 4"<<"\n";
 	Bullet bullet1(sf::Vector2f(50.0f,50.0f),0, Owner::ENEMY);
-    bullet1.updateEnemyBullet(1);
+    bullet1.updateBullet(1);
     CHECK(bullet1.getBulletPos().x == doctest::Approx(-950.0));
     CHECK(bullet1.getBulletPos().y == doctest::Approx(50.0));
 }
@@ -208,7 +208,7 @@ TEST_CASE("Player bullet impacts enemy, enemy takes damage or is killed")
 	std::vector <Enemy> curEnemies;
 	curEnemies.push_back(enemy1);
     CHECK(curEnemies.at(0).isAlive() == true);
-	playerManager1.checkPlayerBulletsToEnemy(curEnemies);    
+	playerManager1.checkPlayerCollisionss(curEnemies);   
     CHECK(curEnemies.at(0).isAlive() == false);
 	
 }
@@ -227,7 +227,7 @@ TEST_CASE("Enemy bullet impacts player, player takes damage or is killed")
     Player player1(displaySize, 400, NULL, NULL);
     player1.setPositionOfPlayer(500,500);
     CHECK(player1.getHealth() == 100);
-    aEnemyManager.checkEnemyBulletsToPlayer(player1);
+    aEnemyManager.checkEnemyCollisions(player1);
     CHECK(player1.getHealth() == 99);    
     
 }
@@ -235,16 +235,16 @@ TEST_CASE("Enemy bullet impacts player, player takes damage or is killed")
 TEST_CASE("Enemy colliding with player will damage the player")
 {    
     std::cout<<"Test 20"<<"\n";
-	PlayerManager playerManager1(displaySize, 0);	    
-    playerManager1.setPlayerPosition(500,500);    
+	Player player1(displaySize,400, NULL, NULL);
+	player1.setPositionOfPlayer(500,500);
 	Enemy enemy1(displaySize,NULL,NULL, EnemyType::SCOUT);
 	enemy1.setRotation(0);
     enemy1.setEnemyPosition(500,500);
-	std::vector <Enemy> curEnemies;
-	curEnemies.push_back(enemy1);
-    CHECK(playerManager1.getPlayerHealth() == 100);
-    playerManager1.checkEnemyPositionToPlayer(curEnemies);
-    CHECK(playerManager1.getPlayerHealth() == 99); 
+	EnemyManager enemyManager1;
+	enemyManager1.addEnemyToVector(enemy1);
+	CHECK(player1.getHealth() == 100);
+	enemyManager1.checkEnemyCollisions(player1);
+	CHECK(player1.getHealth() == 99);
 }
 
 //Level Tests
