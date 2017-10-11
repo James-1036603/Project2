@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=JamesLaptop
-Date                   :=10/10/2017
+Date                   :=11/10/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -63,7 +63,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/Bullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/BulletManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Draw.cpp$(ObjectSuffix) $(IntermediateDirectory)/Enemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Engine.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameMusic.cpp$(ObjectSuffix) $(IntermediateDirectory)/Level.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/Player.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerManager.cpp$(ObjectSuffix) $(IntermediateDirectory)/Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerMovement.cpp$(ObjectSuffix) $(IntermediateDirectory)/Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Collisions.cpp$(ObjectSuffix) 
 
 
 
@@ -213,6 +213,14 @@ $(IntermediateDirectory)/Input.cpp$(DependSuffix): Input.cpp
 
 $(IntermediateDirectory)/Input.cpp$(PreprocessSuffix): Input.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Input.cpp$(PreprocessSuffix) Input.cpp
+
+$(IntermediateDirectory)/Collisions.cpp$(ObjectSuffix): Collisions.cpp $(IntermediateDirectory)/Collisions.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/JamesLaptop/Documents/Default/Game_Project/Collisions.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Collisions.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Collisions.cpp$(DependSuffix): Collisions.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Collisions.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Collisions.cpp$(DependSuffix) -MM Collisions.cpp
+
+$(IntermediateDirectory)/Collisions.cpp$(PreprocessSuffix): Collisions.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Collisions.cpp$(PreprocessSuffix) Collisions.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

@@ -1,7 +1,7 @@
 #ifndef PLAYERMANAGER_H
 #define PLAYERMANAGER_H
 #include "Player.h"
-#include "Enemy.h"
+#include "Collisions.h"
 #include <vector>
 #include <SFML/System.hpp>
 #include <iostream>
@@ -21,8 +21,7 @@ public:
     PlayerManager(const sf::Vector2f& windowSize, const float& radius);
     virtual ~PlayerManager();
     void updatePlayer(const float& elapsedTime);//Update the player
-    void checkPlayerBulletsToEnemy(std::vector<Enemy>& curEnemies);//Check if the player is shoots an enemy
-    void checkEnemyPositionToPlayer(const std::vector<Enemy>& curEnemies);//Check if an enemy collides with the player
+	void checkPlayerCollisionss(std::vector<Enemy>& curEnemies);    
     void playerShoot(float& elapsedTime);
     void drawPlayerToWindow(sf::RenderWindow* currentWindow);
     void drawPlayerBullets(sf::RenderWindow* currentWindow);
@@ -54,6 +53,7 @@ private:
     sf::Text text;
 	PlayerMovement _playerMover;
 	BulletManager _playerBulletMananger;
+	Collisions _collisionDetector;
 	
     void SetTextAndFont();
 

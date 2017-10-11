@@ -179,11 +179,11 @@ void Enemy::updateBullets(const float& elapsedTime)
 
 void Enemy::drawBullets(sf::RenderWindow* currentWindow)
 {
-    for(auto currentBullet : _enemyBullets)  if(currentBullet.bulletIsAlive())  currentWindow->draw(currentBullet.getSprite());
+    for(auto currentBullet : _enemyBullets)  if(currentBullet.bulletIsAlive()) currentWindow->draw(currentBullet.getSprite());
 
 }
 
-std::vector<Bullet> Enemy::getEnemyBullets() const
+std::vector<Bullet> Enemy::getEnemyBullets()
 {
     return _enemyBullets;
 }
@@ -201,4 +201,8 @@ bool Enemy::isAlive() const
 EnemyType Enemy::typeOfEnemy()
 {
     return _typeOfEnemy;
+}
+void Enemy::setBulletInactiveAtPosition(int index)
+{
+	_enemyBullets[index].setInActive();
 }

@@ -68,7 +68,7 @@ sf::Sprite Bullet::getSprite()
 
 void Bullet::setInActive()
 {
-    _isAlive = false;
+    _isAlive = false;	
 }
 
 int Bullet::getBulletDamage()

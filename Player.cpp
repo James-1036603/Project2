@@ -3,7 +3,7 @@
 Player::Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan, PlayerMovement* playerMover)
 {
     //ctor
-    _speed = 200;/
+    _speed = 200;
     _playerLives = 100;
     if(!_objTexture.loadFromFile("PlayerCharacterSmall.png")) throw player_FileNotFound();
     _objSprite.setTexture(_objTexture);//set object texture
@@ -86,7 +86,7 @@ void Player::updateBullets(const float& elapsedTime)
     _playerBullets =  _playerBulletManager.deleteInactiveBullets(&_playerBullets);
 }
 
-void Player::getShot(int bulletDamage)/
+void Player::getShot(int bulletDamage)
 {
     _playerLives -= bulletDamage;
 }
@@ -108,4 +108,9 @@ void Player::drawBullets(sf::RenderWindow* currentWindow)
 {
     for(auto currentBullet : _playerBullets)
         if(currentBullet.bulletIsAlive())currentWindow->draw(currentBullet.getSprite());//Draw the bullet to the screen, but only if it is active
+}
+
+void Player::setBulletInactiveAtPosition(int index)
+{
+	_playerBullets[index].setInActive();
 }

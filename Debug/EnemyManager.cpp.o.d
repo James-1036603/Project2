@@ -63,8 +63,8 @@ Debug/EnemyManager.cpp.o: EnemyManager.cpp EnemyManager.h \
  C:\SFML\include/SFML/Graphics/RenderWindow.hpp \
  C:\SFML\include/SFML/Graphics/Shader.hpp \
  C:\SFML\include/SFML/Graphics/Sprite.hpp \
- C:\SFML\include/SFML/Graphics/Text.hpp BulletManager.h Player.h \
- PlayerMovement.h
+ C:\SFML\include/SFML/Graphics/Text.hpp BulletManager.h Collisions.h \
+ Player.h PlayerMovement.h
 
 EnemyManager.h:
 
@@ -215,6 +215,8 @@ C:\SFML\include/SFML/Graphics/Sprite.hpp:
 C:\SFML\include/SFML/Graphics/Text.hpp:
 
 BulletManager.h:
+
+Collisions.h:
 
 Player.h:
 

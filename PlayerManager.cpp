@@ -55,36 +55,9 @@ bool PlayerManager::playerIsAlive() const
     return _curPlayer.isAlive();
 }
 
-void PlayerManager::checkPlayerBulletsToEnemy(std::vector<Enemy>& curEnemies)//This is not a good method. What if bullet was implemented other to a vector? plus you reveal that enemy has a vector of bullets
+void PlayerManager::checkPlayerCollisionss(std::vector<Enemy>& curEnemies)
 {
-    for(auto i = 0u; i != curEnemies.size(); i++)
-    {
-        for(auto j = 0u; j != _curPlayer.getPlayerBullets().size(); j++)
-        {
-
-            if(curEnemies.at(i).getSprite().getGlobalBounds().contains(_curPlayer.getPlayerBullets().at(j).getBulletPos()))
-            {
-                _curPlayer._playerBullets[j].setInActive();//Set the player bullet to inactive once it has hit an enemy
-                curEnemies.at(i).getShot();//Enemy was shot	
-            } 
-
-        }
-    }
-    //Note, the bullets are not being set inactive yet, thus causing more damage than once to the player. This is likely due to the fact that the returned vectors are CONSTANT, thus no changes to the bullet can be made
-}
-
-void PlayerManager::checkEnemyPositionToPlayer(const std::vector<Enemy>& curEnemies)
-{
-    for(auto curEnemy : curEnemies)
-    {
-        if(curEnemy.getSprite().getGlobalBounds().contains(_curPlayer.getPlayerPos()))
-        {
-			if(curEnemy.typeOfEnemy() == EnemyType::TANK) _curPlayer.getShot(10);//Tanks do substantial damage to player
-			else _curPlayer.getShot(1);            
-        }
-    }
-
-
+	_collisionDetector.checkPlayerCollisions(curEnemies, _curPlayer);
 }
 
 Player& PlayerManager::theCurrentPlayer()

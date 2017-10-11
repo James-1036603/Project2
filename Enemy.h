@@ -32,8 +32,9 @@ public:
     EnemyType typeOfEnemy();//Return the type of enemy for damage calculation
 
     void update(const float& elapsedTime);//Called once per frame
-    std::vector<Bullet> getEnemyBullets() const;
+    std::vector<Bullet> getEnemyBullets();
     void drawBullets(sf::RenderWindow* currentWindow);
+	void setBulletInactiveAtPosition(int index);
 
 
 

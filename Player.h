@@ -33,14 +33,15 @@ public:
     void stopCounterClockwise();//Stop moving left
     void stopClockwise();//Stop moving right
 
-
-
     void update(const float& elapsedTime);//Called once per frame
     std::vector<Bullet> getPlayerBullets();
     void drawBullets(sf::RenderWindow* currentWindow);
+	void setBulletInactiveAtPosition(int index);
 
     void Shoot(float& dtAsSeconds);//Player shoots a bullet
     void getShot(int bulletDamage);
+	
+	
 
     sf::Vector2f getPlayerPos() const
     {

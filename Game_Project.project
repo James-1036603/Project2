@@ -23,6 +23,7 @@
     <File Name="Update.cpp"/>
     <File Name="PlayerMovement.cpp"/>
     <File Name="Input.cpp"/>
+    <File Name="Collisions.cpp"/>
   </VirtualDirectory>
   <VirtualDirectory Name="Headers">
     <File Name="Bullet.h"/>
@@ -36,6 +37,7 @@
     <File Name="Player.h"/>
     <File Name="PlayerManager.h"/>
     <File Name="PlayerMovement.h"/>
+    <File Name="Collisions.h"/>
   </VirtualDirectory>
   <VirtualDirectory Name="TestCode">
     <File Name="GameTests.cpp" ExcludeProjConfig="Debug"/>

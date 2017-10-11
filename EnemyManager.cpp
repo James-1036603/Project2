@@ -15,7 +15,7 @@ void EnemyManager::spawnEnemies(int& currentLevel)
 {
     _curEnemies.clear();
     sf::Vector2f displaySize(1920,1080);
-  for(auto i = 0; i<10-currentLevel; i++)
+	for(auto i = 0; i<10-currentLevel; i++)
     {
         Enemy aNewEnemy(displaySize, &_enemyBulletManager,  &_enemyMover,EnemyType::SCOUT);
         _curEnemies.push_back(aNewEnemy);
@@ -68,20 +68,11 @@ bool EnemyManager::allEnemiesKilled()
     else return false;
 }
 
-void EnemyManager::checkEnemyBulletsToPlayer(Player& thePlayer)
+void EnemyManager::checkEnemyCollisions(Player& currentPlayer)
 {
-    for(auto i = 0u; i != _curEnemies.size(); i++)
-    {
-          for(auto j = 0u; j != _curEnemies[i]._enemyBullets.size(); j++)
-          {
-              if(thePlayer.getSprite().getGlobalBounds().contains(_curEnemies[i]._enemyBullets[j].getBulletPos()))
-                 {
-                     thePlayer.getShot(_curEnemies[i]._enemyBullets[j].getBulletDamage());
-                     _curEnemies[i]._enemyBullets[j].setInActive();                     
-                 }
-          }
-    }
+	_collisionDetector.checkEnemyCollisions(_curEnemies, currentPlayer);
 }
+
 
 void EnemyManager::randomEvents(const float& elapsedTime)
 {
@@ -103,6 +94,6 @@ void EnemyManager::spawnEnemyTank(const float& elapsedTime)//Generate a tanak ba
 
 void EnemyManager::generateRandomTime()
 {
-	_generatedClockTime = rand()%5+1;//Generate a number between 1 and 5
-	_generatedClockTime = _generatedClockTime*5;//Multiply by 20 to give larger increments	
+	_generatedClockTime = rand()%5+1;
+	_generatedClockTime = _generatedClockTime*5;
 }
