@@ -31,34 +31,30 @@ sf::Sprite Player::getSprite()
     return _objSprite;
 }
 
-void Player::moveClockwise()
+void Player::moveRight()
 {
     _rightPressed = true;
 }
 
-void Player::moveCounterClockwise()
+void Player::moveLeft()
 {
     _leftPressed = true;
 }
 
-void Player::stopClockwise()
+void Player::stopRight()
 {
     _rightPressed = false;
 }
 
-void Player::stopCounterClockwise()
+void Player::stopLeft()
 {
     _leftPressed = false;
 }
 
-void Player::Shoot(float& elapsedTime)
+void Player::Shoot()
 {
-    if(elapsedTime>0.01)
-    {        
-        Bullet bulletShot(_curPosition,  _curAngle, Owner::PLAYER);
-        _playerBullets.push_back(bulletShot);
-    }
-
+		Bullet bulletShot(_curPosition,  _curAngle, Owner::PLAYER);
+        _playerBullets.push_back(bulletShot);    
 }
 
 void Player::update(const float& elapsedTime)

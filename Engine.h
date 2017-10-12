@@ -18,8 +18,20 @@ class FileNotFound {};
 class Engine
 {
 public:
+/**
+ * @brief Engine Constructor
+ */
+	
     Engine();
+/**
+ * @brief Engine Destructor
+ */
+	
     virtual ~Engine();
+/**
+ * @brief Start the current engine, ie start the game
+ */
+	
     void start();
 
 private:

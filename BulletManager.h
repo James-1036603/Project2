@@ -12,8 +12,21 @@
 class BulletManager
 {
 public:
+/**
+ * @brief BulletManager Constructor
+ */
+
     BulletManager();
+/**
+ * @brief Bullet Manager Destructor
+ */
+	
     virtual ~BulletManager();
+/**
+ * @brief Remove any bullets from the vector which are marked as inactive. Returns a vector of bullets with the active bullets
+ * @param bulletVector The bullet vector which needs to be checked
+ */
+	
     std::vector<Bullet> deleteInactiveBullets(std::vector<Bullet>* bulletVector);
 
 private:

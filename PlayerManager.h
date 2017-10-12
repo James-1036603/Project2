@@ -4,7 +4,6 @@
 #include "Collisions.h"
 #include <vector>
 #include <SFML/System.hpp>
-#include <iostream>
 #include <sstream>
 
 enum class MoveDirection {RIGHT, LEFT, STOP_RIGHT, STOP_LEFT};
@@ -18,16 +17,57 @@ enum class MoveDirection {RIGHT, LEFT, STOP_RIGHT, STOP_LEFT};
 class PlayerManager
 {
 public:
+/**
+ * @brief Player Manager Constructor
+ * @param windowSize
+ * @param radius
+ */
+
     PlayerManager(const sf::Vector2f& windowSize, const float& radius);
+    /**
+     * @brief Player Manager Destructor
+     */
     virtual ~PlayerManager();
-    void updatePlayer(const float& elapsedTime);//Update the player
+    /**
+     * @brief Update the player over a certain amount of time
+     * @param elapsedTime
+     */
+    void updatePlayer(const float& elapsedTime);
+/**
+ * @brief Check the Player's collisions to the enemies
+ * @param curEnemies
+ */
 	void checkPlayerCollisionss(std::vector<Enemy>& curEnemies);    
-    void playerShoot(float& elapsedTime);
+    /**
+     * @brief Allow the player to shoot
+     * @param elapsedTime
+     */
+    void playerShoot();
+    /**
+     * @brief Draw the player to the provided window
+     * @param currentWindow
+     */
     void drawPlayerToWindow(sf::RenderWindow* currentWindow);
+    /**
+     * @brief Draw the player's bullets to the provided window
+     * @param currentWindow
+     */
     void drawPlayerBullets(sf::RenderWindow* currentWindow);
+    /**
+     * @brief Evaluate that the player is alive or not
+     */
     bool playerIsAlive() const;
-    void movePlayer(MoveDirection dirToMove);//Move the player
-    Player& theCurrentPlayer();//Return the active player. needed for collision checking in enemy
+    /**
+     * @brief Move the player in a given direction. Left, Right or Stop
+     * @param dirToMove
+     */
+    void movePlayer(MoveDirection dirToMove);
+    /**
+     * @brief Return a reference to the current player
+     */
+    Player& theCurrentPlayer();
+	
+	
 	
 	void setPlayerPosition(float x, float y)//ONLY FOR TESTS
 	{

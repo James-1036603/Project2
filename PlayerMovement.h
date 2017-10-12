@@ -11,9 +11,32 @@
 class PlayerMovement
 {
 public:
+/**
+ * @brief Player Movement Constructor
+ */
+
 	PlayerMovement();
+/**
+ * @brief Player Movement Destructor
+ */
 	virtual ~PlayerMovement();
+/**
+ * @brief Move the player clockwise
+ * @param curPos
+ * @param speed
+ * @param elapsedTime
+ * @param circleRadius
+ * @param rotation
+ */
 	void MovePlayerClockwise(sf::Vector2f& curPos, const int& speed, const float& elapsedTime, const float& circleRadius, float& rotation);
+/**
+ * @brief Move the player counter clockwise
+ * @param curPos
+ * @param speed
+ * @param elapsedTime
+ * @param circleRadius
+ * @param rotation
+ */
 	void MovePlayerCounterClockwise(sf::Vector2f& curPos, const int& speed, const float& elapsedTime, const float& circleRadius, float& rotation);
 private:
 };

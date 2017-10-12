@@ -21,19 +21,63 @@ enum class EnemyType {SCOUT,SOLDIER,ROGUE,TANK}; //Three enemy types
 class Enemy
 {
 public:
-    Enemy(EnemyType enemyType);
+    
+/**
+ * @brief Constructor for enemy
+ * @param displaySize The size of the current display
+ * @param BulMan Bullet manager, to remove any inactive bullets
+ * @param EnemyMover The movement of the enemy
+ * @param enemyType The type of enemy. Either SCOUT, SOLDIER, ROGUE, or TANK
+ */
+	
     Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMovement* EnemyMover, EnemyType enemyType);
+/**
+ * @brief Enemy Destructor
+ */
+	
     virtual ~Enemy();
-    sf::Sprite getSprite() const;//Get a copy of the current sprite
-
+/**
+ * @brief Returns the sprite of the current enemy.
+ */
+	
+    sf::Sprite getSprite() const;
+/**
+ * @brief Allow the enemy to shoot
+ */
+	
     void Shoot();
+/**
+ * @brief Allow the current enemy to take damage
+ */
+	
     void getShot();
-    bool isAlive() const;//Check if the enemy is alive
-    EnemyType typeOfEnemy();//Return the type of enemy for damage calculation
-
+    /**
+     * @brief Evaluate whether the enemy is alive or not
+     */
+    bool isAlive() const;
+    /**
+     * @brief Return the type of enemy
+     */
+    EnemyType typeOfEnemy();
+    /**
+     * @brief Update the enemy based on the amount of passed time.
+     * @param elapsedTime How much time has passed
+     */
     void update(const float& elapsedTime);//Called once per frame
+    /**
+     * @brief Return the active enemy bullets
+     */
     std::vector<Bullet> getEnemyBullets();
+/**
+ * @brief Draw the enemy's bullets to the provided window
+ * @param currentWindow The active window to draw to
+ */
+	
     void drawBullets(sf::RenderWindow* currentWindow);
+/**
+ * @brief Set the bullet to inactive at the provided index
+ * @param index The index of the bullet to be marked as inactive
+ */
 	void setBulletInactiveAtPosition(int index);
 
 
@@ -73,6 +117,7 @@ public:
     }
 
 private:
+	Enemy(EnemyType enemyType);//Constructor used by static enemies, not for use of playable enemies
     sf::Vector2f _curPosition;//Where is the current object
     sf::Sprite _objSprite;//Sprite for the object
     sf::Texture _objTexture;//Texture for the object . Static because it is slow to load the texture each time from file!!

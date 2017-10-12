@@ -9,13 +9,10 @@
 #include "PlayerMovement.h"
 #include <cmath>
 
-#include <iostream>
-
 class player_FileNotFound {};
 /**
  * @class Player
  * @author James Phillips (1036603)
- * @date 10/10/2017
  * @file Player.h
  * @brief Player class has the needed member functions for the player, such as their position, sprite, speed, rotation and their bullets active on the screen. The player's movement is determined by the current input. THe player is able to shoot as well
  */
@@ -23,22 +20,75 @@ class player_FileNotFound {};
 class Player
 {
 public:
+/**
+ * @brief Player Constructor
+ * @param displaySize
+ * @param radius
+ * @param BulMan
+ * @param playerMover
+ */
+	
     Player(const sf::Vector2f& displaySize, const float& radius, BulletManager* BulMan, PlayerMovement* playerMover);
+/**
+ * @brief Player Destructor
+ */
+	
     virtual ~Player();
-    sf::Sprite getSprite();//Get a copy of the current sprite
-
-
-    void moveCounterClockwise();//Move the object left
-    void moveClockwise();//Move the object right
-    void stopCounterClockwise();//Stop moving left
-    void stopClockwise();//Stop moving right
-
-    void update(const float& elapsedTime);//Called once per frame
+/**
+ * @brief Return the player sprite
+ */
+	
+    sf::Sprite getSprite();
+/**
+ * @brief Move the player Right
+ */
+	
+    void moveRight();
+/**
+ * @brief Move the player Left
+ */
+	
+    void moveLeft();
+/**
+ * @brief Stop moving the player Right
+ */
+	
+    void stopRight();
+/**
+ * @brief Stop moving the player Left
+ */
+	
+    void stopLeft();
+    /**
+     * @brief Update the player after a certain time
+     * @param elapsedTime
+     */
+    void update(const float& elapsedTime);
+    /**
+     * @brief Return the Player's active bullets
+     */
     std::vector<Bullet> getPlayerBullets();
+/**
+ * @brief Draw the Player's bullets to the provided window
+ * @param currentWindow
+ */
+	
     void drawBullets(sf::RenderWindow* currentWindow);
+/**
+ * @brief Set a specific bullet to inactive
+ * @param index
+ */
+	
 	void setBulletInactiveAtPosition(int index);
-
-    void Shoot(float& dtAsSeconds);//Player shoots a bullet
+    /**
+     * @brief Allow the player to shoot
+     * @param dtAsSeconds
+     */
+    void Shoot();
+    /**
+     * @brief The player takes damage
+     * @param bulletDamage
+     */
     void getShot(int bulletDamage);
 	
 	

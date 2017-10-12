@@ -11,7 +11,7 @@ void Engine::input(float& dtAsSeconds)
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::X)) _window.close();//Quit the game
 
             if(sf::Keyboard::isKeyPressed(sf::Keyboard::M)) _gameMusic.toggleMusic();//Pause the music if M is pressed
-            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) _thePlayer.playerShoot(dtAsSeconds);
+            if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) _thePlayer.playerShoot();
         default:
             break;
         }

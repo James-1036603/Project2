@@ -17,16 +17,53 @@
 class EnemyManager
 {
 public:
+    /**
+     * @brief Constructor for Enemy Manager
+     */
     EnemyManager();
+    /**
+     * @brief Destructor for Enemy Manager
+     */
     virtual ~EnemyManager();
+    /**
+     * @brief Spawn enemies based on the current level
+     * @param currentLevel 
+     */
     void spawnEnemies(int& currentLevel);//Spawn new enemies in a level
+    /**
+     * @brief Update the enemies based on the elapsed time
+     * @param elapsedTime
+     */
     void updateEnemies(const float& elapsedTime);
-    void drawEnemies(sf::RenderWindow* _curWindow);//Draw enemies to the current window
+    /**
+     * @brief Draw the enemies to the provided window
+     * @param _curWindow
+     */
+    void drawEnemies(sf::RenderWindow* _curWindow);
+    /**
+     * @brief Draw the enemy bullets to the provided window
+     * @param _curWindow
+     */
     void drawEnemyBullets(sf::RenderWindow* _curWindow);//Draw the enemy bullets to the window
+	/**
+	 * @brief Check the needed Enemy collisions to the player
+	 * @param currentPlayer
+	 */
 	void checkEnemyCollisions(Player& currentPlayer);
-    bool allEnemiesKilled();//If all the enemies are killed,
-    std::vector<Enemy>& theEnemies();//Defined as a reference for correct passing to other functions
-	void randomEvents(const float& elapsedTime);//Any random any events which need to take place will fall under here
+    /**
+     * @brief Evaluate if all the enemies are killed or not
+     */
+    bool allEnemiesKilled();
+    /**
+     * @brief The current active enemies
+     */
+    std::vector<Enemy>& theEnemies();
+/**
+ * @brief Any random events which need to take place, based on the passed time
+ * @param elapsedTime
+ */
+	
+	void randomEvents(const float& elapsedTime);
     
     
     void setFirstEnemyPosition(float x, float y)//ONLY FOR TESTS

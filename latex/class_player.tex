@@ -1,0 +1,228 @@
+\hypertarget{class_player}{}\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player_a73caf03d79f04f53fe9d799bb5123c37}{Player} (const sf\+::\+Vector2f \&display\+Size, const float \&radius, \hyperlink{class_bullet_manager}{Bullet\+Manager} $\ast$Bul\+Man, \hyperlink{class_player_movement}{Player\+Movement} $\ast$player\+Mover)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_player}{Player} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}} 
+virtual \hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_player}{Player} Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_aabef659f696be314cdb705a1ce77ec2a}\label{class_player_aabef659f696be314cdb705a1ce77ec2a}} 
+sf\+::\+Sprite \hyperlink{class_player_aabef659f696be314cdb705a1ce77ec2a}{get\+Sprite} ()
+\begin{DoxyCompactList}\small\item\em Return the player sprite. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a6a2b68bc4b21d4c4a79a23b498896ec2}\label{class_player_a6a2b68bc4b21d4c4a79a23b498896ec2}} 
+void \hyperlink{class_player_a6a2b68bc4b21d4c4a79a23b498896ec2}{move\+Right} ()
+\begin{DoxyCompactList}\small\item\em Move the player Right. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_ae3bbcf1159bdc059bff1c2513f2505f7}\label{class_player_ae3bbcf1159bdc059bff1c2513f2505f7}} 
+void \hyperlink{class_player_ae3bbcf1159bdc059bff1c2513f2505f7}{move\+Left} ()
+\begin{DoxyCompactList}\small\item\em Move the player Left. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_afebb6b7ca7210e7b1aa2c9ee4ff75b0e}\label{class_player_afebb6b7ca7210e7b1aa2c9ee4ff75b0e}} 
+void \hyperlink{class_player_afebb6b7ca7210e7b1aa2c9ee4ff75b0e}{stop\+Right} ()
+\begin{DoxyCompactList}\small\item\em Stop moving the player Right. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_aa150f941486096bb63cc67eabec9046c}\label{class_player_aa150f941486096bb63cc67eabec9046c}} 
+void \hyperlink{class_player_aa150f941486096bb63cc67eabec9046c}{stop\+Left} ()
+\begin{DoxyCompactList}\small\item\em Stop moving the player Left. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_aaccee569406f6180bd5028d058b8579f}{update} (const float \&elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em Update the player after a certain time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_a39c13745f2cd7f6c17be23965b08dfac}\label{class_player_a39c13745f2cd7f6c17be23965b08dfac}} 
+std\+::vector$<$ \hyperlink{class_bullet}{Bullet} $>$ \hyperlink{class_player_a39c13745f2cd7f6c17be23965b08dfac}{get\+Player\+Bullets} ()
+\begin{DoxyCompactList}\small\item\em Return the \hyperlink{class_player}{Player}\textquotesingle{}s active bullets. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_aa75798d0eaf3066acc57f6cb3158f0bb}{draw\+Bullets} (sf\+::\+Render\+Window $\ast$current\+Window)
+\begin{DoxyCompactList}\small\item\em Draw the \hyperlink{class_player}{Player}\textquotesingle{}s bullets to the provided window. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a4a72b5ba696e55375ee614ef89a87ade}{set\+Bullet\+Inactive\+At\+Position} (int index)
+\begin{DoxyCompactList}\small\item\em Set a specific bullet to inactive. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a2105394431517a41d38140cb65982331}{Shoot} ()
+\begin{DoxyCompactList}\small\item\em Allow the player to shoot. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a13e6164daf86c00800992d756339fe51}{get\+Shot} (int bullet\+Damage)
+\begin{DoxyCompactList}\small\item\em The player takes damage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_player_aab8a89629ae8acaf8c1dc4b2e9f052c6}\label{class_player_aab8a89629ae8acaf8c1dc4b2e9f052c6}} 
+sf\+::\+Vector2f {\bfseries get\+Player\+Pos} () const
+\item 
+\mbox{\Hypertarget{class_player_a515920b9f3992375f179ca17ee750dc1}\label{class_player_a515920b9f3992375f179ca17ee750dc1}} 
+float {\bfseries get\+Speed} () const
+\item 
+\mbox{\Hypertarget{class_player_a3bf9c265d1be1284501b8c03ca5bdfb0}\label{class_player_a3bf9c265d1be1284501b8c03ca5bdfb0}} 
+void {\bfseries set\+Position\+Of\+Bullet} (int index\+Of\+Bullet, float x, float y)
+\item 
+\mbox{\Hypertarget{class_player_abeaa59ae6cd6ca74f269f4af28ef8f82}\label{class_player_abeaa59ae6cd6ca74f269f4af28ef8f82}} 
+void {\bfseries set\+Position\+Of\+Player} (float x, float y)
+\item 
+\mbox{\Hypertarget{class_player_a1f61cee0029ef492d13e289f34e7764b}\label{class_player_a1f61cee0029ef492d13e289f34e7764b}} 
+unsigned int {\bfseries get\+Health} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_a3966588630ad0a127c9250f985865392}\label{class_player_a3966588630ad0a127c9250f985865392}} 
+bool {\bfseries is\+Alive} () const
+\item 
+\mbox{\Hypertarget{class_player_a66534b1473c5f9288ae8cd7001738ff9}\label{class_player_a66534b1473c5f9288ae8cd7001738ff9}} 
+void {\bfseries update\+Bullets} (const float \&elapsed\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_a3eee43afb7a372baca390749259949f8}\label{class_player_a3eee43afb7a372baca390749259949f8}} 
+sf\+::\+Vector2f {\bfseries \+\_\+cur\+Position}
+\item 
+\mbox{\Hypertarget{class_player_a6b0a2f6db37865415e5855868d469a15}\label{class_player_a6b0a2f6db37865415e5855868d469a15}} 
+sf\+::\+Sprite {\bfseries \+\_\+obj\+Sprite}
+\item 
+\mbox{\Hypertarget{class_player_a82b80133ff2c62d50718dca10b004be7}\label{class_player_a82b80133ff2c62d50718dca10b004be7}} 
+sf\+::\+Texture {\bfseries \+\_\+obj\+Texture}
+\item 
+\mbox{\Hypertarget{class_player_a2058005a9cb8d0ee1930178ab5965ac1}\label{class_player_a2058005a9cb8d0ee1930178ab5965ac1}} 
+float {\bfseries \+\_\+speed}
+\item 
+\mbox{\Hypertarget{class_player_a3ac2d7fa51966139efd25bc1b8552208}\label{class_player_a3ac2d7fa51966139efd25bc1b8552208}} 
+unsigned int {\bfseries \+\_\+player\+Lives}
+\item 
+\mbox{\Hypertarget{class_player_a8aff890e78e0f13a19d412e1a1aa0c19}\label{class_player_a8aff890e78e0f13a19d412e1a1aa0c19}} 
+bool {\bfseries \+\_\+right\+Pressed}
+\item 
+\mbox{\Hypertarget{class_player_a968f709b83915a6805d2f194b753e5a4}\label{class_player_a968f709b83915a6805d2f194b753e5a4}} 
+bool {\bfseries \+\_\+left\+Pressed}
+\item 
+\mbox{\Hypertarget{class_player_abfba97cad280b5f31cb10d5e3df35be3}\label{class_player_abfba97cad280b5f31cb10d5e3df35be3}} 
+float {\bfseries \+\_\+circle\+Radius}
+\item 
+\mbox{\Hypertarget{class_player_abc54196e9192b4e91542f8edbafecf4b}\label{class_player_abc54196e9192b4e91542f8edbafecf4b}} 
+float {\bfseries \+\_\+cur\+Angle}
+\item 
+\mbox{\Hypertarget{class_player_ae56c992348833fc0cf154e55b2b348f8}\label{class_player_ae56c992348833fc0cf154e55b2b348f8}} 
+\hyperlink{class_player_movement}{Player\+Movement} $\ast$ {\bfseries \+\_\+player\+Mover}
+\item 
+\mbox{\Hypertarget{class_player_ab261cdf1236f7e794f9b405409315419}\label{class_player_ab261cdf1236f7e794f9b405409315419}} 
+std\+::vector$<$ \hyperlink{class_bullet}{Bullet} $>$ {\bfseries \+\_\+player\+Bullets}
+\item 
+\mbox{\Hypertarget{class_player_a89d5ba57b7de854e218b0917bfa5029d}\label{class_player_a89d5ba57b7de854e218b0917bfa5029d}} 
+\hyperlink{class_bullet_manager}{Bullet\+Manager} {\bfseries \+\_\+player\+Bullet\+Manager}
+\item 
+\mbox{\Hypertarget{class_player_a2782ada46f92cfdd3d68bcacd5253333}\label{class_player_a2782ada46f92cfdd3d68bcacd5253333}} 
+sf\+::\+Vector2f {\bfseries \+\_\+display\+Size}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_player_af4dd6083207676104071a0b097ff2bff}\label{class_player_af4dd6083207676104071a0b097ff2bff}} 
+class {\bfseries Player\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Phillips (1036603) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_a73caf03d79f04f53fe9d799bb5123c37}\label{class_player_a73caf03d79f04f53fe9d799bb5123c37}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{display\+Size,  }\item[{const float \&}]{radius,  }\item[{\hyperlink{class_bullet_manager}{Bullet\+Manager} $\ast$}]{Bul\+Man,  }\item[{\hyperlink{class_player_movement}{Player\+Movement} $\ast$}]{player\+Mover }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_player}{Player} Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Size} & \\
+\hline
+{\em radius} & \\
+\hline
+{\em Bul\+Man} & \\
+\hline
+{\em player\+Mover} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_aa75798d0eaf3066acc57f6cb3158f0bb}\label{class_player_aa75798d0eaf3066acc57f6cb3158f0bb}} 
+\index{Player@{Player}!draw\+Bullets@{draw\+Bullets}}
+\index{draw\+Bullets@{draw\+Bullets}!Player@{Player}}
+\subsubsection{\texorpdfstring{draw\+Bullets()}{drawBullets()}}
+{\footnotesize\ttfamily void Player\+::draw\+Bullets (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{current\+Window }\end{DoxyParamCaption})}
+
+
+
+Draw the \hyperlink{class_player}{Player}\textquotesingle{}s bullets to the provided window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a13e6164daf86c00800992d756339fe51}\label{class_player_a13e6164daf86c00800992d756339fe51}} 
+\index{Player@{Player}!get\+Shot@{get\+Shot}}
+\index{get\+Shot@{get\+Shot}!Player@{Player}}
+\subsubsection{\texorpdfstring{get\+Shot()}{getShot()}}
+{\footnotesize\ttfamily void Player\+::get\+Shot (\begin{DoxyParamCaption}\item[{int}]{bullet\+Damage }\end{DoxyParamCaption})}
+
+
+
+The player takes damage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bullet\+Damage} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a4a72b5ba696e55375ee614ef89a87ade}\label{class_player_a4a72b5ba696e55375ee614ef89a87ade}} 
+\index{Player@{Player}!set\+Bullet\+Inactive\+At\+Position@{set\+Bullet\+Inactive\+At\+Position}}
+\index{set\+Bullet\+Inactive\+At\+Position@{set\+Bullet\+Inactive\+At\+Position}!Player@{Player}}
+\subsubsection{\texorpdfstring{set\+Bullet\+Inactive\+At\+Position()}{setBulletInactiveAtPosition()}}
+{\footnotesize\ttfamily void Player\+::set\+Bullet\+Inactive\+At\+Position (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Set a specific bullet to inactive. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_a2105394431517a41d38140cb65982331}\label{class_player_a2105394431517a41d38140cb65982331}} 
+\index{Player@{Player}!Shoot@{Shoot}}
+\index{Shoot@{Shoot}!Player@{Player}}
+\subsubsection{\texorpdfstring{Shoot()}{Shoot()}}
+{\footnotesize\ttfamily void Player\+::\+Shoot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allow the player to shoot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dt\+As\+Seconds} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_aaccee569406f6180bd5028d058b8579f}\label{class_player_aaccee569406f6180bd5028d058b8579f}} 
+\index{Player@{Player}!update@{update}}
+\index{update@{update}!Player@{Player}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Player\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+
+
+Update the player after a certain time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_player_8h}{Player.\+h}\item 
+Player.\+cpp\end{DoxyCompactItemize}

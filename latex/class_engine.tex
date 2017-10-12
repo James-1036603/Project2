@@ -1,0 +1,81 @@
+\hypertarget{class_engine}{}\section{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}\label{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}} 
+\hyperlink{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}{Engine} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_engine}{Engine} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}\label{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}} 
+virtual \hyperlink{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}{$\sim$\+Engine} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_engine}{Engine} Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}\label{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}} 
+void \hyperlink{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}{start} ()
+\begin{DoxyCompactList}\small\item\em Start the current engine, ie start the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_engine_a19be6708b8b65c5cfd8c13305f1e3c7f}\label{class_engine_a19be6708b8b65c5cfd8c13305f1e3c7f}} 
+void {\bfseries draw\+Screen} (Screen\+Type type\+Of\+Screen)
+\item 
+\mbox{\Hypertarget{class_engine_aa59920acbc4379a9672265904bc08b98}\label{class_engine_aa59920acbc4379a9672265904bc08b98}} 
+void {\bfseries input} (float \&dt\+As\+Seconds)
+\item 
+\mbox{\Hypertarget{class_engine_af40c099ae4c70e308303ef5220ee9052}\label{class_engine_af40c099ae4c70e308303ef5220ee9052}} 
+void {\bfseries update} (float \&dt\+As\+Seconds)
+\item 
+\mbox{\Hypertarget{class_engine_a1b654dc41dfbcb5072147f33142b726e}\label{class_engine_a1b654dc41dfbcb5072147f33142b726e}} 
+void {\bfseries draw} ()
+\item 
+\mbox{\Hypertarget{class_engine_a54ab8f7be8ce000f7bd83a98d41d6b98}\label{class_engine_a54ab8f7be8ce000f7bd83a98d41d6b98}} 
+void {\bfseries progress\+Game} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_engine_afd93e6a52301e792650f99043f113cbf}\label{class_engine_afd93e6a52301e792650f99043f113cbf}} 
+sf\+::\+Render\+Window {\bfseries \+\_\+window}
+\item 
+\mbox{\Hypertarget{class_engine_a1d2219c1a87bf21a3d2bc380624aad5d}\label{class_engine_a1d2219c1a87bf21a3d2bc380624aad5d}} 
+sf\+::\+Sprite {\bfseries \+\_\+background\+Sprite}
+\item 
+\mbox{\Hypertarget{class_engine_aeb8f54a010a6f1442872692ce869166a}\label{class_engine_aeb8f54a010a6f1442872692ce869166a}} 
+sf\+::\+Texture {\bfseries \+\_\+background\+Texture}
+\item 
+\mbox{\Hypertarget{class_engine_a65c78abdcfa8ae0c4dbe04985b09eac7}\label{class_engine_a65c78abdcfa8ae0c4dbe04985b09eac7}} 
+\hyperlink{class_game_music}{Game\+Music} {\bfseries \+\_\+game\+Music}
+\item 
+\mbox{\Hypertarget{class_engine_ad9c98c3f60277c95d34d48e02082c47c}\label{class_engine_ad9c98c3f60277c95d34d48e02082c47c}} 
+\hyperlink{class_player_manager}{Player\+Manager} {\bfseries \+\_\+the\+Player}
+\item 
+\mbox{\Hypertarget{class_engine_af5dd5d02b414b2a098988c371b00ac88}\label{class_engine_af5dd5d02b414b2a098988c371b00ac88}} 
+\hyperlink{class_enemy_manager}{Enemy\+Manager} {\bfseries \+\_\+the\+Enemies}
+\item 
+\mbox{\Hypertarget{class_engine_aef39034128dc92b64d76435742ca6851}\label{class_engine_aef39034128dc92b64d76435742ca6851}} 
+\hyperlink{class_level}{Level} {\bfseries \+\_\+game\+Levels}
+\item 
+\mbox{\Hypertarget{class_engine_a75beb6a1c14b936fa666bb2de726dc12}\label{class_engine_a75beb6a1c14b936fa666bb2de726dc12}} 
+const int {\bfseries \+\_\+height} = sf\+::\+Video\+Mode\+::get\+Desktop\+Mode().height
+\item 
+\mbox{\Hypertarget{class_engine_a535dc0c572ec7af354a4b15f20bb02df}\label{class_engine_a535dc0c572ec7af354a4b15f20bb02df}} 
+const int {\bfseries \+\_\+width} = sf\+::\+Video\+Mode\+::get\+Desktop\+Mode().width
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Phillips (1036603) 
+\end{DoxyAuthor}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_engine_8h}{Engine.\+h}\item 
+Draw.\+cpp\item 
+Engine.\+cpp\item 
+Input.\+cpp\item 
+Update.\+cpp\end{DoxyCompactItemize}

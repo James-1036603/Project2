@@ -1,0 +1,221 @@
+\hypertarget{class_enemy}{}\section{Enemy Class Reference}
+\label{class_enemy}\index{Enemy@{Enemy}}
+
+
+{\ttfamily \#include $<$Enemy.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_enemy_aad76aec6e71a26cff30fd4bb1d5323d2}{Enemy} (const sf\+::\+Vector2f \&display\+Size, \hyperlink{class_bullet_manager}{Bullet\+Manager} $\ast$Bul\+Man, \hyperlink{class_enemy_movement}{Enemy\+Movement} $\ast$Enemy\+Mover, Enemy\+Type enemy\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor for enemy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_ac0eec4755e28c02688065f9657150ac3}\label{class_enemy_ac0eec4755e28c02688065f9657150ac3}} 
+virtual \hyperlink{class_enemy_ac0eec4755e28c02688065f9657150ac3}{$\sim$\+Enemy} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_enemy}{Enemy} Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a8f769acc8f473846d11eaabf504a1089}\label{class_enemy_a8f769acc8f473846d11eaabf504a1089}} 
+sf\+::\+Sprite \hyperlink{class_enemy_a8f769acc8f473846d11eaabf504a1089}{get\+Sprite} () const
+\begin{DoxyCompactList}\small\item\em Returns the sprite of the current enemy. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_ab526cfaf13910e15ca1e5e84ef230dd1}\label{class_enemy_ab526cfaf13910e15ca1e5e84ef230dd1}} 
+void \hyperlink{class_enemy_ab526cfaf13910e15ca1e5e84ef230dd1}{Shoot} ()
+\begin{DoxyCompactList}\small\item\em Allow the enemy to shoot. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a2faee7be0abbf8d473ecd6d7ee084e60}\label{class_enemy_a2faee7be0abbf8d473ecd6d7ee084e60}} 
+void \hyperlink{class_enemy_a2faee7be0abbf8d473ecd6d7ee084e60}{get\+Shot} ()
+\begin{DoxyCompactList}\small\item\em Allow the current enemy to take damage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a2801f42818600b19a7381dd2d1635af8}\label{class_enemy_a2801f42818600b19a7381dd2d1635af8}} 
+bool \hyperlink{class_enemy_a2801f42818600b19a7381dd2d1635af8}{is\+Alive} () const
+\begin{DoxyCompactList}\small\item\em Evaluate whether the enemy is alive or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a7d8b3efe6d46b3c77446fe7f2a282a19}\label{class_enemy_a7d8b3efe6d46b3c77446fe7f2a282a19}} 
+Enemy\+Type \hyperlink{class_enemy_a7d8b3efe6d46b3c77446fe7f2a282a19}{type\+Of\+Enemy} ()
+\begin{DoxyCompactList}\small\item\em Return the type of enemy. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_a541b72a32e4a0217d58d1ee573c2f23a}{update} (const float \&elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em Update the enemy based on the amount of passed time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a849b23a3f78625911b0969506426d4da}\label{class_enemy_a849b23a3f78625911b0969506426d4da}} 
+std\+::vector$<$ \hyperlink{class_bullet}{Bullet} $>$ \hyperlink{class_enemy_a849b23a3f78625911b0969506426d4da}{get\+Enemy\+Bullets} ()
+\begin{DoxyCompactList}\small\item\em Return the active enemy bullets. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_ac0e1068fc766428d69d55b18e0fce0ca}{draw\+Bullets} (sf\+::\+Render\+Window $\ast$current\+Window)
+\begin{DoxyCompactList}\small\item\em Draw the enemy\textquotesingle{}s bullets to the provided window. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_a02e1cacf8fad39bbcc28271a53637024}{set\+Bullet\+Inactive\+At\+Position} (int index)
+\begin{DoxyCompactList}\small\item\em Set the bullet to inactive at the provided index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_a9f5b6b7b70f7f3532e82eebcab2e26e8}\label{class_enemy_a9f5b6b7b70f7f3532e82eebcab2e26e8}} 
+sf\+::\+Vector2f {\bfseries get\+Enemy\+Pos} () const
+\item 
+\mbox{\Hypertarget{class_enemy_a342051a8cf9fe6e329774e37af486fca}\label{class_enemy_a342051a8cf9fe6e329774e37af486fca}} 
+float {\bfseries get\+Speed} () const
+\item 
+\mbox{\Hypertarget{class_enemy_a73e88b0f1e68650e6ea536c53a3cf920}\label{class_enemy_a73e88b0f1e68650e6ea536c53a3cf920}} 
+float {\bfseries get\+Damage\+For\+Bullet} () const
+\item 
+\mbox{\Hypertarget{class_enemy_a8ddda321d45a2fa6f35272087afe258b}\label{class_enemy_a8ddda321d45a2fa6f35272087afe258b}} 
+void {\bfseries set\+Steps\+Taken} (int num)
+\item 
+\mbox{\Hypertarget{class_enemy_ad02b7dfac0339e110f9aba837a815782}\label{class_enemy_ad02b7dfac0339e110f9aba837a815782}} 
+void {\bfseries set\+Rotation} (float num)
+\item 
+\mbox{\Hypertarget{class_enemy_a6a83e4ff9dab297dbec1644dcc9152c6}\label{class_enemy_a6a83e4ff9dab297dbec1644dcc9152c6}} 
+void {\bfseries set\+Enemy\+Position} (float x, float y)
+\item 
+\mbox{\Hypertarget{class_enemy_a49e2b8533dc258764e7a0ee5c4990eeb}\label{class_enemy_a49e2b8533dc258764e7a0ee5c4990eeb}} 
+void {\bfseries set\+Position\+Of\+Bullet} (int index\+Of\+Bullet, float x, float y)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_a57306ac8f82213245655f4c5377b1d76}\label{class_enemy_a57306ac8f82213245655f4c5377b1d76}} 
+{\bfseries Enemy} (Enemy\+Type enemy\+Type)
+\item 
+\mbox{\Hypertarget{class_enemy_a85b0344388ba2e073bd610cf88025037}\label{class_enemy_a85b0344388ba2e073bd610cf88025037}} 
+void {\bfseries update\+Bullets} (const float \&elapsed\+Time)
+\item 
+\mbox{\Hypertarget{class_enemy_ab446b847a18890227905674734f7017e}\label{class_enemy_ab446b847a18890227905674734f7017e}} 
+void {\bfseries check\+Bounds} ()
+\item 
+\mbox{\Hypertarget{class_enemy_a66c71c54afd65734ed82983882a940e6}\label{class_enemy_a66c71c54afd65734ed82983882a940e6}} 
+void {\bfseries generate\+Rotation} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_aefebf6e5fb323b9b27510c26707d0013}\label{class_enemy_aefebf6e5fb323b9b27510c26707d0013}} 
+sf\+::\+Vector2f {\bfseries \+\_\+cur\+Position}
+\item 
+\mbox{\Hypertarget{class_enemy_a299e3bbee6558cad0e9cd5dc510341a7}\label{class_enemy_a299e3bbee6558cad0e9cd5dc510341a7}} 
+sf\+::\+Sprite {\bfseries \+\_\+obj\+Sprite}
+\item 
+\mbox{\Hypertarget{class_enemy_a9bfc9a676333f13aa3bc87dbabc036b5}\label{class_enemy_a9bfc9a676333f13aa3bc87dbabc036b5}} 
+sf\+::\+Texture {\bfseries \+\_\+obj\+Texture}
+\item 
+\mbox{\Hypertarget{class_enemy_a5ad8a827b28dd24331a434d1993d5c01}\label{class_enemy_a5ad8a827b28dd24331a434d1993d5c01}} 
+float {\bfseries \+\_\+speed}
+\item 
+\mbox{\Hypertarget{class_enemy_ad00fabd2ca45f308cf3b0ead95c9bb82}\label{class_enemy_ad00fabd2ca45f308cf3b0ead95c9bb82}} 
+float {\bfseries \+\_\+rotation}
+\item 
+\mbox{\Hypertarget{class_enemy_a6c795cbaf685c2b4824601219c39192b}\label{class_enemy_a6c795cbaf685c2b4824601219c39192b}} 
+int {\bfseries \+\_\+steps\+Taken}
+\item 
+\mbox{\Hypertarget{class_enemy_af922f36da4c166ab18091c297f7faa0e}\label{class_enemy_af922f36da4c166ab18091c297f7faa0e}} 
+int {\bfseries \+\_\+damage\+For\+Bullet}
+\item 
+\mbox{\Hypertarget{class_enemy_a28e9fad6f896986b88f53895f6bba866}\label{class_enemy_a28e9fad6f896986b88f53895f6bba866}} 
+Enemy\+Type {\bfseries \+\_\+type\+Of\+Enemy}
+\item 
+\mbox{\Hypertarget{class_enemy_ab0fb1cab49fa8580cd6ba8ce3d70b32e}\label{class_enemy_ab0fb1cab49fa8580cd6ba8ce3d70b32e}} 
+std\+::vector$<$ \hyperlink{class_bullet}{Bullet} $>$ {\bfseries \+\_\+enemy\+Bullets}
+\item 
+\mbox{\Hypertarget{class_enemy_a3a0b038e3f79797e8e1ef32b1ec441e0}\label{class_enemy_a3a0b038e3f79797e8e1ef32b1ec441e0}} 
+\hyperlink{class_enemy_movement}{Enemy\+Movement} $\ast$ {\bfseries \+\_\+move\+Enemy}
+\item 
+\mbox{\Hypertarget{class_enemy_a5f5dbc651e786307c64b99b6a4219f99}\label{class_enemy_a5f5dbc651e786307c64b99b6a4219f99}} 
+\hyperlink{class_bullet_manager}{Bullet\+Manager} $\ast$ {\bfseries \+\_\+\+Bullet\+Manager}
+\item 
+\mbox{\Hypertarget{class_enemy_a27fcc8bffa13feb1097d41f4fa0532f8}\label{class_enemy_a27fcc8bffa13feb1097d41f4fa0532f8}} 
+sf\+::\+Vector2f {\bfseries \+\_\+display\+Size}
+\item 
+\mbox{\Hypertarget{class_enemy_ae9c6779193a20e666d0d1ec4091d35d9}\label{class_enemy_ae9c6779193a20e666d0d1ec4091d35d9}} 
+bool {\bfseries \+\_\+is\+Alive}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_a2fc8a9f17adf285b5e4de6313634be22}\label{class_enemy_a2fc8a9f17adf285b5e4de6313634be22}} 
+static \hyperlink{class_enemy}{Enemy} {\bfseries \+\_\+default\+Scout} \{Enemy\+Type\+::\+S\+C\+O\+UT\}
+\item 
+\mbox{\Hypertarget{class_enemy_ab8db9b04d15ed20f32c541b6a3fccecc}\label{class_enemy_ab8db9b04d15ed20f32c541b6a3fccecc}} 
+static \hyperlink{class_enemy}{Enemy} {\bfseries \+\_\+default\+Soldier} \{Enemy\+Type\+::\+S\+O\+L\+D\+I\+ER\}
+\item 
+\mbox{\Hypertarget{class_enemy_a678760b166085ad28d2568c80dde9c70}\label{class_enemy_a678760b166085ad28d2568c80dde9c70}} 
+static \hyperlink{class_enemy}{Enemy} {\bfseries \+\_\+default\+Rogue} \{Enemy\+Type\+::\+R\+O\+G\+UE\}
+\item 
+\mbox{\Hypertarget{class_enemy_a27c1284d98b8009247f0a1347811876f}\label{class_enemy_a27c1284d98b8009247f0a1347811876f}} 
+static \hyperlink{class_enemy}{Enemy} {\bfseries \+\_\+default\+Tank} \{Enemy\+Type\+::\+T\+A\+NK\}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_enemy_a316703164b8c295e193f235a3c275003}\label{class_enemy_a316703164b8c295e193f235a3c275003}} 
+class {\bfseries Enemy\+Manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Phillips (1036603) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_aad76aec6e71a26cff30fd4bb1d5323d2}\label{class_enemy_aad76aec6e71a26cff30fd4bb1d5323d2}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{display\+Size,  }\item[{\hyperlink{class_bullet_manager}{Bullet\+Manager} $\ast$}]{Bul\+Man,  }\item[{\hyperlink{class_enemy_movement}{Enemy\+Movement} $\ast$}]{Enemy\+Mover,  }\item[{Enemy\+Type}]{enemy\+Type }\end{DoxyParamCaption})}
+
+
+
+Constructor for enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Size} & The size of the current display \\
+\hline
+{\em Bul\+Man} & \hyperlink{class_bullet}{Bullet} manager, to remove any inactive bullets \\
+\hline
+{\em Enemy\+Mover} & The movement of the enemy \\
+\hline
+{\em enemy\+Type} & The type of enemy. Either S\+C\+O\+UT, S\+O\+L\+D\+I\+ER, R\+O\+G\+UE, or T\+A\+NK \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_ac0e1068fc766428d69d55b18e0fce0ca}\label{class_enemy_ac0e1068fc766428d69d55b18e0fce0ca}} 
+\index{Enemy@{Enemy}!draw\+Bullets@{draw\+Bullets}}
+\index{draw\+Bullets@{draw\+Bullets}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{draw\+Bullets()}{drawBullets()}}
+{\footnotesize\ttfamily void Enemy\+::draw\+Bullets (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{current\+Window }\end{DoxyParamCaption})}
+
+
+
+Draw the enemy\textquotesingle{}s bullets to the provided window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Window} & The active window to draw to \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_a02e1cacf8fad39bbcc28271a53637024}\label{class_enemy_a02e1cacf8fad39bbcc28271a53637024}} 
+\index{Enemy@{Enemy}!set\+Bullet\+Inactive\+At\+Position@{set\+Bullet\+Inactive\+At\+Position}}
+\index{set\+Bullet\+Inactive\+At\+Position@{set\+Bullet\+Inactive\+At\+Position}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{set\+Bullet\+Inactive\+At\+Position()}{setBulletInactiveAtPosition()}}
+{\footnotesize\ttfamily void Enemy\+::set\+Bullet\+Inactive\+At\+Position (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Set the bullet to inactive at the provided index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the bullet to be marked as inactive \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_a541b72a32e4a0217d58d1ee573c2f23a}\label{class_enemy_a541b72a32e4a0217d58d1ee573c2f23a}} 
+\index{Enemy@{Enemy}!update@{update}}
+\index{update@{update}!Enemy@{Enemy}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Enemy\+::update (\begin{DoxyParamCaption}\item[{const float \&}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+
+
+Update the enemy based on the amount of passed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+Time} & How much time has passed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_enemy_8h}{Enemy.\+h}\item 
+Enemy.\+cpp\end{DoxyCompactItemize}

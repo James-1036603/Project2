@@ -17,11 +17,11 @@ PlayerManager::~PlayerManager()
 
 void PlayerManager::movePlayer(MoveDirection dirToMove)//Move the player
 {
-    if(dirToMove == MoveDirection::RIGHT) _curPlayer.moveClockwise();
-    else if(dirToMove == MoveDirection::STOP_RIGHT) _curPlayer.stopClockwise();
+    if(dirToMove == MoveDirection::RIGHT) _curPlayer.moveRight();
+    else if(dirToMove == MoveDirection::STOP_RIGHT) _curPlayer.stopRight();
 
-    if(dirToMove == MoveDirection::LEFT) _curPlayer.moveCounterClockwise();
-    else if(dirToMove == MoveDirection::STOP_LEFT) _curPlayer.stopCounterClockwise();
+    if(dirToMove == MoveDirection::LEFT) _curPlayer.moveLeft();
+    else if(dirToMove == MoveDirection::STOP_LEFT) _curPlayer.stopLeft();
 
 }
 
@@ -34,9 +34,9 @@ void PlayerManager::updatePlayer(const float& elapsedTime)
     text.setString(livesText.str().c_str());//Set the text to lives
 }
 
-void PlayerManager::playerShoot(float& elapsedTime)
+void PlayerManager::playerShoot()
 {
-    _curPlayer.Shoot(elapsedTime);
+    _curPlayer.Shoot();
 }
 
 void PlayerManager::drawPlayerToWindow(sf::RenderWindow* currentWindow)//Draw player to window

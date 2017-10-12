@@ -75,23 +75,22 @@ TEST_CASE("Player moves along circular path")
     std::cout<<"Test 7"<<"\n";
 	PlayerMovement playerMover;
     Player player1(displaySize,400, NULL, &playerMover);
-    player1.moveClockwise();
+    player1.moveLeft();
     player1.update(1);
     CHECK(player1.getPlayerPos().x == doctest::Approx(560.0f));
     CHECK(player1.getPlayerPos().y == doctest::Approx(540.637f));
-    player1.stopClockwise();
-    player1.moveCounterClockwise();
+    player1.stopLeft();
+    player1.moveRight();
     player1.update(1);
-    CHECK(player1.getPlayerPos().x == doctest::Approx(1125.879));
-    CHECK(player1.getPlayerPos().y == doctest::Approx(176.016f));
+    CHECK(player1.getPlayerPos().x == doctest::Approx(1127.037));
+    CHECK(player1.getPlayerPos().y == doctest::Approx(903.453));
 }
 
 TEST_CASE("Player can shoot a bullet")
 {
     std::cout<<"Test 8"<<"\n";
-    Player player1(displaySize,400, NULL, NULL);
-    auto elapsedTime = 1.0f;
-    player1.Shoot(elapsedTime);
+    Player player1(displaySize,400, NULL, NULL);    
+    player1.Shoot();
     std::vector<Bullet> bulletsCur = player1.getPlayerBullets();
     CHECK(bulletsCur.size()==1);
 }
@@ -198,9 +197,8 @@ TEST_CASE("Enemy Tank moves correctly")
 TEST_CASE("Player bullet impacts enemy, enemy takes damage or is killed")
 {
 	std::cout<<"Test 18"<<"\n";	
-    auto elapsedTime = 1.0f;
 	PlayerManager playerManager1(displaySize, 0);	    
-    playerManager1.playerShoot(elapsedTime);
+    playerManager1.playerShoot();
     playerManager1.setFirstBulletPos(500,500);
 	Enemy enemy1(displaySize,NULL,NULL, EnemyType::SCOUT);
 	enemy1.setRotation(0);

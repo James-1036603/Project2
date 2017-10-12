@@ -82,8 +82,8 @@ Debug/GameTests.cpp.o: GameTests.cpp \
  C:\SFML\include/SFML/Audio/SoundFileFactory.inl \
  C:\SFML\include/SFML/Audio/SoundFileReader.hpp \
  C:\SFML\include/SFML/Audio/SoundFileWriter.hpp PlayerManager.h Player.h \
- Bullet.h BulletMovement.h BulletManager.h PlayerMovement.h Enemy.h \
- EnemyMovement.h EnemyManager.h Level.h
+ Bullet.h BulletMovement.h BulletManager.h PlayerMovement.h Collisions.h \
+ Enemy.h EnemyMovement.h EnemyManager.h Level.h
 
 C:\Users\JamesLaptop\Documents\Default\doctest/doctest.h:
 
@@ -274,6 +274,8 @@ BulletMovement.h:
 BulletManager.h:
 
 PlayerMovement.h:
+
+Collisions.h:
 
 Enemy.h:
 

@@ -1,6 +1,6 @@
 #ifndef GAMEMUSIC_H
 #define GAMEMUSIC_H
-#include<SFML/Audio.hpp>
+#include <SFML/Audio.hpp>
 
 class Music_FileNotFound {};
 /**
@@ -13,16 +13,42 @@ class Music_FileNotFound {};
 class GameMusic
 {
 public:
+/**
+ * @brief Game Music Constructor
+ */
+
     GameMusic();
+/**
+ * @brief GameMusic Destructor
+ */
+	
+	virtual ~GameMusic();
+/**
+ * @brief Load an audio file from the provided path
+ * @param AudioPath
+ */
+	
     void loadFromFile(char AudioPath[]);//Load audio file from current path
+/**
+ * @brief Start or Play the current sound file
+ */
+	
     void play();//Play the music
-    void pause();//Pause the music
+/**
+ * @brief Change the volume of the current sound file
+ * @param volume
+ */
+
     void changeVolume(int volume);//Change the current volume
+/**
+ * @brief Toggle the music between play and pause
+ */
+	
     void toggleMusic();//Switch between playing and pause
-    virtual ~GameMusic();
 
 private:
     sf::Music _gameMusic;//Music for the game
+	void pause();//Pause the music
 };
 
 #endif // GAMEMUSIC_H

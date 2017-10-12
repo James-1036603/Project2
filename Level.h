@@ -14,11 +14,34 @@ class level_FileNotFound{};
 class Level
 {
 public:
+/**
+ * @brief Level Constructor
+ */
+
     Level();
+/**
+ * @brief Level Destructor
+ */
+	
     virtual ~Level();
+/**
+ * @brief Return the current level
+ */
+	
     int currentLevel();
+    /**
+     * @brief Go to the next Level
+     */
     void nextLevel();
+    /**
+     * @brief Evaluate whether the maximum level has been reached or not
+     */
     bool maxLevel();
+/**
+ * @brief Draw the current level to the current window
+ * @param currentWindow
+ */
+	
     void drawLevelsToWindow(sf::RenderWindow* currentWindow);
 private:
     int _currentLevel;
