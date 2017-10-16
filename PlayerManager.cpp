@@ -30,7 +30,7 @@ void PlayerManager::updatePlayer(const float& elapsedTime)
 
     _curPlayer.update(elapsedTime);
     std::stringstream livesText;//Convert the lives to a string stream (int to string method)
-    livesText << _curPlayer._playerLives;
+    livesText <<"Health: "<< _curPlayer._playerLives;
     text.setString(livesText.str().c_str());//Set the text to lives
 }
 
@@ -42,12 +42,13 @@ void PlayerManager::playerShoot()
 void PlayerManager::drawPlayerToWindow(sf::RenderWindow* currentWindow)//Draw player to window
 {
     currentWindow->draw(_curPlayer.getSprite());
+	_curPlayer.drawBullets(currentWindow);
     currentWindow->draw(text);//Draw the lives to the screen
 }
 
 void PlayerManager::drawPlayerBullets(sf::RenderWindow* currentWindow)//Draw player bullets to window
 {
-    _curPlayer.drawBullets(currentWindow);
+    
 }
 
 bool PlayerManager::playerIsAlive() const
@@ -71,8 +72,8 @@ void PlayerManager::SetTextAndFont()
     //Set text characteristics
     text.setFont(font);
     text.setCharacterSize(24);
-    text.setPosition(1850,0);
+    text.setPosition(1790,0);
     text.setStyle(sf::Text::Regular);
-//    text.setFillColor(sf::Color::Red);
+    text.setColor(sf::Color::Red);
 
 }

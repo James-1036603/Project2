@@ -142,8 +142,6 @@ private:
 
     std::vector<Bullet> _playerBullets;
     BulletManager _playerBulletManager;
-	
-
 
     sf::Vector2f _displaySize;//The resolution of the display. Ensure that out player does not go out of bounds (This will not be needed for the angular movement)
     friend class PlayerManager;//Player manager can access private data members

@@ -2,6 +2,7 @@
 #define LEVEL_H
 #include <SFML/Graphics.hpp>
 #include <sstream>
+#include <string>
 
 class level_FileNotFound{};
 /**
