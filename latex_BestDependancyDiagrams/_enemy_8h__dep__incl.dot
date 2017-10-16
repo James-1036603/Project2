@@ -1,0 +1,39 @@
+digraph "Enemy.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node11 [label="Enemy.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="Collisions.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_collisions_8h.html",tooltip="A class to evaluate the needed collisions. Currently they are enemy bullets to player, player bullets to enemy, enemy position to player. "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="Collisions.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_collisions_8cpp.html"];
+  Node12 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="PlayerManager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_manager_8h.html",tooltip="The playermanager will maintain all updates and events to the player, such as player input..."];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Engine.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_engine_8h.html",tooltip="The engine is an instance of the game itself. The engine is the interface to the player, with the play window and player input. "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="Draw.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_draw_8cpp.html"];
+  Node15 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="Engine.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_engine_8cpp.html"];
+  Node15 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="GameTests.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_game_tests_8cpp.html"];
+  Node15 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="Input.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_input_8cpp.html"];
+  Node15 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node15 -> Node21 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node21 [label="Update.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_update_8cpp.html"];
+  Node14 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 -> Node22 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node22 [label="PlayerManager.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_manager_8cpp.html"];
+  Node12 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node23 [label="EnemyManager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_manager_8h.html",tooltip="Manager class for an enemy. This class will maintain the amount of enemies in the game..."];
+  Node23 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node23 -> Node24 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node24 [label="EnemyManager.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_manager_8cpp.html"];
+  Node23 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node23 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 -> Node25 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node25 [label="Enemy.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_8cpp.html"];
+  Node11 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

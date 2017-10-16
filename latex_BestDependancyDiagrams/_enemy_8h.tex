@@ -1,0 +1,79 @@
+\hypertarget{_enemy_8h}{}\section{C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\+Enemy.h File Reference}
+\label{_enemy_8h}\index{C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\+Enemy.\+h@{C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\+Enemy.\+h}}
+
+
+\hyperlink{class_enemy}{Enemy} class, which has 4 types of enemies. Each enemy has a postion, sprite, speed, rotation, bullet damage and the amount of steps taken. The enemy is moved based on its current type.  
+
+
+{\ttfamily \#include \char`\"{}Enemy\+Movement.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bullet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bullet\+Manager.\+h\char`\"{}}\newline
+Include dependency graph for Enemy.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{_enemy_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classenemy___file_not_found}{enemy\+\_\+\+File\+Not\+Found}
+\item 
+class \hyperlink{class_enemy}{Enemy}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_enemy_8h_a598a3330b3c21701223ee0ca14316eca}{PI}~3.\+14
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_enemy_8h_ac3e413a86119db4b031458c7259e268e}{Enemy\+Type} \{ \hyperlink{_enemy_8h_ac3e413a86119db4b031458c7259e268eaa171194925053f44024a82de9d20148a}{Enemy\+Type\+::\+S\+C\+O\+UT}, 
+\hyperlink{_enemy_8h_ac3e413a86119db4b031458c7259e268ea36101183b0be7bffbbe6d24ef81987a1}{Enemy\+Type\+::\+S\+O\+L\+D\+I\+ER}, 
+\hyperlink{_enemy_8h_ac3e413a86119db4b031458c7259e268ea416f104f4dfca42fccfd1d6e7534d3ad}{Enemy\+Type\+::\+R\+O\+G\+UE}, 
+\hyperlink{_enemy_8h_ac3e413a86119db4b031458c7259e268eafce7f36275b432d29255606c0f395dcd}{Enemy\+Type\+::\+T\+A\+NK}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_enemy}{Enemy} class, which has 4 types of enemies. Each enemy has a postion, sprite, speed, rotation, bullet damage and the amount of steps taken. The enemy is moved based on its current type. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_enemy_8h_a598a3330b3c21701223ee0ca14316eca}\label{_enemy_8h_a598a3330b3c21701223ee0ca14316eca}} 
+\index{Enemy.\+h@{Enemy.\+h}!PI@{PI}}
+\index{PI@{PI}!Enemy.\+h@{Enemy.\+h}}
+\subsubsection{\texorpdfstring{PI}{PI}}
+{\footnotesize\ttfamily \#define PI~3.\+14}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_enemy_8h_ac3e413a86119db4b031458c7259e268e}\label{_enemy_8h_ac3e413a86119db4b031458c7259e268e}} 
+\index{Enemy.\+h@{Enemy.\+h}!Enemy\+Type@{Enemy\+Type}}
+\index{Enemy\+Type@{Enemy\+Type}!Enemy.\+h@{Enemy.\+h}}
+\subsubsection{\texorpdfstring{Enemy\+Type}{EnemyType}}
+{\footnotesize\ttfamily enum \hyperlink{_enemy_8h_ac3e413a86119db4b031458c7259e268e}{Enemy\+Type}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+C\+O\+UT@{S\+C\+O\+UT}!Enemy.\+h@{Enemy.\+h}}\index{Enemy.\+h@{Enemy.\+h}!S\+C\+O\+UT@{S\+C\+O\+UT}}}\mbox{\Hypertarget{_enemy_8h_ac3e413a86119db4b031458c7259e268eaa171194925053f44024a82de9d20148a}\label{_enemy_8h_ac3e413a86119db4b031458c7259e268eaa171194925053f44024a82de9d20148a}} 
+S\+C\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+O\+L\+D\+I\+ER@{S\+O\+L\+D\+I\+ER}!Enemy.\+h@{Enemy.\+h}}\index{Enemy.\+h@{Enemy.\+h}!S\+O\+L\+D\+I\+ER@{S\+O\+L\+D\+I\+ER}}}\mbox{\Hypertarget{_enemy_8h_ac3e413a86119db4b031458c7259e268ea36101183b0be7bffbbe6d24ef81987a1}\label{_enemy_8h_ac3e413a86119db4b031458c7259e268ea36101183b0be7bffbbe6d24ef81987a1}} 
+S\+O\+L\+D\+I\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+O\+G\+UE@{R\+O\+G\+UE}!Enemy.\+h@{Enemy.\+h}}\index{Enemy.\+h@{Enemy.\+h}!R\+O\+G\+UE@{R\+O\+G\+UE}}}\mbox{\Hypertarget{_enemy_8h_ac3e413a86119db4b031458c7259e268ea416f104f4dfca42fccfd1d6e7534d3ad}\label{_enemy_8h_ac3e413a86119db4b031458c7259e268ea416f104f4dfca42fccfd1d6e7534d3ad}} 
+R\+O\+G\+UE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+A\+NK@{T\+A\+NK}!Enemy.\+h@{Enemy.\+h}}\index{Enemy.\+h@{Enemy.\+h}!T\+A\+NK@{T\+A\+NK}}}\mbox{\Hypertarget{_enemy_8h_ac3e413a86119db4b031458c7259e268eafce7f36275b432d29255606c0f395dcd}\label{_enemy_8h_ac3e413a86119db4b031458c7259e268eafce7f36275b432d29255606c0f395dcd}} 
+T\+A\+NK&\\
+\hline
+
+\end{DoxyEnumFields}

@@ -1,0 +1,12 @@
+digraph "EnemyManager"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{EnemyManager\n|- _curEnemies\l- _elapsedClockTime\l- _generatedClockTime\l|+ EnemyManager()\l+ ~EnemyManager()\l+ spawnEnemies()\l+ updateEnemies()\l+ drawEnemies()\l+ drawEnemyBullets()\l+ checkEnemyCollisions()\l+ allEnemiesKilled()\l+ theEnemies()\l+ randomEvents()\l+ setFirstEnemyPosition()\l+ getFirstBulletPos()\l+ setFirstBulletPos()\l+ addEnemyToVector()\l+ setGeneratedClockTime()\l- removeInactiveEnemies()\l- generateRandomTime()\l- spawnEnemyTank()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_enemyMover" ,arrowhead="odiamond"];
+  Node2 [label="{EnemyMovement\n||+ EnemyMovement()\l+ ~EnemyMovement()\l+ MoveEnemyScout()\l+ MoveEnemySoldier()\l+ MoveEnemyRogue()\l+ MoveEnemyTank()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_enemy_movement.html"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_enemyBulletManager" ,arrowhead="odiamond"];
+  Node3 [label="{BulletManager\n||+ BulletManager()\l+ ~BulletManager()\l+ deleteInactiveBullets()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_bullet_manager.html"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_collisionDetector" ,arrowhead="odiamond"];
+  Node4 [label="{Collisions\n||+ Collisions()\l+ ~Collisions()\l+ checkPlayerCollisions()\l+ checkEnemyCollisions()\l- checkPlayerToEnemy()\l- checkEnemyBulletsToPlayer()\l- checkEnemyPositionToPLayer()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_collisions.html"];
+}

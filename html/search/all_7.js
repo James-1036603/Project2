@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['gamemusic',['GameMusic',['../class_game_music.html',1,'GameMusic'],['../class_game_music.html#a3636a483e9a9d86ff5700f4a13662dcb',1,'GameMusic::GameMusic()']]],
-  ['gamemusic_2ecpp',['GameMusic.cpp',['../_game_music_8cpp.html',1,'']]],
-  ['gamemusic_2eh',['GameMusic.h',['../_game_music_8h.html',1,'']]],
-  ['gametests_2ecpp',['GameTests.cpp',['../_game_tests_8cpp.html',1,'']]],
-  ['generaterandomtime',['generateRandomTime',['../class_enemy_manager.html#a4b6f8823d43203930ab98035fe808a55',1,'EnemyManager']]],
-  ['generaterotation',['generateRotation',['../class_enemy.html#a66c71c54afd65734ed82983882a940e6',1,'Enemy']]],
-  ['getbulletdamage',['getBulletDamage',['../class_bullet.html#a588467f138b5c65d018bf04ab2ca2931',1,'Bullet']]],
-  ['getbulletpos',['getBulletPos',['../class_bullet.html#a22bc1ccf27f5ff8fe939616ca10b1489',1,'Bullet']]],
-  ['getdamageforbullet',['getDamageForBullet',['../class_enemy.html#a73e88b0f1e68650e6ea536c53a3cf920',1,'Enemy']]],
-  ['getenemybullets',['getEnemyBullets',['../class_enemy.html#a849b23a3f78625911b0969506426d4da',1,'Enemy']]],
-  ['getenemypos',['getEnemyPos',['../class_enemy.html#a9f5b6b7b70f7f3532e82eebcab2e26e8',1,'Enemy']]],
-  ['getfirstbulletpos',['getFirstBulletPos',['../class_enemy_manager.html#a0632e71c86c73e74708d34df6d1fefba',1,'EnemyManager::getFirstBulletPos()'],['../class_player_manager.html#a1e058a4c38ae4b17a8541feb40247d06',1,'PlayerManager::getFirstBulletPos()']]],
-  ['getgradient',['getGradient',['../class_bullet_movement.html#a4dddd135a0d89dbb8d7b4ec076264f16',1,'BulletMovement']]],
-  ['gethealth',['getHealth',['../class_player.html#a1f61cee0029ef492d13e289f34e7764b',1,'Player']]],
-  ['getintercept',['getIntercept',['../class_bullet_movement.html#ab9716be6fffd1b7f58e5b3be24062e5b',1,'BulletMovement']]],
-  ['getplayerbullets',['getPlayerBullets',['../class_player.html#a39c13745f2cd7f6c17be23965b08dfac',1,'Player']]],
-  ['getplayerhealth',['getPlayerHealth',['../class_player_manager.html#a1e1d29acf1a54f18fafe6a2a91c67ee7',1,'PlayerManager']]],
-  ['getplayerpos',['getPlayerPos',['../class_player.html#aab8a89629ae8acaf8c1dc4b2e9f052c6',1,'Player']]],
-  ['getshot',['getShot',['../class_enemy.html#a2faee7be0abbf8d473ecd6d7ee084e60',1,'Enemy::getShot()'],['../class_player.html#a13e6164daf86c00800992d756339fe51',1,'Player::getShot()']]],
-  ['getspeed',['getSpeed',['../class_bullet.html#ac1d1af57b11dae435ca8d951e85b7079',1,'Bullet::getSpeed()'],['../class_enemy.html#a342051a8cf9fe6e329774e37af486fca',1,'Enemy::getSpeed()'],['../class_player.html#a515920b9f3992375f179ca17ee750dc1',1,'Player::getSpeed()']]],
-  ['getsprite',['getSprite',['../class_bullet.html#aa313bc0e2c9fd200c526cb6fe320462c',1,'Bullet::getSprite()'],['../class_enemy.html#a8f769acc8f473846d11eaabf504a1089',1,'Enemy::getSprite()'],['../class_player.html#aabef659f696be314cdb705a1ce77ec2a',1,'Player::getSprite()']]],
-  ['gradient',['gradient',['../class_bullet_movement.html#a84efe87d137c1d0b9e14de5a5c9c7938',1,'BulletMovement']]]
+  ['isalive',['isAlive',['../class_enemy.html#a2801f42818600b19a7381dd2d1635af8',1,'Enemy']]]
 ];

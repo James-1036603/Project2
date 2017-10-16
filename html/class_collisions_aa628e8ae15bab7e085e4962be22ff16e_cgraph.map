@@ -1,0 +1,7 @@
+<map id="Collisions::checkEnemyCollisions" name="Collisions::checkEnemyCollisions">
+<area shape="rect" id="node2" href="$class_player.html#a39c13745f2cd7f6c17be23965b08dfac" title="Return the Player&#39;s active bullets. " alt="" coords="272,5,435,32"/>
+<area shape="rect" id="node3" href="$class_player.html#a4a72b5ba696e55375ee614ef89a87ade" title="Set a specific bullet to inactive. " alt="" coords="273,57,434,98"/>
+<area shape="rect" id="node4" href="$class_player.html#aabef659f696be314cdb705a1ce77ec2a" title="Return the player sprite. " alt="" coords="294,123,413,149"/>
+<area shape="rect" id="node5" href="$class_player.html#a13e6164daf86c00800992d756339fe51" title="The player takes damage. " alt="" coords="297,173,409,200"/>
+<area shape="rect" id="node6" href="$class_player.html#aab8a89629ae8acaf8c1dc4b2e9f052c6" title="Player::getPlayerPos" alt="" coords="281,224,426,251"/>
+</map>

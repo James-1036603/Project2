@@ -1,0 +1,9 @@
+<map id="C:/Users/DrDoom/Documents/Project/Game_Project/Collisions.h" name="C:/Users/DrDoom/Documents/Project/Game_Project/Collisions.h">
+<area shape="rect" id="node3" href="$_bullet_8h.html" title="A class that will contain the characteristics of the needed bullet, such as its position, damage, speed, rotation, sprite, owner and so forth. " alt="" coords="644,244,711,271"/>
+<area shape="rect" id="node7" href="$_enemy_8h.html" title="Enemy class, which has 4 types of enemies. Each enemy has a postion, sprite, speed, rotation, bullet damage and the amount of steps taken. The enemy is moved based on its current type. " alt="" coords="223,95,297,121"/>
+<area shape="rect" id="node12" href="$_player_8h.html" title="Player class has the needed member functions for the player, such as their position, sprite, speed, rotation and their bullets active on the screen. The player&#39;s movement is determined by the current input. THe player is able to shoot as well. " alt="" coords="541,95,611,121"/>
+<area shape="rect" id="node4" href="$_bullet_movement_8h.html" title="BulletMovement.h" alt="" coords="619,319,744,345"/>
+<area shape="rect" id="node8" href="$_enemy_movement_8h.html" title="This will move a specific enemy, based on it&#39;s type. " alt="" coords="5,319,139,345"/>
+<area shape="rect" id="node10" href="$_bullet_manager_8h.html" title="This class will manage any needed functions of the bullet. In this instance, it removes any inactive ..." alt="" coords="321,169,437,196"/>
+<area shape="rect" id="node13" href="$_player_movement_8h.html" title="The movement of the player. The player will either move clockwise or counter clockwise along the radi..." alt="" coords="419,244,549,271"/>
+</map>

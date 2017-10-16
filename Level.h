@@ -3,6 +3,11 @@
 #include <SFML/Graphics.hpp>
 #include <sstream>
 #include <string>
+/**
+ * @class level_FileNotFound
+ * @file Level.h
+ * @brief File Not Found for Level. Used in error catching
+ */
 
 class level_FileNotFound{};
 /**

@@ -3,8 +3,6 @@
 #include <vector>
 #include <SFML/System.hpp>
 #include "Enemy.h"
-#include "EnemyMovement.h"
-#include "BulletManager.h"
 #include "Collisions.h"
 
 /**

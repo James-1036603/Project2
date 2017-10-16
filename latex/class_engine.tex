@@ -4,53 +4,18 @@
 
 {\ttfamily \#include $<$Engine.\+h$>$}
 
-
-
-Collaboration diagram for Engine\+:
-% FIG 0
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}\label{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}} 
 \hyperlink{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}{Engine} ()
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_engine}{Engine} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}\label{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}} 
 virtual \hyperlink{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}{$\sim$\+Engine} ()
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_engine}{Engine} Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}\label{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}} 
 void \hyperlink{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}{start} ()
 \begin{DoxyCompactList}\small\item\em Start the current engine, ie start the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-void \hyperlink{class_engine_a19be6708b8b65c5cfd8c13305f1e3c7f}{draw\+Screen} (\hyperlink{_engine_8h_a9f5ff9109158e83287c5c888bf7bb8a7}{Screen\+Type} type\+Of\+Screen)
-\item 
-void \hyperlink{class_engine_aa59920acbc4379a9672265904bc08b98}{input} (float \&dt\+As\+Seconds)
-\item 
-void \hyperlink{class_engine_af40c099ae4c70e308303ef5220ee9052}{update} (float \&dt\+As\+Seconds)
-\item 
-void \hyperlink{class_engine_a1b654dc41dfbcb5072147f33142b726e}{draw} ()
-\item 
-void \hyperlink{class_engine_a54ab8f7be8ce000f7bd83a98d41d6b98}{progress\+Game} ()
-\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-sf\+::\+Render\+Window \hyperlink{class_engine_afd93e6a52301e792650f99043f113cbf}{\+\_\+window}
-\item 
-sf\+::\+Sprite \hyperlink{class_engine_a1d2219c1a87bf21a3d2bc380624aad5d}{\+\_\+background\+Sprite}
-\item 
-sf\+::\+Texture \hyperlink{class_engine_aeb8f54a010a6f1442872692ce869166a}{\+\_\+background\+Texture}
-\item 
-\hyperlink{class_game_music}{Game\+Music} \hyperlink{class_engine_a65c78abdcfa8ae0c4dbe04985b09eac7}{\+\_\+game\+Music}
-\item 
-\hyperlink{class_player_manager}{Player\+Manager} \hyperlink{class_engine_ad9c98c3f60277c95d34d48e02082c47c}{\+\_\+the\+Player}
-\item 
-\hyperlink{class_enemy_manager}{Enemy\+Manager} \hyperlink{class_engine_af5dd5d02b414b2a098988c371b00ac88}{\+\_\+the\+Enemies}
-\item 
-\hyperlink{class_level}{Level} \hyperlink{class_engine_aef39034128dc92b64d76435742ca6851}{\+\_\+game\+Levels}
-\item 
-const int \hyperlink{class_engine_a75beb6a1c14b936fa666bb2de726dc12}{\+\_\+height} = sf\+::\+Video\+Mode\+::get\+Desktop\+Mode().height
-\item 
-const int \hyperlink{class_engine_a535dc0c572ec7af354a4b15f20bb02df}{\+\_\+width} = sf\+::\+Video\+Mode\+::get\+Desktop\+Mode().width
-\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -59,133 +24,10 @@ James Phillips (1036603)
 \end{DoxyAuthor}
 
 
-\subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}\label{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}} 
-\index{Engine@{Engine}!Engine@{Engine}}
-\index{Engine@{Engine}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{Engine()}{Engine()}}
-{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-\hyperlink{class_engine}{Engine} Constructor. 
-
-\mbox{\Hypertarget{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}\label{class_engine_a8ef7030a089ecb30bbfcb9e43094717a}} 
-\index{Engine@{Engine}!````~Engine@{$\sim$\+Engine}}
-\index{````~Engine@{$\sim$\+Engine}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{$\sim$\+Engine()}{~Engine()}}
-{\footnotesize\ttfamily Engine\+::$\sim$\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-\hyperlink{class_engine}{Engine} Destructor. 
-
-
-
-\subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_engine_a1b654dc41dfbcb5072147f33142b726e}\label{class_engine_a1b654dc41dfbcb5072147f33142b726e}} 
-\index{Engine@{Engine}!draw@{draw}}
-\index{draw@{draw}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{draw()}{draw()}}
-{\footnotesize\ttfamily void Engine\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_a19be6708b8b65c5cfd8c13305f1e3c7f}\label{class_engine_a19be6708b8b65c5cfd8c13305f1e3c7f}} 
-\index{Engine@{Engine}!draw\+Screen@{draw\+Screen}}
-\index{draw\+Screen@{draw\+Screen}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{draw\+Screen()}{drawScreen()}}
-{\footnotesize\ttfamily void Engine\+::draw\+Screen (\begin{DoxyParamCaption}\item[{\hyperlink{_engine_8h_a9f5ff9109158e83287c5c888bf7bb8a7}{Screen\+Type}}]{type\+Of\+Screen }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_aa59920acbc4379a9672265904bc08b98}\label{class_engine_aa59920acbc4379a9672265904bc08b98}} 
-\index{Engine@{Engine}!input@{input}}
-\index{input@{input}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{input()}{input()}}
-{\footnotesize\ttfamily void Engine\+::input (\begin{DoxyParamCaption}\item[{float \&}]{dt\+As\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_a54ab8f7be8ce000f7bd83a98d41d6b98}\label{class_engine_a54ab8f7be8ce000f7bd83a98d41d6b98}} 
-\index{Engine@{Engine}!progress\+Game@{progress\+Game}}
-\index{progress\+Game@{progress\+Game}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{progress\+Game()}{progressGame()}}
-{\footnotesize\ttfamily void Engine\+::progress\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}\label{class_engine_a4d8066dd213a03f5420d1bf60f150ca7}} 
-\index{Engine@{Engine}!start@{start}}
-\index{start@{start}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{start()}{start()}}
-{\footnotesize\ttfamily void Engine\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Start the current engine, ie start the game. 
-
-\mbox{\Hypertarget{class_engine_af40c099ae4c70e308303ef5220ee9052}\label{class_engine_af40c099ae4c70e308303ef5220ee9052}} 
-\index{Engine@{Engine}!update@{update}}
-\index{update@{update}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{update()}{update()}}
-{\footnotesize\ttfamily void Engine\+::update (\begin{DoxyParamCaption}\item[{float \&}]{dt\+As\+Seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_engine_a1d2219c1a87bf21a3d2bc380624aad5d}\label{class_engine_a1d2219c1a87bf21a3d2bc380624aad5d}} 
-\index{Engine@{Engine}!\+\_\+background\+Sprite@{\+\_\+background\+Sprite}}
-\index{\+\_\+background\+Sprite@{\+\_\+background\+Sprite}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+background\+Sprite}{\_backgroundSprite}}
-{\footnotesize\ttfamily sf\+::\+Sprite Engine\+::\+\_\+background\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_aeb8f54a010a6f1442872692ce869166a}\label{class_engine_aeb8f54a010a6f1442872692ce869166a}} 
-\index{Engine@{Engine}!\+\_\+background\+Texture@{\+\_\+background\+Texture}}
-\index{\+\_\+background\+Texture@{\+\_\+background\+Texture}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+background\+Texture}{\_backgroundTexture}}
-{\footnotesize\ttfamily sf\+::\+Texture Engine\+::\+\_\+background\+Texture\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_aef39034128dc92b64d76435742ca6851}\label{class_engine_aef39034128dc92b64d76435742ca6851}} 
-\index{Engine@{Engine}!\+\_\+game\+Levels@{\+\_\+game\+Levels}}
-\index{\+\_\+game\+Levels@{\+\_\+game\+Levels}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+game\+Levels}{\_gameLevels}}
-{\footnotesize\ttfamily \hyperlink{class_level}{Level} Engine\+::\+\_\+game\+Levels\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_a65c78abdcfa8ae0c4dbe04985b09eac7}\label{class_engine_a65c78abdcfa8ae0c4dbe04985b09eac7}} 
-\index{Engine@{Engine}!\+\_\+game\+Music@{\+\_\+game\+Music}}
-\index{\+\_\+game\+Music@{\+\_\+game\+Music}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+game\+Music}{\_gameMusic}}
-{\footnotesize\ttfamily \hyperlink{class_game_music}{Game\+Music} Engine\+::\+\_\+game\+Music\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_a75beb6a1c14b936fa666bb2de726dc12}\label{class_engine_a75beb6a1c14b936fa666bb2de726dc12}} 
-\index{Engine@{Engine}!\+\_\+height@{\+\_\+height}}
-\index{\+\_\+height@{\+\_\+height}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+height}{\_height}}
-{\footnotesize\ttfamily const int Engine\+::\+\_\+height = sf\+::\+Video\+Mode\+::get\+Desktop\+Mode().height\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_af5dd5d02b414b2a098988c371b00ac88}\label{class_engine_af5dd5d02b414b2a098988c371b00ac88}} 
-\index{Engine@{Engine}!\+\_\+the\+Enemies@{\+\_\+the\+Enemies}}
-\index{\+\_\+the\+Enemies@{\+\_\+the\+Enemies}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+the\+Enemies}{\_theEnemies}}
-{\footnotesize\ttfamily \hyperlink{class_enemy_manager}{Enemy\+Manager} Engine\+::\+\_\+the\+Enemies\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_ad9c98c3f60277c95d34d48e02082c47c}\label{class_engine_ad9c98c3f60277c95d34d48e02082c47c}} 
-\index{Engine@{Engine}!\+\_\+the\+Player@{\+\_\+the\+Player}}
-\index{\+\_\+the\+Player@{\+\_\+the\+Player}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+the\+Player}{\_thePlayer}}
-{\footnotesize\ttfamily \hyperlink{class_player_manager}{Player\+Manager} Engine\+::\+\_\+the\+Player\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_a535dc0c572ec7af354a4b15f20bb02df}\label{class_engine_a535dc0c572ec7af354a4b15f20bb02df}} 
-\index{Engine@{Engine}!\+\_\+width@{\+\_\+width}}
-\index{\+\_\+width@{\+\_\+width}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+width}{\_width}}
-{\footnotesize\ttfamily const int Engine\+::\+\_\+width = sf\+::\+Video\+Mode\+::get\+Desktop\+Mode().width\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_engine_afd93e6a52301e792650f99043f113cbf}\label{class_engine_afd93e6a52301e792650f99043f113cbf}} 
-\index{Engine@{Engine}!\+\_\+window@{\+\_\+window}}
-\index{\+\_\+window@{\+\_\+window}!Engine@{Engine}}
-\subsubsection{\texorpdfstring{\+\_\+window}{\_window}}
-{\footnotesize\ttfamily sf\+::\+Render\+Window Engine\+::\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_engine_8h}{Engine.\+h}\item 
-\hyperlink{_draw_8cpp}{Draw.\+cpp}\item 
-\hyperlink{_engine_8cpp}{Engine.\+cpp}\item 
-\hyperlink{_input_8cpp}{Input.\+cpp}\item 
-\hyperlink{_update_8cpp}{Update.\+cpp}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/\hyperlink{_engine_8h}{Engine.\+h}\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/Draw.\+cpp\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/Engine.\+cpp\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/Input.\+cpp\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/Update.\+cpp\end{DoxyCompactItemize}

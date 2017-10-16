@@ -4,65 +4,39 @@
 
 {\ttfamily \#include $<$Bullet.\+h$>$}
 
-
-
-Collaboration diagram for Bullet\+:
-% FIG 0
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_bullet_a751da85d043013c509426b6cf33bd9c5}{Bullet} (const sf\+::\+Vector2f \&starting\+Pos, const float \&rotation, \hyperlink{_bullet_8h_a3b5e9e55eb7b08d5702a101e529e5507}{Owner} Bullet\+Owner, int damage=1)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_bullet}{Bullet} Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}\label{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}} 
 virtual \hyperlink{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}{$\sim$\+Bullet} ()
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_bullet}{Bullet} Destructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bullet_aa313bc0e2c9fd200c526cb6fe320462c}\label{class_bullet_aa313bc0e2c9fd200c526cb6fe320462c}} 
 sf\+::\+Sprite \hyperlink{class_bullet_aa313bc0e2c9fd200c526cb6fe320462c}{get\+Sprite} ()
 \begin{DoxyCompactList}\small\item\em Sprite of the bullet. \end{DoxyCompactList}\item 
 void \hyperlink{class_bullet_a241c1ceb808ae0f93e4f66f28bbd525f}{update\+Bullet} (const float \&elapsed\+Time)
 \begin{DoxyCompactList}\small\item\em Update the bullet over time. This will move the bullet, and evaluate its position on the screen. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bullet_a103ff9146dce215f15ca0c4282a5a8cf}\label{class_bullet_a103ff9146dce215f15ca0c4282a5a8cf}} 
 bool \hyperlink{class_bullet_a103ff9146dce215f15ca0c4282a5a8cf}{bullet\+Is\+Alive} ()
 \begin{DoxyCompactList}\small\item\em The state of the bullet, if it is active or not. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bullet_a588467f138b5c65d018bf04ab2ca2931}\label{class_bullet_a588467f138b5c65d018bf04ab2ca2931}} 
 int \hyperlink{class_bullet_a588467f138b5c65d018bf04ab2ca2931}{get\+Bullet\+Damage} ()
 \begin{DoxyCompactList}\small\item\em The damage of the current bullet. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_bullet_afe143dafb173b03b6f35fa9472cbe465}\label{class_bullet_afe143dafb173b03b6f35fa9472cbe465}} 
 void \hyperlink{class_bullet_afe143dafb173b03b6f35fa9472cbe465}{set\+In\+Active} ()
 \begin{DoxyCompactList}\small\item\em Set the bullet inactive for any needed reason. \end{DoxyCompactList}\item 
-sf\+::\+Vector2f \hyperlink{class_bullet_a22bc1ccf27f5ff8fe939616ca10b1489}{get\+Bullet\+Pos} () const
+\mbox{\Hypertarget{class_bullet_a22bc1ccf27f5ff8fe939616ca10b1489}\label{class_bullet_a22bc1ccf27f5ff8fe939616ca10b1489}} 
+sf\+::\+Vector2f {\bfseries get\+Bullet\+Pos} () const
 \item 
-float \hyperlink{class_bullet_ac1d1af57b11dae435ca8d951e85b7079}{get\+Speed} () const
+\mbox{\Hypertarget{class_bullet_ac1d1af57b11dae435ca8d951e85b7079}\label{class_bullet_ac1d1af57b11dae435ca8d951e85b7079}} 
+float {\bfseries get\+Speed} () const
 \item 
-void \hyperlink{class_bullet_adfd1d1a317bd18f9d6aec65630301ae2}{set\+Active} (bool val)
+\mbox{\Hypertarget{class_bullet_adfd1d1a317bd18f9d6aec65630301ae2}\label{class_bullet_adfd1d1a317bd18f9d6aec65630301ae2}} 
+void {\bfseries set\+Active} (bool val)
 \item 
-void \hyperlink{class_bullet_af6e316869e595d8f0b2af44dd80a8dd6}{set\+Bullet\+Position} (float x, float y)
-\end{DoxyCompactItemize}
-\subsection*{Private Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\hyperlink{class_bullet_acd7befc0bc18907cc1d871d37bbdddeb}{Bullet} ()
-\item 
-void \hyperlink{class_bullet_a1ea29046b26f40abb9f94ca2ccd5d215}{move} (const float \&elapsed\+Time)
-\begin{DoxyCompactList}\small\item\em Move the bullet based on the amount of time which has passed. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-sf\+::\+Vector2f \hyperlink{class_bullet_a5889ed15f47debd2914c39f2dc71ec35}{\+\_\+bullet\+Pos}
-\item 
-sf\+::\+Sprite \hyperlink{class_bullet_a02a711293bc8bb2e8c7107811071c2e3}{\+\_\+bullet\+Sprite}
-\item 
-sf\+::\+Texture \hyperlink{class_bullet_ab75a648ee856f991a724499d1b8756fc}{\+\_\+bullet\+Texture}
-\item 
-float \hyperlink{class_bullet_a6a971a89bb69a7e9d5be0955e78d12a5}{\+\_\+speed}
-\item 
-float \hyperlink{class_bullet_a1904e460221accb69ae194fc4eb7d54f}{\+\_\+rotation}
-\item 
-int \hyperlink{class_bullet_a9b7eeafe7ca0e007f22e88ed39c04f34}{\+\_\+damage}
-\item 
-bool \hyperlink{class_bullet_a493d2187e18321e4777e3681c5ee07a6}{\+\_\+is\+Alive}
-\item 
-\hyperlink{_bullet_8h_a3b5e9e55eb7b08d5702a101e529e5507}{Owner} \hyperlink{class_bullet_af9fd5bbfc7e4e6a5a0f7e5af45360309}{\+\_\+bullet\+Owner}
-\end{DoxyCompactItemize}
-\subsection*{Static Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-static \hyperlink{class_bullet}{Bullet} \hyperlink{class_bullet_a3a4b2ab27b25f04a30d3fc39e4a3b014}{\+\_\+default} \{\}
+\mbox{\Hypertarget{class_bullet_af6e316869e595d8f0b2af44dd80a8dd6}\label{class_bullet_af6e316869e595d8f0b2af44dd80a8dd6}} 
+void {\bfseries set\+Bullet\+Position} (float x, float y)
 \end{DoxyCompactItemize}
 
 
@@ -76,7 +50,7 @@ James Phillips (1036603)
 \mbox{\Hypertarget{class_bullet_a751da85d043013c509426b6cf33bd9c5}\label{class_bullet_a751da85d043013c509426b6cf33bd9c5}} 
 \index{Bullet@{Bullet}!Bullet@{Bullet}}
 \index{Bullet@{Bullet}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{Bullet()}{Bullet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{Bullet()}{Bullet()}}
 {\footnotesize\ttfamily Bullet\+::\+Bullet (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{starting\+Pos,  }\item[{const float \&}]{rotation,  }\item[{\hyperlink{_bullet_8h_a3b5e9e55eb7b08d5702a101e529e5507}{Owner}}]{Bullet\+Owner,  }\item[{int}]{damage = {\ttfamily 1} }\end{DoxyParamCaption})}
 
 
@@ -94,104 +68,9 @@ James Phillips (1036603)
 {\em damage} & Damage for the bullet \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}\label{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}} 
-\index{Bullet@{Bullet}!````~Bullet@{$\sim$\+Bullet}}
-\index{````~Bullet@{$\sim$\+Bullet}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{$\sim$\+Bullet()}{~Bullet()}}
-{\footnotesize\ttfamily Bullet\+::$\sim$\+Bullet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
-
-
-
-\hyperlink{class_bullet}{Bullet} Destructor. 
-
-\mbox{\Hypertarget{class_bullet_acd7befc0bc18907cc1d871d37bbdddeb}\label{class_bullet_acd7befc0bc18907cc1d871d37bbdddeb}} 
-\index{Bullet@{Bullet}!Bullet@{Bullet}}
-\index{Bullet@{Bullet}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{Bullet()}{Bullet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Bullet\+::\+Bullet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_bullet_a103ff9146dce215f15ca0c4282a5a8cf}\label{class_bullet_a103ff9146dce215f15ca0c4282a5a8cf}} 
-\index{Bullet@{Bullet}!bullet\+Is\+Alive@{bullet\+Is\+Alive}}
-\index{bullet\+Is\+Alive@{bullet\+Is\+Alive}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{bullet\+Is\+Alive()}{bulletIsAlive()}}
-{\footnotesize\ttfamily bool Bullet\+::bullet\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-The state of the bullet, if it is active or not. 
-
-\mbox{\Hypertarget{class_bullet_a588467f138b5c65d018bf04ab2ca2931}\label{class_bullet_a588467f138b5c65d018bf04ab2ca2931}} 
-\index{Bullet@{Bullet}!get\+Bullet\+Damage@{get\+Bullet\+Damage}}
-\index{get\+Bullet\+Damage@{get\+Bullet\+Damage}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{get\+Bullet\+Damage()}{getBulletDamage()}}
-{\footnotesize\ttfamily int Bullet\+::get\+Bullet\+Damage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-The damage of the current bullet. 
-
-\mbox{\Hypertarget{class_bullet_a22bc1ccf27f5ff8fe939616ca10b1489}\label{class_bullet_a22bc1ccf27f5ff8fe939616ca10b1489}} 
-\index{Bullet@{Bullet}!get\+Bullet\+Pos@{get\+Bullet\+Pos}}
-\index{get\+Bullet\+Pos@{get\+Bullet\+Pos}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{get\+Bullet\+Pos()}{getBulletPos()}}
-{\footnotesize\ttfamily sf\+::\+Vector2f Bullet\+::get\+Bullet\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_bullet_ac1d1af57b11dae435ca8d951e85b7079}\label{class_bullet_ac1d1af57b11dae435ca8d951e85b7079}} 
-\index{Bullet@{Bullet}!get\+Speed@{get\+Speed}}
-\index{get\+Speed@{get\+Speed}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{get\+Speed()}{getSpeed()}}
-{\footnotesize\ttfamily float Bullet\+::get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_bullet_aa313bc0e2c9fd200c526cb6fe320462c}\label{class_bullet_aa313bc0e2c9fd200c526cb6fe320462c}} 
-\index{Bullet@{Bullet}!get\+Sprite@{get\+Sprite}}
-\index{get\+Sprite@{get\+Sprite}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{get\+Sprite()}{getSprite()}}
-{\footnotesize\ttfamily sf\+::\+Sprite Bullet\+::get\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Sprite of the bullet. 
-
-\mbox{\Hypertarget{class_bullet_a1ea29046b26f40abb9f94ca2ccd5d215}\label{class_bullet_a1ea29046b26f40abb9f94ca2ccd5d215}} 
-\index{Bullet@{Bullet}!move@{move}}
-\index{move@{move}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{move()}{move()}}
-{\footnotesize\ttfamily void Bullet\+::move (\begin{DoxyParamCaption}\item[{const float \&}]{elapsed\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Move the bullet based on the amount of time which has passed. 
-
-A static member of the bullet, the program only needs to load the texture once 
-\begin{DoxyParams}{Parameters}
-{\em elapsed\+Time} & The amount of time which has passed, this will determine how far the bullet has to move \\
-\hline
-\end{DoxyParams}
-\mbox{\Hypertarget{class_bullet_adfd1d1a317bd18f9d6aec65630301ae2}\label{class_bullet_adfd1d1a317bd18f9d6aec65630301ae2}} 
-\index{Bullet@{Bullet}!set\+Active@{set\+Active}}
-\index{set\+Active@{set\+Active}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{set\+Active()}{setActive()}}
-{\footnotesize\ttfamily void Bullet\+::set\+Active (\begin{DoxyParamCaption}\item[{bool}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_bullet_af6e316869e595d8f0b2af44dd80a8dd6}\label{class_bullet_af6e316869e595d8f0b2af44dd80a8dd6}} 
-\index{Bullet@{Bullet}!set\+Bullet\+Position@{set\+Bullet\+Position}}
-\index{set\+Bullet\+Position@{set\+Bullet\+Position}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{set\+Bullet\+Position()}{setBulletPosition()}}
-{\footnotesize\ttfamily void Bullet\+::set\+Bullet\+Position (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-\mbox{\Hypertarget{class_bullet_afe143dafb173b03b6f35fa9472cbe465}\label{class_bullet_afe143dafb173b03b6f35fa9472cbe465}} 
-\index{Bullet@{Bullet}!set\+In\+Active@{set\+In\+Active}}
-\index{set\+In\+Active@{set\+In\+Active}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{set\+In\+Active()}{setInActive()}}
-{\footnotesize\ttfamily void Bullet\+::set\+In\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Set the bullet inactive for any needed reason. 
-
 \mbox{\Hypertarget{class_bullet_a241c1ceb808ae0f93e4f66f28bbd525f}\label{class_bullet_a241c1ceb808ae0f93e4f66f28bbd525f}} 
 \index{Bullet@{Bullet}!update\+Bullet@{update\+Bullet}}
 \index{update\+Bullet@{update\+Bullet}!Bullet@{Bullet}}
@@ -209,64 +88,7 @@ Update the bullet over time. This will move the bullet, and evaluate its positio
 \end{DoxyParams}
 
 
-\subsection{Member Data Documentation}
-\mbox{\Hypertarget{class_bullet_af9fd5bbfc7e4e6a5a0f7e5af45360309}\label{class_bullet_af9fd5bbfc7e4e6a5a0f7e5af45360309}} 
-\index{Bullet@{Bullet}!\+\_\+bullet\+Owner@{\+\_\+bullet\+Owner}}
-\index{\+\_\+bullet\+Owner@{\+\_\+bullet\+Owner}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+bullet\+Owner}{\_bulletOwner}}
-{\footnotesize\ttfamily \hyperlink{_bullet_8h_a3b5e9e55eb7b08d5702a101e529e5507}{Owner} Bullet\+::\+\_\+bullet\+Owner\hspace{0.3cm}{\ttfamily [private]}}
-
-The bullet state, whether active or not \mbox{\Hypertarget{class_bullet_a5889ed15f47debd2914c39f2dc71ec35}\label{class_bullet_a5889ed15f47debd2914c39f2dc71ec35}} 
-\index{Bullet@{Bullet}!\+\_\+bullet\+Pos@{\+\_\+bullet\+Pos}}
-\index{\+\_\+bullet\+Pos@{\+\_\+bullet\+Pos}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+bullet\+Pos}{\_bulletPos}}
-{\footnotesize\ttfamily sf\+::\+Vector2f Bullet\+::\+\_\+bullet\+Pos\hspace{0.3cm}{\ttfamily [private]}}
-
-\mbox{\Hypertarget{class_bullet_a02a711293bc8bb2e8c7107811071c2e3}\label{class_bullet_a02a711293bc8bb2e8c7107811071c2e3}} 
-\index{Bullet@{Bullet}!\+\_\+bullet\+Sprite@{\+\_\+bullet\+Sprite}}
-\index{\+\_\+bullet\+Sprite@{\+\_\+bullet\+Sprite}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+bullet\+Sprite}{\_bulletSprite}}
-{\footnotesize\ttfamily sf\+::\+Sprite Bullet\+::\+\_\+bullet\+Sprite\hspace{0.3cm}{\ttfamily [private]}}
-
-The current position of the bullet \mbox{\Hypertarget{class_bullet_ab75a648ee856f991a724499d1b8756fc}\label{class_bullet_ab75a648ee856f991a724499d1b8756fc}} 
-\index{Bullet@{Bullet}!\+\_\+bullet\+Texture@{\+\_\+bullet\+Texture}}
-\index{\+\_\+bullet\+Texture@{\+\_\+bullet\+Texture}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+bullet\+Texture}{\_bulletTexture}}
-{\footnotesize\ttfamily sf\+::\+Texture Bullet\+::\+\_\+bullet\+Texture\hspace{0.3cm}{\ttfamily [private]}}
-
-The current bullet sprite. This is what is represented to the window \mbox{\Hypertarget{class_bullet_a9b7eeafe7ca0e007f22e88ed39c04f34}\label{class_bullet_a9b7eeafe7ca0e007f22e88ed39c04f34}} 
-\index{Bullet@{Bullet}!\+\_\+damage@{\+\_\+damage}}
-\index{\+\_\+damage@{\+\_\+damage}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+damage}{\_damage}}
-{\footnotesize\ttfamily int Bullet\+::\+\_\+damage\hspace{0.3cm}{\ttfamily [private]}}
-
-The rotation of the bullet \mbox{\Hypertarget{class_bullet_a3a4b2ab27b25f04a30d3fc39e4a3b014}\label{class_bullet_a3a4b2ab27b25f04a30d3fc39e4a3b014}} 
-\index{Bullet@{Bullet}!\+\_\+default@{\+\_\+default}}
-\index{\+\_\+default@{\+\_\+default}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+default}{\_default}}
-{\footnotesize\ttfamily \hyperlink{class_bullet}{Bullet} Bullet\+::\+\_\+default \{\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
-
-The owner of the bullet \mbox{\Hypertarget{class_bullet_a493d2187e18321e4777e3681c5ee07a6}\label{class_bullet_a493d2187e18321e4777e3681c5ee07a6}} 
-\index{Bullet@{Bullet}!\+\_\+is\+Alive@{\+\_\+is\+Alive}}
-\index{\+\_\+is\+Alive@{\+\_\+is\+Alive}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+is\+Alive}{\_isAlive}}
-{\footnotesize\ttfamily bool Bullet\+::\+\_\+is\+Alive\hspace{0.3cm}{\ttfamily [private]}}
-
-The damage of the bullet \mbox{\Hypertarget{class_bullet_a1904e460221accb69ae194fc4eb7d54f}\label{class_bullet_a1904e460221accb69ae194fc4eb7d54f}} 
-\index{Bullet@{Bullet}!\+\_\+rotation@{\+\_\+rotation}}
-\index{\+\_\+rotation@{\+\_\+rotation}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+rotation}{\_rotation}}
-{\footnotesize\ttfamily float Bullet\+::\+\_\+rotation\hspace{0.3cm}{\ttfamily [private]}}
-
-The speed of the bullet \mbox{\Hypertarget{class_bullet_a6a971a89bb69a7e9d5be0955e78d12a5}\label{class_bullet_a6a971a89bb69a7e9d5be0955e78d12a5}} 
-\index{Bullet@{Bullet}!\+\_\+speed@{\+\_\+speed}}
-\index{\+\_\+speed@{\+\_\+speed}!Bullet@{Bullet}}
-\subsubsection{\texorpdfstring{\+\_\+speed}{\_speed}}
-{\footnotesize\ttfamily float Bullet\+::\+\_\+speed\hspace{0.3cm}{\ttfamily [private]}}
-
-The texture for the bullet 
-
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{_bullet_8h}{Bullet.\+h}\item 
-\hyperlink{_bullet_8cpp}{Bullet.\+cpp}\end{DoxyCompactItemize}
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/\hyperlink{_bullet_8h}{Bullet.\+h}\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/Bullet.\+cpp\end{DoxyCompactItemize}

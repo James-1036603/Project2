@@ -1,0 +1,4 @@
+<map id="PlayerManager::drawPlayerToWindow" name="PlayerManager::drawPlayerToWindow">
+<area shape="rect" id="node2" href="$class_player.html#aabef659f696be314cdb705a1ce77ec2a" title="Return the player sprite. " alt="" coords="243,5,361,32"/>
+<area shape="rect" id="node3" href="$class_player.html#aa75798d0eaf3066acc57f6cb3158f0bb" title="Draw the Player&#39;s bullets to the provided window. " alt="" coords="235,56,369,83"/>
+</map>

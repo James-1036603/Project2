@@ -1,13 +1,18 @@
 #ifndef BULLET_H
 #define BULLET_H
-#include "BulletMovement.h"
 #include <SFML/Graphics.hpp>
 #include <cmath>
 
 /** An enum for the owner of the bullet
- * THe owner of the bullet is either the Player or an Enemy
+ * The owner of the bullet is either the Player or an Enemy
  */
 enum class Owner{PLAYER, ENEMY};//Who owns the shot bullet
+/**
+ * @class bullet_FileNotFound
+ * @file Bullet.h
+ * @brief File Not Found for Bullet. Used in error catching
+ */
+
 class bullet_FileNotFound {};
 
 
@@ -87,24 +92,16 @@ public:
 private:
     Bullet();
 
-    sf::Vector2f _bulletPos;/*! The current position of the bullet*/
-    sf::Sprite _bulletSprite;/*! The current bullet sprite. This is what is represented to the window*/
-    sf::Texture _bulletTexture;/*! The texture for the bullet*/
-    float _speed;/*! The speed of the bullet*/
-    float _rotation;/*! The rotation of the bullet*/
-    int _damage;/*! The damage of the bullet*/
-    bool _isAlive;/*! The bullet state, whether active or not*/
-	Owner _bulletOwner;/*! The owner of the bullet*/
-    
-    static Bullet _default;/*! A static member of the bullet, the program only needs to load the texture once*/
-/**
- * @brief Move the bullet based on the amount of time which has passed
- * @param elapsedTime The amount of time which has passed, this will determine how far the bullet has to move
- */
-	
+    sf::Vector2f _bulletPos;
+    sf::Sprite _bulletSprite;
+    sf::Texture _bulletTexture;
+    float _speed;
+    float _rotation;
+    int _damage;
+    bool _isAlive;
+	Owner _bulletOwner;    
+    static Bullet _default;	
 	void move(const float& elapsedTime);
-	
-    //sf::Vector2f _displaySize;
 
 
 

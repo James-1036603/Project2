@@ -1,0 +1,7 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$_game_tests_8cpp.html#ac0230399c621da4679687e37351dba76" title="displaySize" alt="" coords="201,5,290,32"/>
+<area shape="rect" id="node3" href="$class_enemy.html#a7d8b3efe6d46b3c77446fe7f2a282a19" title="Return the type of enemy. " alt="" coords="170,56,321,83"/>
+<area shape="rect" id="node4" href="$class_enemy.html#a9f5b6b7b70f7f3532e82eebcab2e26e8" title="Enemy::getEnemyPos" alt="" coords="169,107,322,133"/>
+<area shape="rect" id="node5" href="$class_enemy.html#a342051a8cf9fe6e329774e37af486fca" title="Enemy::getSpeed" alt="" coords="182,157,309,184"/>
+<area shape="rect" id="node6" href="$class_enemy.html#a73e88b0f1e68650e6ea536c53a3cf920" title="Enemy::getDamageForBullet" alt="" coords="151,208,340,235"/>
+</map>

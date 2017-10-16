@@ -1,0 +1,3 @@
+<map id="PlayerManager::playerShoot" name="PlayerManager::playerShoot">
+<area shape="rect" id="node2" href="$class_player.html#a2105394431517a41d38140cb65982331" title="Allow the player to shoot. " alt="" coords="240,5,341,32"/>
+</map>

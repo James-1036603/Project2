@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['randomevents',['randomEvents',['../class_enemy_manager.html#abafa080764d42fbc020c33e48c7afb2f',1,'EnemyManager']]],
-  ['removeinactiveenemies',['removeInactiveEnemies',['../class_enemy_manager.html#a206ef948ffa7e4d518da91dad493efe6',1,'EnemyManager']]],
-  ['right',['RIGHT',['../_player_manager_8h.html#a00ec4eba48da32d6cbdf827185fd3d34a21507b40c80068eda19865706fdc2403',1,'PlayerManager.h']]],
-  ['rogue',['ROGUE',['../_enemy_8h.html#ac3e413a86119db4b031458c7259e268ea416f104f4dfca42fccfd1d6e7534d3ad',1,'Enemy.h']]]
+  ['screentype',['ScreenType',['../_engine_8h.html#a9f5ff9109158e83287c5c888bf7bb8a7',1,'Engine.h']]],
+  ['setbulletinactiveatposition',['setBulletInactiveAtPosition',['../class_enemy.html#a02e1cacf8fad39bbcc28271a53637024',1,'Enemy::setBulletInactiveAtPosition()'],['../class_player.html#a4a72b5ba696e55375ee614ef89a87ade',1,'Player::setBulletInactiveAtPosition()']]],
+  ['setinactive',['setInActive',['../class_bullet.html#afe143dafb173b03b6f35fa9472cbe465',1,'Bullet']]],
+  ['shoot',['Shoot',['../class_enemy.html#ab526cfaf13910e15ca1e5e84ef230dd1',1,'Enemy::Shoot()'],['../class_player.html#a2105394431517a41d38140cb65982331',1,'Player::Shoot()']]],
+  ['spawnenemies',['spawnEnemies',['../class_enemy_manager.html#a37036db8aad73493103815dc45c6339d',1,'EnemyManager']]],
+  ['start',['start',['../class_engine.html#a4d8066dd213a03f5420d1bf60f150ca7',1,'Engine']]],
+  ['stopleft',['stopLeft',['../class_player.html#aa150f941486096bb63cc67eabec9046c',1,'Player']]],
+  ['stopright',['stopRight',['../class_player.html#afebb6b7ca7210e7b1aa2c9ee4ff75b0e',1,'Player']]]
 ];

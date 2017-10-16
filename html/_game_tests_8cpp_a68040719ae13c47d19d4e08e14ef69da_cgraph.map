@@ -1,0 +1,10 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$_game_tests_8cpp.html#ac0230399c621da4679687e37351dba76" title="displaySize" alt="" coords="215,5,304,32"/>
+<area shape="rect" id="node3" href="$class_player_manager.html#a7a61c6484a3dd12293d2481c5f61fb71" title="Allow the player to shoot. " alt="" coords="166,56,353,83"/>
+<area shape="rect" id="node5" href="$class_player_manager.html#ae654ee04f5d9820cbb4c6b91161cc7a2" title="PlayerManager::setFirstBulletPos" alt="" coords="151,107,368,133"/>
+<area shape="rect" id="node6" href="$class_enemy.html#ad02b7dfac0339e110f9aba837a815782" title="Enemy::setRotation" alt="" coords="191,157,328,184"/>
+<area shape="rect" id="node7" href="$class_enemy.html#a6a83e4ff9dab297dbec1644dcc9152c6" title="Enemy::setEnemyPosition" alt="" coords="171,208,348,235"/>
+<area shape="rect" id="node8" href="$class_player_manager.html#ac4bad97c7d281a47a876d7cee5f864bd" title="Check the Player&#39;s collisions to the enemies. " alt="" coords="165,259,354,301"/>
+<area shape="rect" id="node4" href="$class_player.html#a2105394431517a41d38140cb65982331" title="Allow the player to shoot. " alt="" coords="473,56,574,83"/>
+<area shape="rect" id="node9" href="$class_collisions.html#a990174c72f4771e6c2a8c014bd873513" title="Check the Player orientated collisions. " alt="" coords="416,267,631,293"/>
+</map>

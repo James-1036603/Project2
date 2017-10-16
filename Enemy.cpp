@@ -88,11 +88,7 @@ Enemy::Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMoveme
     _BulletManager = BulMan;
     _moveEnemy = EnemyMover;
     _displaySize = displaySize;
-
-
 }
-
-
 
 Enemy::~Enemy()
 {
@@ -145,8 +141,8 @@ void Enemy::checkBounds()
     if(_curPosition.x >= _displaySize.x || _curPosition.x <= 0 ||
             _curPosition.y >= _displaySize.y || _curPosition.y <= 0)
     {
-        _curPosition.x = 960;//Reset if out of bounds x
-        _curPosition.y = 540;//Reset if out of bounds y
+        _curPosition.x = _displaySize.x/2;//Reset if out of bounds x
+        _curPosition.y = _displaySize.y/2;//Reset if out of bounds y
         Enemy::generateRotation();//Another random line once moved off screen
         _objSprite.setRotation(_rotation *(180/PI) );
 		if(_typeOfEnemy==EnemyType::TANK) _isAlive = false; //If an enemy tank moves off the screen and can't be respawned at center, set inactive

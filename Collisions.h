@@ -1,7 +1,6 @@
 #ifndef COLLISIONS_H
 #define COLLISIONS_H
 #include <vector>
-#include "Bullet.h"
 #include "Enemy.h"
 #include "Player.h"
 /**

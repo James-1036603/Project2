@@ -5,7 +5,8 @@
 #include <vector>
 #include <SFML/System.hpp>
 #include <sstream>
-
+/** An enum for the direction of movement of the player
+ */
 enum class MoveDirection {RIGHT, LEFT, STOP_RIGHT, STOP_LEFT};
 /**
  * @class PlayerManager
@@ -65,8 +66,7 @@ public:
     /**
      * @brief Return a reference to the current player
      */
-    Player& theCurrentPlayer();
-	
+    Player& theCurrentPlayer();	
 	
 	
 	void setPlayerPosition(float x, float y)//ONLY FOR TESTS
@@ -93,13 +93,8 @@ private:
     sf::Text text;
 	PlayerMovement _playerMover;
 	BulletManager _playerBulletMananger;
-	Collisions _collisionDetector;
-	
+	Collisions _collisionDetector;	
     void SetTextAndFont();
-
-
-
-
 };
 
 #endif // PLAYERMANAGER_H

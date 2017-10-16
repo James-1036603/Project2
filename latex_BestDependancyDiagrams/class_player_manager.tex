@@ -1,0 +1,281 @@
+\hypertarget{class_player_manager}{}\section{Player\+Manager Class Reference}
+\label{class_player_manager}\index{Player\+Manager@{Player\+Manager}}
+
+
+{\ttfamily \#include $<$Player\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player_manager_aa2ce60af19b9d80bd884e2edaea726d6}{Player\+Manager} (const sf\+::\+Vector2f \&window\+Size, const float \&radius)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_player}{Player} Manager Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_player_manager_ab53de6b16914b7591fc2bd3038069ac7}{$\sim$\+Player\+Manager} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_player}{Player} Manager Destructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_manager_a171946405d72c219802315721e09467d}{update\+Player} (const float \&elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em Update the player over a certain amount of time. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_manager_ac4bad97c7d281a47a876d7cee5f864bd}{check\+Player\+Collisionss} (std\+::vector$<$ \hyperlink{class_enemy}{Enemy} $>$ \&cur\+Enemies)
+\begin{DoxyCompactList}\small\item\em Check the \hyperlink{class_player}{Player}\textquotesingle{}s collisions to the enemies. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_manager_a7a61c6484a3dd12293d2481c5f61fb71}{player\+Shoot} ()
+\begin{DoxyCompactList}\small\item\em Allow the player to shoot. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_manager_a8dfbc91721f7c9cfeae80ae7fa89602e}{draw\+Player\+To\+Window} (sf\+::\+Render\+Window $\ast$current\+Window)
+\begin{DoxyCompactList}\small\item\em Draw the player to the provided window. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_manager_a503d878624b53851c6fa25559630f544}{draw\+Player\+Bullets} (sf\+::\+Render\+Window $\ast$current\+Window)
+\begin{DoxyCompactList}\small\item\em Draw the player\textquotesingle{}s bullets to the provided window. \end{DoxyCompactList}\item 
+bool \hyperlink{class_player_manager_ab927a10c2c602c42daf2e11eb8861692}{player\+Is\+Alive} () const
+\begin{DoxyCompactList}\small\item\em Evaluate that the player is alive or not. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_manager_a95358a4f97cf343f5d5d01a440c5dc76}{move\+Player} (\hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34}{Move\+Direction} dir\+To\+Move)
+\begin{DoxyCompactList}\small\item\em Move the player in a given direction. Left, Right or Stop. \end{DoxyCompactList}\item 
+\hyperlink{class_player}{Player} \& \hyperlink{class_player_manager_aa70cd9ab8f7a582c27bef02e12a408e7}{the\+Current\+Player} ()
+\begin{DoxyCompactList}\small\item\em Return a reference to the current player. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_manager_afbce199fe8a661b8002ae94b8396c7aa}{set\+Player\+Position} (float x, float y)
+\item 
+sf\+::\+Vector2f \hyperlink{class_player_manager_a1e058a4c38ae4b17a8541feb40247d06}{get\+First\+Bullet\+Pos} ()
+\item 
+void \hyperlink{class_player_manager_ae654ee04f5d9820cbb4c6b91161cc7a2}{set\+First\+Bullet\+Pos} (float x, float y)
+\item 
+unsigned int \hyperlink{class_player_manager_a1e1d29acf1a54f18fafe6a2a91c67ee7}{get\+Player\+Health} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_player_manager_a7f6871a42521409f64c1a335a48c4398}{Set\+Text\+And\+Font} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player}{Player} \hyperlink{class_player_manager_a60256e044fc83080d90cd57d24ba0e29}{\+\_\+cur\+Player}
+\item 
+sf\+::\+Font \hyperlink{class_player_manager_a01378a061dd9a9170c6f45cd1955dec1}{font}
+\item 
+sf\+::\+Text \hyperlink{class_player_manager_a2fc335171a9117a91aa672cf4ce78e1a}{text}
+\item 
+\hyperlink{class_player_movement}{Player\+Movement} \hyperlink{class_player_manager_a1c29120eaa2bd04b1a9f270cbd8ac749}{\+\_\+player\+Mover}
+\item 
+\hyperlink{class_bullet_manager}{Bullet\+Manager} \hyperlink{class_player_manager_a8e97405a3e13fc9c7dbba27e09ffd66d}{\+\_\+player\+Bullet\+Mananger}
+\item 
+\hyperlink{class_collisions}{Collisions} \hyperlink{class_player_manager_ae736dee4829cc21604a6d800b7a2222e}{\+\_\+collision\+Detector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Phillips (1036603) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_player_manager_aa2ce60af19b9d80bd884e2edaea726d6}\label{class_player_manager_aa2ce60af19b9d80bd884e2edaea726d6}} 
+\index{Player\+Manager@{Player\+Manager}!Player\+Manager@{Player\+Manager}}
+\index{Player\+Manager@{Player\+Manager}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{Player\+Manager()}{PlayerManager()}}
+{\footnotesize\ttfamily Player\+Manager\+::\+Player\+Manager (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{window\+Size,  }\item[{const float \&}]{radius }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_player}{Player} Manager Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Size} & \\
+\hline
+{\em radius} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_manager_ab53de6b16914b7591fc2bd3038069ac7}\label{class_player_manager_ab53de6b16914b7591fc2bd3038069ac7}} 
+\index{Player\+Manager@{Player\+Manager}!````~Player\+Manager@{$\sim$\+Player\+Manager}}
+\index{````~Player\+Manager@{$\sim$\+Player\+Manager}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Player\+Manager()}{~PlayerManager()}}
+{\footnotesize\ttfamily Player\+Manager\+::$\sim$\+Player\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_player}{Player} Manager Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_player_manager_ac4bad97c7d281a47a876d7cee5f864bd}\label{class_player_manager_ac4bad97c7d281a47a876d7cee5f864bd}} 
+\index{Player\+Manager@{Player\+Manager}!check\+Player\+Collisionss@{check\+Player\+Collisionss}}
+\index{check\+Player\+Collisionss@{check\+Player\+Collisionss}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{check\+Player\+Collisionss()}{checkPlayerCollisionss()}}
+{\footnotesize\ttfamily void Player\+Manager\+::check\+Player\+Collisionss (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{class_enemy}{Enemy} $>$ \&}]{cur\+Enemies }\end{DoxyParamCaption})}
+
+
+
+Check the \hyperlink{class_player}{Player}\textquotesingle{}s collisions to the enemies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cur\+Enemies} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_manager_a503d878624b53851c6fa25559630f544}\label{class_player_manager_a503d878624b53851c6fa25559630f544}} 
+\index{Player\+Manager@{Player\+Manager}!draw\+Player\+Bullets@{draw\+Player\+Bullets}}
+\index{draw\+Player\+Bullets@{draw\+Player\+Bullets}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{draw\+Player\+Bullets()}{drawPlayerBullets()}}
+{\footnotesize\ttfamily void Player\+Manager\+::draw\+Player\+Bullets (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{current\+Window }\end{DoxyParamCaption})}
+
+
+
+Draw the player\textquotesingle{}s bullets to the provided window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_manager_a8dfbc91721f7c9cfeae80ae7fa89602e}\label{class_player_manager_a8dfbc91721f7c9cfeae80ae7fa89602e}} 
+\index{Player\+Manager@{Player\+Manager}!draw\+Player\+To\+Window@{draw\+Player\+To\+Window}}
+\index{draw\+Player\+To\+Window@{draw\+Player\+To\+Window}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{draw\+Player\+To\+Window()}{drawPlayerToWindow()}}
+{\footnotesize\ttfamily void Player\+Manager\+::draw\+Player\+To\+Window (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{current\+Window }\end{DoxyParamCaption})}
+
+
+
+Draw the player to the provided window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_manager_a1e058a4c38ae4b17a8541feb40247d06}\label{class_player_manager_a1e058a4c38ae4b17a8541feb40247d06}} 
+\index{Player\+Manager@{Player\+Manager}!get\+First\+Bullet\+Pos@{get\+First\+Bullet\+Pos}}
+\index{get\+First\+Bullet\+Pos@{get\+First\+Bullet\+Pos}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{get\+First\+Bullet\+Pos()}{getFirstBulletPos()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Player\+Manager\+::get\+First\+Bullet\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_manager_a1e1d29acf1a54f18fafe6a2a91c67ee7}\label{class_player_manager_a1e1d29acf1a54f18fafe6a2a91c67ee7}} 
+\index{Player\+Manager@{Player\+Manager}!get\+Player\+Health@{get\+Player\+Health}}
+\index{get\+Player\+Health@{get\+Player\+Health}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{get\+Player\+Health()}{getPlayerHealth()}}
+{\footnotesize\ttfamily unsigned int Player\+Manager\+::get\+Player\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_manager_a95358a4f97cf343f5d5d01a440c5dc76}\label{class_player_manager_a95358a4f97cf343f5d5d01a440c5dc76}} 
+\index{Player\+Manager@{Player\+Manager}!move\+Player@{move\+Player}}
+\index{move\+Player@{move\+Player}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{move\+Player()}{movePlayer()}}
+{\footnotesize\ttfamily void Player\+Manager\+::move\+Player (\begin{DoxyParamCaption}\item[{\hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34}{Move\+Direction}}]{dir\+To\+Move }\end{DoxyParamCaption})}
+
+
+
+Move the player in a given direction. Left, Right or Stop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+To\+Move} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_manager_ab927a10c2c602c42daf2e11eb8861692}\label{class_player_manager_ab927a10c2c602c42daf2e11eb8861692}} 
+\index{Player\+Manager@{Player\+Manager}!player\+Is\+Alive@{player\+Is\+Alive}}
+\index{player\+Is\+Alive@{player\+Is\+Alive}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{player\+Is\+Alive()}{playerIsAlive()}}
+{\footnotesize\ttfamily bool Player\+Manager\+::player\+Is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Evaluate that the player is alive or not. 
+
+\mbox{\Hypertarget{class_player_manager_a7a61c6484a3dd12293d2481c5f61fb71}\label{class_player_manager_a7a61c6484a3dd12293d2481c5f61fb71}} 
+\index{Player\+Manager@{Player\+Manager}!player\+Shoot@{player\+Shoot}}
+\index{player\+Shoot@{player\+Shoot}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{player\+Shoot()}{playerShoot()}}
+{\footnotesize\ttfamily void Player\+Manager\+::player\+Shoot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Allow the player to shoot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+Time} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_player_manager_ae654ee04f5d9820cbb4c6b91161cc7a2}\label{class_player_manager_ae654ee04f5d9820cbb4c6b91161cc7a2}} 
+\index{Player\+Manager@{Player\+Manager}!set\+First\+Bullet\+Pos@{set\+First\+Bullet\+Pos}}
+\index{set\+First\+Bullet\+Pos@{set\+First\+Bullet\+Pos}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{set\+First\+Bullet\+Pos()}{setFirstBulletPos()}}
+{\footnotesize\ttfamily void Player\+Manager\+::set\+First\+Bullet\+Pos (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_manager_afbce199fe8a661b8002ae94b8396c7aa}\label{class_player_manager_afbce199fe8a661b8002ae94b8396c7aa}} 
+\index{Player\+Manager@{Player\+Manager}!set\+Player\+Position@{set\+Player\+Position}}
+\index{set\+Player\+Position@{set\+Player\+Position}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{set\+Player\+Position()}{setPlayerPosition()}}
+{\footnotesize\ttfamily void Player\+Manager\+::set\+Player\+Position (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_player_manager_a7f6871a42521409f64c1a335a48c4398}\label{class_player_manager_a7f6871a42521409f64c1a335a48c4398}} 
+\index{Player\+Manager@{Player\+Manager}!Set\+Text\+And\+Font@{Set\+Text\+And\+Font}}
+\index{Set\+Text\+And\+Font@{Set\+Text\+And\+Font}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{Set\+Text\+And\+Font()}{SetTextAndFont()}}
+{\footnotesize\ttfamily void Player\+Manager\+::\+Set\+Text\+And\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_manager_aa70cd9ab8f7a582c27bef02e12a408e7}\label{class_player_manager_aa70cd9ab8f7a582c27bef02e12a408e7}} 
+\index{Player\+Manager@{Player\+Manager}!the\+Current\+Player@{the\+Current\+Player}}
+\index{the\+Current\+Player@{the\+Current\+Player}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{the\+Current\+Player()}{theCurrentPlayer()}}
+{\footnotesize\ttfamily \hyperlink{class_player}{Player} \& Player\+Manager\+::the\+Current\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return a reference to the current player. 
+
+\mbox{\Hypertarget{class_player_manager_a171946405d72c219802315721e09467d}\label{class_player_manager_a171946405d72c219802315721e09467d}} 
+\index{Player\+Manager@{Player\+Manager}!update\+Player@{update\+Player}}
+\index{update\+Player@{update\+Player}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{update\+Player()}{updatePlayer()}}
+{\footnotesize\ttfamily void Player\+Manager\+::update\+Player (\begin{DoxyParamCaption}\item[{const float \&}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+
+
+Update the player over a certain amount of time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_player_manager_ae736dee4829cc21604a6d800b7a2222e}\label{class_player_manager_ae736dee4829cc21604a6d800b7a2222e}} 
+\index{Player\+Manager@{Player\+Manager}!\+\_\+collision\+Detector@{\+\_\+collision\+Detector}}
+\index{\+\_\+collision\+Detector@{\+\_\+collision\+Detector}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+collision\+Detector}{\_collisionDetector}}
+{\footnotesize\ttfamily \hyperlink{class_collisions}{Collisions} Player\+Manager\+::\+\_\+collision\+Detector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_manager_a60256e044fc83080d90cd57d24ba0e29}\label{class_player_manager_a60256e044fc83080d90cd57d24ba0e29}} 
+\index{Player\+Manager@{Player\+Manager}!\+\_\+cur\+Player@{\+\_\+cur\+Player}}
+\index{\+\_\+cur\+Player@{\+\_\+cur\+Player}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+cur\+Player}{\_curPlayer}}
+{\footnotesize\ttfamily \hyperlink{class_player}{Player} Player\+Manager\+::\+\_\+cur\+Player\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_manager_a8e97405a3e13fc9c7dbba27e09ffd66d}\label{class_player_manager_a8e97405a3e13fc9c7dbba27e09ffd66d}} 
+\index{Player\+Manager@{Player\+Manager}!\+\_\+player\+Bullet\+Mananger@{\+\_\+player\+Bullet\+Mananger}}
+\index{\+\_\+player\+Bullet\+Mananger@{\+\_\+player\+Bullet\+Mananger}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+player\+Bullet\+Mananger}{\_playerBulletMananger}}
+{\footnotesize\ttfamily \hyperlink{class_bullet_manager}{Bullet\+Manager} Player\+Manager\+::\+\_\+player\+Bullet\+Mananger\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_manager_a1c29120eaa2bd04b1a9f270cbd8ac749}\label{class_player_manager_a1c29120eaa2bd04b1a9f270cbd8ac749}} 
+\index{Player\+Manager@{Player\+Manager}!\+\_\+player\+Mover@{\+\_\+player\+Mover}}
+\index{\+\_\+player\+Mover@{\+\_\+player\+Mover}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+player\+Mover}{\_playerMover}}
+{\footnotesize\ttfamily \hyperlink{class_player_movement}{Player\+Movement} Player\+Manager\+::\+\_\+player\+Mover\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_manager_a01378a061dd9a9170c6f45cd1955dec1}\label{class_player_manager_a01378a061dd9a9170c6f45cd1955dec1}} 
+\index{Player\+Manager@{Player\+Manager}!font@{font}}
+\index{font@{font}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font Player\+Manager\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_player_manager_a2fc335171a9117a91aa672cf4ce78e1a}\label{class_player_manager_a2fc335171a9117a91aa672cf4ce78e1a}} 
+\index{Player\+Manager@{Player\+Manager}!text@{text}}
+\index{text@{text}!Player\+Manager@{Player\+Manager}}
+\subsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily sf\+::\+Text Player\+Manager\+::text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_player_manager_8h}{Player\+Manager.\+h}\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_player_manager_8cpp}{Player\+Manager.\+cpp}\end{DoxyCompactItemize}

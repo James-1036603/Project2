@@ -1,0 +1,5 @@
+<map id="Player::update" name="Player::update">
+<area shape="rect" id="node2" href="$class_player_movement.html#a9975a1cdcd2243f3b142cd94230118bc" title="Move the player clockwise. " alt="" coords="160,5,353,47"/>
+<area shape="rect" id="node3" href="$class_player_movement.html#abc231fdfdbc0f2acb2bcb38b54b1320f" title="Move the player counter clockwise. " alt="" coords="160,71,353,112"/>
+<area shape="rect" id="node4" href="$class_bullet_manager.html#a834ec287e01fc2ed7c5d3885e4b380c6" title="Remove any bullets from the vector which are marked as inactive. Returns a vector of bullets with the..." alt="" coords="161,136,352,177"/>
+</map>

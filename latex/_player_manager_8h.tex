@@ -1,5 +1,5 @@
-\hypertarget{_player_manager_8h}{}\section{Player\+Manager.\+h File Reference}
-\label{_player_manager_8h}\index{Player\+Manager.\+h@{Player\+Manager.\+h}}
+\hypertarget{_player_manager_8h}{}\section{C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/\+Player\+Manager.h File Reference}
+\label{_player_manager_8h}\index{C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/\+Player\+Manager.\+h@{C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project/\+Player\+Manager.\+h}}
 
 
 The playermanager will maintain all updates and events to the player, such as player input, collision detection, drawing the player to the active window.  
@@ -10,10 +10,6 @@ The playermanager will maintain all updates and events to the player, such as pl
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$S\+F\+M\+L/\+System.\+hpp$>$}\newline
 {\ttfamily \#include $<$sstream$>$}\newline
-Include dependency graph for Player\+Manager.\+h\+:
-% FIG 0
-This graph shows which files directly or indirectly include this file\+:
-% FIG 1
 \subsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,10 +18,10 @@ class \hyperlink{class_player_manager}{Player\+Manager}
 \subsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34}{Move\+Direction} \{ \hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a21507b40c80068eda19865706fdc2403}{Move\+Direction\+::\+R\+I\+G\+HT}, 
-\hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a684d325a7303f52e64011467ff5c5758}{Move\+Direction\+::\+L\+E\+FT}, 
-\hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a5980084724c3808d9d53ed0d5cf5ff6e}{Move\+Direction\+::\+S\+T\+O\+P\+\_\+\+R\+I\+G\+HT}, 
-\hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a89f2ef07b3abcf1175d968519245df22}{Move\+Direction\+::\+S\+T\+O\+P\+\_\+\+L\+E\+FT}
+enum \hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34}{Move\+Direction} \{ {\bfseries R\+I\+G\+HT}, 
+{\bfseries L\+E\+FT}, 
+{\bfseries S\+T\+O\+P\+\_\+\+R\+I\+G\+HT}, 
+{\bfseries S\+T\+O\+P\+\_\+\+L\+E\+FT}
  \}
 \end{DoxyCompactItemize}
 
@@ -42,21 +38,4 @@ The playermanager will maintain all updates and events to the player, such as pl
 \subsubsection{\texorpdfstring{Move\+Direction}{MoveDirection}}
 {\footnotesize\ttfamily enum \hyperlink{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34}{Move\+Direction}\hspace{0.3cm}{\ttfamily [strong]}}
 
-\begin{DoxyEnumFields}{Enumerator}
-\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+HT@{R\+I\+G\+HT}!Player\+Manager.\+h@{Player\+Manager.\+h}}\index{Player\+Manager.\+h@{Player\+Manager.\+h}!R\+I\+G\+HT@{R\+I\+G\+HT}}}\mbox{\Hypertarget{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a21507b40c80068eda19865706fdc2403}\label{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a21507b40c80068eda19865706fdc2403}} 
-R\+I\+G\+HT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+FT@{L\+E\+FT}!Player\+Manager.\+h@{Player\+Manager.\+h}}\index{Player\+Manager.\+h@{Player\+Manager.\+h}!L\+E\+FT@{L\+E\+FT}}}\mbox{\Hypertarget{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a684d325a7303f52e64011467ff5c5758}\label{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a684d325a7303f52e64011467ff5c5758}} 
-L\+E\+FT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+\_\+\+R\+I\+G\+HT@{S\+T\+O\+P\+\_\+\+R\+I\+G\+HT}!Player\+Manager.\+h@{Player\+Manager.\+h}}\index{Player\+Manager.\+h@{Player\+Manager.\+h}!S\+T\+O\+P\+\_\+\+R\+I\+G\+HT@{S\+T\+O\+P\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a5980084724c3808d9d53ed0d5cf5ff6e}\label{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a5980084724c3808d9d53ed0d5cf5ff6e}} 
-S\+T\+O\+P\+\_\+\+R\+I\+G\+HT&\\
-\hline
-
-\raisebox{\heightof{T}}[0pt][0pt]{\index{S\+T\+O\+P\+\_\+\+L\+E\+FT@{S\+T\+O\+P\+\_\+\+L\+E\+FT}!Player\+Manager.\+h@{Player\+Manager.\+h}}\index{Player\+Manager.\+h@{Player\+Manager.\+h}!S\+T\+O\+P\+\_\+\+L\+E\+FT@{S\+T\+O\+P\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a89f2ef07b3abcf1175d968519245df22}\label{_player_manager_8h_a00ec4eba48da32d6cbdf827185fd3d34a89f2ef07b3abcf1175d968519245df22}} 
-S\+T\+O\+P\+\_\+\+L\+E\+FT&\\
-\hline
-
-\end{DoxyEnumFields}
+An enum for the direction of movement of the player 

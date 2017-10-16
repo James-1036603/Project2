@@ -6,10 +6,16 @@
 #include "Bullet.h"
 #include "BulletManager.h"
 #define PI 3.14
-
-#include <iostream>
+/**
+ * @class enemy_FileNotFound
+ * @file Enemy.h
+ * @brief File Not found for the enemy. Used for error catching
+ */
 
 class enemy_FileNotFound {};
+/** An enum for the type of enemy.
+ * There are 4 types of enemy. Scout, soldier, rogue and tank
+ */
 enum class EnemyType {SCOUT,SOLDIER,ROGUE,TANK}; //Three enemy types
 /**
  * @class Enemy
@@ -126,25 +132,22 @@ private:
     int _stepsTaken;//The idea is, a bullet will be shot every 5 steps taken
     int _damageForBullet;//Damage for the bullet (related to the type of enemy)
     EnemyType _typeOfEnemy;
-
-
-
-    std::vector<Bullet> _enemyBullets;
-    void updateBullets(const float& elapsedTime);
-    void checkBounds();//Check if the enemy has moved out of bounds
-
+    bool _isAlive;
+    std::vector<Bullet> _enemyBullets;    
+	EnemyMovement* _moveEnemy;
+    BulletManager* _BulletManager; 
     static Enemy _defaultScout;//Static enemy for Scout
     static Enemy _defaultSoldier;//Static enemy for Soldier
     static Enemy _defaultRogue;//Static enemy for Rogue
 	static Enemy _defaultTank;//Static enemy for Tank
-	
-	EnemyMovement* _moveEnemy;
-    BulletManager* _BulletManager;    
+	   
 
     sf::Vector2f _displaySize;//When the enemy goes off the screen
 
-    bool _isAlive;
+    
     void generateRotation();//Generate a random angle for the sprite
+    void updateBullets(const float& elapsedTime);
+    void checkBounds();//Check if the enemy has moved out of bounds
     friend class EnemyManager;
 
 };

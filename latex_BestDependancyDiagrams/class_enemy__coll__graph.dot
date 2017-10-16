@@ -1,0 +1,11 @@
+digraph "Enemy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Enemy\n|- _curPosition\l- _objSprite\l- _objTexture\l- _speed\l- _rotation\l- _stepsTaken\l- _damageForBullet\l- _typeOfEnemy\l- _enemyBullets\l- _displaySize\l- _isAlive\l|+ Enemy()\l+ ~Enemy()\l+ getSprite()\l+ Shoot()\l+ getShot()\l+ isAlive()\l+ typeOfEnemy()\l+ update()\l+ getEnemyBullets()\l+ drawBullets()\land 8 more...\l- Enemy()\l- updateBullets()\l- checkBounds()\l- generateRotation()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_moveEnemy" ,arrowhead="odiamond"];
+  Node2 [label="{EnemyMovement\n||+ EnemyMovement()\l+ ~EnemyMovement()\l+ MoveEnemyScout()\l+ MoveEnemySoldier()\l+ MoveEnemyRogue()\l+ MoveEnemyTank()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_enemy_movement.html"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_BulletManager" ,arrowhead="odiamond"];
+  Node3 [label="{BulletManager\n||+ BulletManager()\l+ ~BulletManager()\l+ deleteInactiveBullets()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_bullet_manager.html"];
+  Node1 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_defaultRogue\n-_defaultScout\n-_defaultSoldier\n-_defaultTank" ,arrowhead="odiamond"];
+}

@@ -1,0 +1,153 @@
+\hypertarget{class_level}{}\section{Level Class Reference}
+\label{class_level}\index{Level@{Level}}
+
+
+{\ttfamily \#include $<$Level.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_level_a7a696c928ca5d5354db6e50e46d0f67d}{Level} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_level}{Level} Constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_level_a249eac1e8f19ff44134efa5e986feaca}{$\sim$\+Level} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_level}{Level} Destructor. \end{DoxyCompactList}\item 
+int \hyperlink{class_level_a7ee14ca534888973fab088e511db1341}{current\+Level} ()
+\begin{DoxyCompactList}\small\item\em Return the current level. \end{DoxyCompactList}\item 
+void \hyperlink{class_level_a9e00624c99565b0bc3cedf7b7971818e}{next\+Level} ()
+\begin{DoxyCompactList}\small\item\em Go to the next \hyperlink{class_level}{Level}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_level_a702a1a057a4572ea37b701126501621a}{max\+Level} ()
+\begin{DoxyCompactList}\small\item\em Evaluate whether the maximum level has been reached or not. \end{DoxyCompactList}\item 
+void \hyperlink{class_level_a4cdf43966bbd49ea4f392762c4cd7991}{draw\+Levels\+To\+Window} (sf\+::\+Render\+Window $\ast$current\+Window)
+\begin{DoxyCompactList}\small\item\em Draw the current level to the current window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_level_aa726d09473bbb551477994c70e516a99}{set\+Text\+And\+Font} ()
+\item 
+void \hyperlink{class_level_a0d5d67c406bf3ee9eb5be34718345b40}{level\+To\+Text} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_level_a70f3892ab0296e9ab92798b62d1dc894}{\+\_\+current\+Level}
+\item 
+sf\+::\+Font \hyperlink{class_level_af8ac9bfc42fb1b12b12538e2b9c170e7}{font}
+\item 
+sf\+::\+Text \hyperlink{class_level_a4f0d652d48634a83436f314c0581ac23}{text}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Phillips (1036603) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_level_a7a696c928ca5d5354db6e50e46d0f67d}\label{class_level_a7a696c928ca5d5354db6e50e46d0f67d}} 
+\index{Level@{Level}!Level@{Level}}
+\index{Level@{Level}!Level@{Level}}
+\subsubsection{\texorpdfstring{Level()}{Level()}}
+{\footnotesize\ttfamily Level\+::\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{class_level}{Level} Constructor. 
+
+\mbox{\Hypertarget{class_level_a249eac1e8f19ff44134efa5e986feaca}\label{class_level_a249eac1e8f19ff44134efa5e986feaca}} 
+\index{Level@{Level}!````~Level@{$\sim$\+Level}}
+\index{````~Level@{$\sim$\+Level}!Level@{Level}}
+\subsubsection{\texorpdfstring{$\sim$\+Level()}{~Level()}}
+{\footnotesize\ttfamily Level\+::$\sim$\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_level}{Level} Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_level_a7ee14ca534888973fab088e511db1341}\label{class_level_a7ee14ca534888973fab088e511db1341}} 
+\index{Level@{Level}!current\+Level@{current\+Level}}
+\index{current\+Level@{current\+Level}!Level@{Level}}
+\subsubsection{\texorpdfstring{current\+Level()}{currentLevel()}}
+{\footnotesize\ttfamily int Level\+::current\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the current level. 
+
+\mbox{\Hypertarget{class_level_a4cdf43966bbd49ea4f392762c4cd7991}\label{class_level_a4cdf43966bbd49ea4f392762c4cd7991}} 
+\index{Level@{Level}!draw\+Levels\+To\+Window@{draw\+Levels\+To\+Window}}
+\index{draw\+Levels\+To\+Window@{draw\+Levels\+To\+Window}!Level@{Level}}
+\subsubsection{\texorpdfstring{draw\+Levels\+To\+Window()}{drawLevelsToWindow()}}
+{\footnotesize\ttfamily void Level\+::draw\+Levels\+To\+Window (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{current\+Window }\end{DoxyParamCaption})}
+
+
+
+Draw the current level to the current window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_level_a0d5d67c406bf3ee9eb5be34718345b40}\label{class_level_a0d5d67c406bf3ee9eb5be34718345b40}} 
+\index{Level@{Level}!level\+To\+Text@{level\+To\+Text}}
+\index{level\+To\+Text@{level\+To\+Text}!Level@{Level}}
+\subsubsection{\texorpdfstring{level\+To\+Text()}{levelToText()}}
+{\footnotesize\ttfamily void Level\+::level\+To\+Text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_level_a702a1a057a4572ea37b701126501621a}\label{class_level_a702a1a057a4572ea37b701126501621a}} 
+\index{Level@{Level}!max\+Level@{max\+Level}}
+\index{max\+Level@{max\+Level}!Level@{Level}}
+\subsubsection{\texorpdfstring{max\+Level()}{maxLevel()}}
+{\footnotesize\ttfamily bool Level\+::max\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Evaluate whether the maximum level has been reached or not. 
+
+\mbox{\Hypertarget{class_level_a9e00624c99565b0bc3cedf7b7971818e}\label{class_level_a9e00624c99565b0bc3cedf7b7971818e}} 
+\index{Level@{Level}!next\+Level@{next\+Level}}
+\index{next\+Level@{next\+Level}!Level@{Level}}
+\subsubsection{\texorpdfstring{next\+Level()}{nextLevel()}}
+{\footnotesize\ttfamily void Level\+::next\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Go to the next \hyperlink{class_level}{Level}. 
+
+\mbox{\Hypertarget{class_level_aa726d09473bbb551477994c70e516a99}\label{class_level_aa726d09473bbb551477994c70e516a99}} 
+\index{Level@{Level}!set\+Text\+And\+Font@{set\+Text\+And\+Font}}
+\index{set\+Text\+And\+Font@{set\+Text\+And\+Font}!Level@{Level}}
+\subsubsection{\texorpdfstring{set\+Text\+And\+Font()}{setTextAndFont()}}
+{\footnotesize\ttfamily void Level\+::set\+Text\+And\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_level_a70f3892ab0296e9ab92798b62d1dc894}\label{class_level_a70f3892ab0296e9ab92798b62d1dc894}} 
+\index{Level@{Level}!\+\_\+current\+Level@{\+\_\+current\+Level}}
+\index{\+\_\+current\+Level@{\+\_\+current\+Level}!Level@{Level}}
+\subsubsection{\texorpdfstring{\+\_\+current\+Level}{\_currentLevel}}
+{\footnotesize\ttfamily int Level\+::\+\_\+current\+Level\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_level_af8ac9bfc42fb1b12b12538e2b9c170e7}\label{class_level_af8ac9bfc42fb1b12b12538e2b9c170e7}} 
+\index{Level@{Level}!font@{font}}
+\index{font@{font}!Level@{Level}}
+\subsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily sf\+::\+Font Level\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_level_a4f0d652d48634a83436f314c0581ac23}\label{class_level_a4f0d652d48634a83436f314c0581ac23}} 
+\index{Level@{Level}!text@{text}}
+\index{text@{text}!Level@{Level}}
+\subsubsection{\texorpdfstring{text}{text}}
+{\footnotesize\ttfamily sf\+::\+Text Level\+::text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_level_8h}{Level.\+h}\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_level_8cpp}{Level.\+cpp}\end{DoxyCompactItemize}

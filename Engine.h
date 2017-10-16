@@ -5,8 +5,15 @@
 #include "PlayerManager.h"
 #include "EnemyManager.h"
 #include "Level.h"
-
+/** An enum for the type of splash screen to be displayed
+ */
 enum class ScreenType{SPLASH,WIN,LOSE};
+/**
+ * @class FileNotFound
+ * @file Engine.h
+ * @brief File Not Found for engine. Used in error catching
+ */
+
 class FileNotFound {};
 /**
  * @class Engine

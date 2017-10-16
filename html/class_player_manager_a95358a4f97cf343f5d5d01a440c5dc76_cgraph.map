@@ -1,0 +1,6 @@
+<map id="PlayerManager::movePlayer" name="PlayerManager::movePlayer">
+<area shape="rect" id="node2" href="$class_player.html#a6a2b68bc4b21d4c4a79a23b498896ec2" title="Move the player Right. " alt="" coords="237,5,364,32"/>
+<area shape="rect" id="node3" href="$class_player.html#afebb6b7ca7210e7b1aa2c9ee4ff75b0e" title="Stop moving the player Right. " alt="" coords="239,56,362,83"/>
+<area shape="rect" id="node4" href="$class_player.html#ae3bbcf1159bdc059bff1c2513f2505f7" title="Move the player Left. " alt="" coords="241,107,360,133"/>
+<area shape="rect" id="node5" href="$class_player.html#aa150f941486096bb63cc67eabec9046c" title="Stop moving the player Left. " alt="" coords="244,157,357,184"/>
+</map>

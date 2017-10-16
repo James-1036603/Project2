@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['bullet',['Bullet',['../class_bullet.html',1,'Bullet'],['../class_bullet.html#a751da85d043013c509426b6cf33bd9c5',1,'Bullet::Bullet(const sf::Vector2f &amp;startingPos, const float &amp;rotation, Owner BulletOwner, int damage=1)'],['../class_bullet.html#acd7befc0bc18907cc1d871d37bbdddeb',1,'Bullet::Bullet()']]],
-  ['bullet_2ecpp',['Bullet.cpp',['../_bullet_8cpp.html',1,'']]],
-  ['bullet_2eh',['Bullet.h',['../_bullet_8h.html',1,'']]],
-  ['bullet_5ffilenotfound',['bullet_FileNotFound',['../classbullet___file_not_found.html',1,'']]],
-  ['bulletisalive',['bulletIsAlive',['../class_bullet.html#a103ff9146dce215f15ca0c4282a5a8cf',1,'Bullet']]],
-  ['bulletmanager',['BulletManager',['../class_bullet_manager.html',1,'BulletManager'],['../class_bullet_manager.html#a4aae3d492898b93dd5730dc28f2cc910',1,'BulletManager::BulletManager()']]],
-  ['bulletmanager_2ecpp',['BulletManager.cpp',['../_bullet_manager_8cpp.html',1,'']]],
-  ['bulletmanager_2eh',['BulletManager.h',['../_bullet_manager_8h.html',1,'']]],
-  ['bulletmovement',['BulletMovement',['../class_bullet_movement.html',1,'BulletMovement'],['../class_bullet_movement.html#a828d99972323657caf3dafa00e3a9e5e',1,'BulletMovement::BulletMovement()']]],
-  ['bulletmovement_2ecpp',['BulletMovement.cpp',['../_bullet_movement_8cpp.html',1,'']]],
-  ['bulletmovement_2eh',['BulletMovement.h',['../_bullet_movement_8h.html',1,'']]]
+  ['changevolume',['changeVolume',['../class_game_music.html#adafedd8d8c1b98efbac108c8f8b826ac',1,'GameMusic']]],
+  ['checkenemycollisions',['checkEnemyCollisions',['../class_collisions.html#aa628e8ae15bab7e085e4962be22ff16e',1,'Collisions::checkEnemyCollisions()'],['../class_enemy_manager.html#a317b11ce52e67c7b760b2b81755fd95f',1,'EnemyManager::checkEnemyCollisions()']]],
+  ['checkplayercollisions',['checkPlayerCollisions',['../class_collisions.html#a990174c72f4771e6c2a8c014bd873513',1,'Collisions']]],
+  ['checkplayercollisionss',['checkPlayerCollisionss',['../class_player_manager.html#ac4bad97c7d281a47a876d7cee5f864bd',1,'PlayerManager']]],
+  ['collisions',['Collisions',['../class_collisions.html',1,'Collisions'],['../class_collisions.html#a006630da4b62b10ebf123c6333c2b198',1,'Collisions::Collisions()']]],
+  ['collisions_2eh',['Collisions.h',['../_collisions_8h.html',1,'']]],
+  ['currentlevel',['currentLevel',['../class_level.html#a7ee14ca534888973fab088e511db1341',1,'Level']]]
 ];

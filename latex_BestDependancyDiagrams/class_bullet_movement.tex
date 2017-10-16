@@ -1,0 +1,118 @@
+\hypertarget{class_bullet_movement}{}\section{Bullet\+Movement Class Reference}
+\label{class_bullet_movement}\index{Bullet\+Movement@{Bullet\+Movement}}
+
+
+{\ttfamily \#include $<$Bullet\+Movement.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bullet_movement_a828d99972323657caf3dafa00e3a9e5e}{Bullet\+Movement} (const sf\+::\+Vector2f \&bullet\+Starting\+Position)
+\item 
+virtual \hyperlink{class_bullet_movement_a81e3816f8089dd796ed1ac03a3d9c683}{$\sim$\+Bullet\+Movement} ()
+\item 
+void \hyperlink{class_bullet_movement_a33b6ad498331352d366e2dab6bc2c712}{Move\+Player\+Bullet} (sf\+::\+Vector2f $\ast$cur\+Pos, const float \&elapsed\+Time, bool \&bullet\+Satus)
+\item 
+void \hyperlink{class_bullet_movement_ae7109a6098374d23e8dc2360d6546b7c}{Move\+Enemy\+Bullet} (sf\+::\+Vector2f $\ast$cur\+Pos, const float \&elapsed\+Time, bool \&bullet\+Satus, const float \&rotation, const float \&speed)
+\item 
+float \hyperlink{class_bullet_movement_a4dddd135a0d89dbb8d7b4ec076264f16}{get\+Gradient} ()
+\item 
+float \hyperlink{class_bullet_movement_ab9716be6fffd1b7f58e5b3be24062e5b}{get\+Intercept} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_bullet_movement_a84efe87d137c1d0b9e14de5a5c9c7938}{gradient} ()
+\item 
+float \hyperlink{class_bullet_movement_a165576c782ea8432c14ee86456ff97c4}{y\+Intercept} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2f \hyperlink{class_bullet_movement_a80f3b6b7f248b1bfecc4845319bc91fc}{\+\_\+bullet\+Start\+Pos}
+\item 
+float \hyperlink{class_bullet_movement_a21abb8a9b6d5d1d6cd5e079648ade529}{\+\_\+gradient}
+\item 
+float \hyperlink{class_bullet_movement_a8d20043e5da44b2585b78e0be9d9ad66}{\+\_\+y\+Intercept}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bullet_movement_a828d99972323657caf3dafa00e3a9e5e}\label{class_bullet_movement_a828d99972323657caf3dafa00e3a9e5e}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!Bullet\+Movement@{Bullet\+Movement}}
+\index{Bullet\+Movement@{Bullet\+Movement}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{Bullet\+Movement()}{BulletMovement()}}
+{\footnotesize\ttfamily Bullet\+Movement\+::\+Bullet\+Movement (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{bullet\+Starting\+Position }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bullet_movement_a81e3816f8089dd796ed1ac03a3d9c683}\label{class_bullet_movement_a81e3816f8089dd796ed1ac03a3d9c683}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!````~Bullet\+Movement@{$\sim$\+Bullet\+Movement}}
+\index{````~Bullet\+Movement@{$\sim$\+Bullet\+Movement}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{$\sim$\+Bullet\+Movement()}{~BulletMovement()}}
+{\footnotesize\ttfamily Bullet\+Movement\+::$\sim$\+Bullet\+Movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bullet_movement_a4dddd135a0d89dbb8d7b4ec076264f16}\label{class_bullet_movement_a4dddd135a0d89dbb8d7b4ec076264f16}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!get\+Gradient@{get\+Gradient}}
+\index{get\+Gradient@{get\+Gradient}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{get\+Gradient()}{getGradient()}}
+{\footnotesize\ttfamily float Bullet\+Movement\+::get\+Gradient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_bullet_movement_ab9716be6fffd1b7f58e5b3be24062e5b}\label{class_bullet_movement_ab9716be6fffd1b7f58e5b3be24062e5b}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!get\+Intercept@{get\+Intercept}}
+\index{get\+Intercept@{get\+Intercept}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{get\+Intercept()}{getIntercept()}}
+{\footnotesize\ttfamily float Bullet\+Movement\+::get\+Intercept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_bullet_movement_a84efe87d137c1d0b9e14de5a5c9c7938}\label{class_bullet_movement_a84efe87d137c1d0b9e14de5a5c9c7938}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!gradient@{gradient}}
+\index{gradient@{gradient}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{gradient()}{gradient()}}
+{\footnotesize\ttfamily float Bullet\+Movement\+::gradient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_bullet_movement_ae7109a6098374d23e8dc2360d6546b7c}\label{class_bullet_movement_ae7109a6098374d23e8dc2360d6546b7c}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!Move\+Enemy\+Bullet@{Move\+Enemy\+Bullet}}
+\index{Move\+Enemy\+Bullet@{Move\+Enemy\+Bullet}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{Move\+Enemy\+Bullet()}{MoveEnemyBullet()}}
+{\footnotesize\ttfamily void Bullet\+Movement\+::\+Move\+Enemy\+Bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f $\ast$}]{cur\+Pos,  }\item[{const float \&}]{elapsed\+Time,  }\item[{bool \&}]{bullet\+Satus,  }\item[{const float \&}]{rotation,  }\item[{const float \&}]{speed }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bullet_movement_a33b6ad498331352d366e2dab6bc2c712}\label{class_bullet_movement_a33b6ad498331352d366e2dab6bc2c712}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!Move\+Player\+Bullet@{Move\+Player\+Bullet}}
+\index{Move\+Player\+Bullet@{Move\+Player\+Bullet}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{Move\+Player\+Bullet()}{MovePlayerBullet()}}
+{\footnotesize\ttfamily void Bullet\+Movement\+::\+Move\+Player\+Bullet (\begin{DoxyParamCaption}\item[{sf\+::\+Vector2f $\ast$}]{cur\+Pos,  }\item[{const float \&}]{elapsed\+Time,  }\item[{bool \&}]{bullet\+Satus }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_bullet_movement_a165576c782ea8432c14ee86456ff97c4}\label{class_bullet_movement_a165576c782ea8432c14ee86456ff97c4}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!y\+Intercept@{y\+Intercept}}
+\index{y\+Intercept@{y\+Intercept}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{y\+Intercept()}{yIntercept()}}
+{\footnotesize\ttfamily float Bullet\+Movement\+::y\+Intercept (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bullet_movement_a80f3b6b7f248b1bfecc4845319bc91fc}\label{class_bullet_movement_a80f3b6b7f248b1bfecc4845319bc91fc}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!\+\_\+bullet\+Start\+Pos@{\+\_\+bullet\+Start\+Pos}}
+\index{\+\_\+bullet\+Start\+Pos@{\+\_\+bullet\+Start\+Pos}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{\+\_\+bullet\+Start\+Pos}{\_bulletStartPos}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Bullet\+Movement\+::\+\_\+bullet\+Start\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_bullet_movement_a21abb8a9b6d5d1d6cd5e079648ade529}\label{class_bullet_movement_a21abb8a9b6d5d1d6cd5e079648ade529}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!\+\_\+gradient@{\+\_\+gradient}}
+\index{\+\_\+gradient@{\+\_\+gradient}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{\+\_\+gradient}{\_gradient}}
+{\footnotesize\ttfamily float Bullet\+Movement\+::\+\_\+gradient\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_bullet_movement_a8d20043e5da44b2585b78e0be9d9ad66}\label{class_bullet_movement_a8d20043e5da44b2585b78e0be9d9ad66}} 
+\index{Bullet\+Movement@{Bullet\+Movement}!\+\_\+y\+Intercept@{\+\_\+y\+Intercept}}
+\index{\+\_\+y\+Intercept@{\+\_\+y\+Intercept}!Bullet\+Movement@{Bullet\+Movement}}
+\subsubsection{\texorpdfstring{\+\_\+y\+Intercept}{\_yIntercept}}
+{\footnotesize\ttfamily float Bullet\+Movement\+::\+\_\+y\+Intercept\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_bullet_movement_8h}{Bullet\+Movement.\+h}\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_bullet_movement_8cpp}{Bullet\+Movement.\+cpp}\end{DoxyCompactItemize}

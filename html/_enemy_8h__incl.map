@@ -1,0 +1,6 @@
+<map id="C:/Users/DrDoom/Documents/Project/Game_Project/Enemy.h" name="C:/Users/DrDoom/Documents/Project/Game_Project/Enemy.h">
+<area shape="rect" id="node4" href="$_enemy_movement_8h.html" title="This will move a specific enemy, based on it&#39;s type. " alt="" coords="271,244,404,271"/>
+<area shape="rect" id="node7" href="$_bullet_8h.html" title="A class that will contain the characteristics of the needed bullet, such as its position, damage, speed, rotation, sprite, owner and so forth. " alt="" coords="100,169,167,196"/>
+<area shape="rect" id="node9" href="$_bullet_manager_8h.html" title="This class will manage any needed functions of the bullet. In this instance, it removes any inactive ..." alt="" coords="73,95,189,121"/>
+<area shape="rect" id="node8" href="$_bullet_movement_8h.html" title="BulletMovement.h" alt="" coords="71,244,196,271"/>
+</map>

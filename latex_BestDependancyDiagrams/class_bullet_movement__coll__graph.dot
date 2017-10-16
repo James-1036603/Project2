@@ -1,0 +1,6 @@
+digraph "BulletMovement"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{BulletMovement\n|- _bulletStartPos\l- _gradient\l- _yIntercept\l|+ BulletMovement()\l+ ~BulletMovement()\l+ MovePlayerBullet()\l+ MoveEnemyBullet()\l+ getGradient()\l+ getIntercept()\l- gradient()\l- yIntercept()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

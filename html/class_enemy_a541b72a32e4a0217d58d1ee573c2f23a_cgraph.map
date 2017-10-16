@@ -1,0 +1,8 @@
+<map id="Enemy::update" name="Enemy::update">
+<area shape="rect" id="node2" href="$class_enemy_movement.html#ac4b06df6242ceae2925ca689cef4cfba" title="Enemy Scout Movement. " alt="" coords="178,5,379,47"/>
+<area shape="rect" id="node3" href="$class_enemy_movement.html#ae4f8dc0bcd83424c4d6ce76300bdf2c8" title="Enemy Soldier Movement. " alt="" coords="178,71,379,112"/>
+<area shape="rect" id="node4" href="$class_enemy_movement.html#a6e09641ef866d6a45c6ef342c905bc14" title="Enemy Rogue Movement. " alt="" coords="178,136,379,177"/>
+<area shape="rect" id="node5" href="$class_enemy_movement.html#a91bd4b4f91b62660728ca2f5ac5062fd" title="Enemy Tank Movement. " alt="" coords="164,202,393,229"/>
+<area shape="rect" id="node6" href="$class_enemy.html#ab526cfaf13910e15ca1e5e84ef230dd1" title="Allow the enemy to shoot. " alt="" coords="226,253,331,279"/>
+<area shape="rect" id="node7" href="$class_bullet_manager.html#a834ec287e01fc2ed7c5d3885e4b380c6" title="Remove any bullets from the vector which are marked as inactive. Returns a vector of bullets with the..." alt="" coords="441,245,632,287"/>
+</map>

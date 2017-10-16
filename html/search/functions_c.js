@@ -1,22 +1,9 @@
 var searchData=
 [
-  ['setactive',['setActive',['../class_bullet.html#adfd1d1a317bd18f9d6aec65630301ae2',1,'Bullet']]],
   ['setbulletinactiveatposition',['setBulletInactiveAtPosition',['../class_enemy.html#a02e1cacf8fad39bbcc28271a53637024',1,'Enemy::setBulletInactiveAtPosition()'],['../class_player.html#a4a72b5ba696e55375ee614ef89a87ade',1,'Player::setBulletInactiveAtPosition()']]],
-  ['setbulletposition',['setBulletPosition',['../class_bullet.html#af6e316869e595d8f0b2af44dd80a8dd6',1,'Bullet']]],
-  ['setenemyposition',['setEnemyPosition',['../class_enemy.html#a6a83e4ff9dab297dbec1644dcc9152c6',1,'Enemy']]],
-  ['setfirstbulletpos',['setFirstBulletPos',['../class_enemy_manager.html#a217800f39e93529dc7c912857f5a4228',1,'EnemyManager::setFirstBulletPos()'],['../class_player_manager.html#ae654ee04f5d9820cbb4c6b91161cc7a2',1,'PlayerManager::setFirstBulletPos()']]],
-  ['setfirstenemyposition',['setFirstEnemyPosition',['../class_enemy_manager.html#a5aacf80c75d457dfc2274c5f3be3ca96',1,'EnemyManager']]],
-  ['setgeneratedclocktime',['setGeneratedClockTime',['../class_enemy_manager.html#a6258b25ccc4866129f9bfe176ee22c1f',1,'EnemyManager']]],
   ['setinactive',['setInActive',['../class_bullet.html#afe143dafb173b03b6f35fa9472cbe465',1,'Bullet']]],
-  ['setplayerposition',['setPlayerPosition',['../class_player_manager.html#afbce199fe8a661b8002ae94b8396c7aa',1,'PlayerManager']]],
-  ['setpositionofbullet',['setPositionOfBullet',['../class_enemy.html#a49e2b8533dc258764e7a0ee5c4990eeb',1,'Enemy::setPositionOfBullet()'],['../class_player.html#a3bf9c265d1be1284501b8c03ca5bdfb0',1,'Player::setPositionOfBullet()']]],
-  ['setpositionofplayer',['setPositionOfPlayer',['../class_player.html#abeaa59ae6cd6ca74f269f4af28ef8f82',1,'Player']]],
-  ['setrotation',['setRotation',['../class_enemy.html#ad02b7dfac0339e110f9aba837a815782',1,'Enemy']]],
-  ['setstepstaken',['setStepsTaken',['../class_enemy.html#a8ddda321d45a2fa6f35272087afe258b',1,'Enemy']]],
-  ['settextandfont',['SetTextAndFont',['../class_player_manager.html#a7f6871a42521409f64c1a335a48c4398',1,'PlayerManager::SetTextAndFont()'],['../class_level.html#aa726d09473bbb551477994c70e516a99',1,'Level::setTextAndFont()']]],
   ['shoot',['Shoot',['../class_enemy.html#ab526cfaf13910e15ca1e5e84ef230dd1',1,'Enemy::Shoot()'],['../class_player.html#a2105394431517a41d38140cb65982331',1,'Player::Shoot()']]],
   ['spawnenemies',['spawnEnemies',['../class_enemy_manager.html#a37036db8aad73493103815dc45c6339d',1,'EnemyManager']]],
-  ['spawnenemytank',['spawnEnemyTank',['../class_enemy_manager.html#aecc9136f37db0fb4ce451c3849ecde5d',1,'EnemyManager']]],
   ['start',['start',['../class_engine.html#a4d8066dd213a03f5420d1bf60f150ca7',1,'Engine']]],
   ['stopleft',['stopLeft',['../class_player.html#aa150f941486096bb63cc67eabec9046c',1,'Player']]],
   ['stopright',['stopRight',['../class_player.html#afebb6b7ca7210e7b1aa2c9ee4ff75b0e',1,'Player']]]

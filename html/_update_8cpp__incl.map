@@ -1,0 +1,15 @@
+<map id="C:/Users/DrDoom/Documents/Project/Game_Project/Update.cpp" name="C:/Users/DrDoom/Documents/Project/Game_Project/Update.cpp">
+<area shape="rect" id="node2" href="$_engine_8h.html" title="The engine is an instance of the game itself. The engine is the interface to the player, with the play window and player input. " alt="" coords="303,95,376,121"/>
+<area shape="rect" id="node4" href="$_game_music_8h.html" title="The background music for the game. This class adds for extra functionality than the SFML music librar..." alt="" coords="47,169,149,196"/>
+<area shape="rect" id="node6" href="$_player_manager_8h.html" title="The playermanager will maintain all updates and events to the player, such as player input..." alt="" coords="463,169,583,196"/>
+<area shape="rect" id="node21" href="$_enemy_manager_8h.html" title="Manager class for an enemy. This class will maintain the amount of enemies in the game..." alt="" coords="1044,169,1168,196"/>
+<area shape="rect" id="node22" href="$_level_8h.html" title="The levels for the game as an integer type, up to a certain maximum level. " alt="" coords="308,169,371,196"/>
+<area shape="rect" id="node7" href="$_player_8h.html" title="Player class has the needed member functions for the player, such as their position, sprite, speed, rotation and their bullets active on the screen. The player&#39;s movement is determined by the current input. THe player is able to shoot as well. " alt="" coords="665,319,736,345"/>
+<area shape="rect" id="node15" href="$_collisions_8h.html" title="A class to evaluate the needed collisions. Currently they are enemy bullets to player, player bullets to enemy, enemy position to player. " alt="" coords="716,244,805,271"/>
+<area shape="rect" id="node10" href="$_bullet_8h.html" title="A class that will contain the characteristics of the needed bullet, such as its position, damage, speed, rotation, sprite, owner and so forth. " alt="" coords="1065,468,1131,495"/>
+<area shape="rect" id="node13" href="$_bullet_manager_8h.html" title="This class will manage any needed functions of the bullet. In this instance, it removes any inactive ..." alt="" coords="913,393,1029,420"/>
+<area shape="rect" id="node14" href="$_player_movement_8h.html" title="The movement of the player. The player will either move clockwise or counter clockwise along the radi..." alt="" coords="456,543,585,569"/>
+<area shape="rect" id="node11" href="$_bullet_movement_8h.html" title="BulletMovement.h" alt="" coords="1251,543,1377,569"/>
+<area shape="rect" id="node16" href="$_enemy_8h.html" title="Enemy class, which has 4 types of enemies. Each enemy has a postion, sprite, speed, rotation, bullet damage and the amount of steps taken. The enemy is moved based on its current type. " alt="" coords="1143,319,1218,345"/>
+<area shape="rect" id="node17" href="$_enemy_movement_8h.html" title="This will move a specific enemy, based on it&#39;s type. " alt="" coords="1403,393,1537,420"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="GameMusic::toggleMusic" name="GameMusic::toggleMusic">
+<area shape="rect" id="node2" href="$class_game_music.html#a88151bbcf754b0dc87e75cf5949b7602" title="Start or Play the current sound file. " alt="" coords="224,5,348,32"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="Enemy::Shoot" name="Enemy::Shoot">
+<area shape="rect" id="node2" href="$class_bullet_manager.html#a834ec287e01fc2ed7c5d3885e4b380c6" title="Remove any bullets from the vector which are marked as inactive. Returns a vector of bullets with the..." alt="" coords="159,5,349,47"/>
+</map>

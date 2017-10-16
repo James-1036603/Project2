@@ -132,17 +132,14 @@ private:
     sf::Sprite _objSprite;//Sprite for the object
     sf::Texture _objTexture;//Texture for the object . Static because it is slow to load the texture each time from file!!
     float _speed;//Speed of pixels per second
-    unsigned int _playerLives;//The amount of lives the player has
-    bool _rightPressed;//Object is moving right
-    bool _leftPressed;//Object is moving left
-
     float _circleRadius;
     float _curAngle;
+    unsigned int _playerLives;//The amount of lives the player has    
+    bool _rightPressed;//Object is moving right
+    bool _leftPressed;//Object is moving left    
 	PlayerMovement* _playerMover;
-
     std::vector<Bullet> _playerBullets;
     BulletManager _playerBulletManager;
-
     sf::Vector2f _displaySize;//The resolution of the display. Ensure that out player does not go out of bounds (This will not be needed for the angular movement)
     friend class PlayerManager;//Player manager can access private data members
 };

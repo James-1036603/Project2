@@ -1,0 +1,298 @@
+\hypertarget{class_enemy_manager}{}\section{Enemy\+Manager Class Reference}
+\label{class_enemy_manager}\index{Enemy\+Manager@{Enemy\+Manager}}
+
+
+{\ttfamily \#include $<$Enemy\+Manager.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_enemy_manager_ae8d3abb80956df199094432e49ca0d13}{Enemy\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class_enemy}{Enemy} Manager. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_enemy_manager_afe3583e45273d5509e59467d06a3feb6}{$\sim$\+Enemy\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor for \hyperlink{class_enemy}{Enemy} Manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_manager_a37036db8aad73493103815dc45c6339d}{spawn\+Enemies} (int \&current\+Level)
+\begin{DoxyCompactList}\small\item\em Spawn enemies based on the current level. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_manager_a8a3caf890d121478e41dcc192a8aa4a2}{update\+Enemies} (const float \&elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em Update the enemies based on the elapsed time. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_manager_af740dd63780a06fde9a5dd72330624da}{draw\+Enemies} (sf\+::\+Render\+Window $\ast$\+\_\+cur\+Window)
+\begin{DoxyCompactList}\small\item\em Draw the enemies to the provided window. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_manager_ae551aa23d45b17e6c9b3d5b12e39ab26}{draw\+Enemy\+Bullets} (sf\+::\+Render\+Window $\ast$\+\_\+cur\+Window)
+\begin{DoxyCompactList}\small\item\em Draw the enemy bullets to the provided window. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_manager_a317b11ce52e67c7b760b2b81755fd95f}{check\+Enemy\+Collisions} (\hyperlink{class_player}{Player} \&current\+Player)
+\begin{DoxyCompactList}\small\item\em Check the needed \hyperlink{class_enemy}{Enemy} collisions to the player. \end{DoxyCompactList}\item 
+bool \hyperlink{class_enemy_manager_a9395ad36205c9653b4511859fb82179a}{all\+Enemies\+Killed} ()
+\begin{DoxyCompactList}\small\item\em Evaluate if all the enemies are killed or not. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{class_enemy}{Enemy} $>$ \& \hyperlink{class_enemy_manager_afee94a1383c9ec47a8a8ebb4fa4a2f7b}{the\+Enemies} ()
+\begin{DoxyCompactList}\small\item\em The current active enemies. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_manager_abafa080764d42fbc020c33e48c7afb2f}{random\+Events} (const float \&elapsed\+Time)
+\begin{DoxyCompactList}\small\item\em Any random events which need to take place, based on the passed time. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_manager_a5aacf80c75d457dfc2274c5f3be3ca96}{set\+First\+Enemy\+Position} (float x, float y)
+\item 
+sf\+::\+Vector2f \hyperlink{class_enemy_manager_a0632e71c86c73e74708d34df6d1fefba}{get\+First\+Bullet\+Pos} ()
+\item 
+void \hyperlink{class_enemy_manager_a217800f39e93529dc7c912857f5a4228}{set\+First\+Bullet\+Pos} (float x, float y)
+\item 
+void \hyperlink{class_enemy_manager_a73b9e07b84f4c25f88d09744aa373f3b}{add\+Enemy\+To\+Vector} (\hyperlink{class_enemy}{Enemy} the\+Enemy)
+\item 
+void \hyperlink{class_enemy_manager_a6258b25ccc4866129f9bfe176ee22c1f}{set\+Generated\+Clock\+Time} (float clock\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_enemy}{Enemy} $>$ \hyperlink{class_enemy_manager_a206ef948ffa7e4d518da91dad493efe6}{remove\+Inactive\+Enemies} ()
+\item 
+void \hyperlink{class_enemy_manager_a4b6f8823d43203930ab98035fe808a55}{generate\+Random\+Time} ()
+\item 
+void \hyperlink{class_enemy_manager_aecc9136f37db0fb4ce451c3849ecde5d}{spawn\+Enemy\+Tank} (const float \&elapsed\+Time)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \hyperlink{class_enemy}{Enemy} $>$ \hyperlink{class_enemy_manager_aa1907b3a1c7068e8feca0f8462ea8a6d}{\+\_\+cur\+Enemies}
+\item 
+\hyperlink{class_enemy_movement}{Enemy\+Movement} \hyperlink{class_enemy_manager_ade1b38d513c67ab3d461639c1d7c7bad}{\+\_\+enemy\+Mover}
+\item 
+\hyperlink{class_bullet_manager}{Bullet\+Manager} \hyperlink{class_enemy_manager_a10472fca1f8ea20212b47512ce22382e}{\+\_\+enemy\+Bullet\+Manager}
+\item 
+\hyperlink{class_collisions}{Collisions} \hyperlink{class_enemy_manager_ab0dfb92601feacf2de9b92c2a11468bf}{\+\_\+collision\+Detector}
+\item 
+float \hyperlink{class_enemy_manager_a3d77691b9f7e4af466de4eeb0982a7d0}{\+\_\+elapsed\+Clock\+Time}
+\item 
+float \hyperlink{class_enemy_manager_acc7728a6a32d399ca416558f7b769090}{\+\_\+generated\+Clock\+Time}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+James Phillips (1036603) 
+\end{DoxyAuthor}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_manager_ae8d3abb80956df199094432e49ca0d13}\label{class_enemy_manager_ae8d3abb80956df199094432e49ca0d13}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!Enemy\+Manager@{Enemy\+Manager}}
+\index{Enemy\+Manager@{Enemy\+Manager}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{Enemy\+Manager()}{EnemyManager()}}
+{\footnotesize\ttfamily Enemy\+Manager\+::\+Enemy\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor for \hyperlink{class_enemy}{Enemy} Manager. 
+
+\mbox{\Hypertarget{class_enemy_manager_afe3583e45273d5509e59467d06a3feb6}\label{class_enemy_manager_afe3583e45273d5509e59467d06a3feb6}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!````~Enemy\+Manager@{$\sim$\+Enemy\+Manager}}
+\index{````~Enemy\+Manager@{$\sim$\+Enemy\+Manager}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{$\sim$\+Enemy\+Manager()}{~EnemyManager()}}
+{\footnotesize\ttfamily Enemy\+Manager\+::$\sim$\+Enemy\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destructor for \hyperlink{class_enemy}{Enemy} Manager. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_manager_a73b9e07b84f4c25f88d09744aa373f3b}\label{class_enemy_manager_a73b9e07b84f4c25f88d09744aa373f3b}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!add\+Enemy\+To\+Vector@{add\+Enemy\+To\+Vector}}
+\index{add\+Enemy\+To\+Vector@{add\+Enemy\+To\+Vector}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{add\+Enemy\+To\+Vector()}{addEnemyToVector()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::add\+Enemy\+To\+Vector (\begin{DoxyParamCaption}\item[{\hyperlink{class_enemy}{Enemy}}]{the\+Enemy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a9395ad36205c9653b4511859fb82179a}\label{class_enemy_manager_a9395ad36205c9653b4511859fb82179a}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!all\+Enemies\+Killed@{all\+Enemies\+Killed}}
+\index{all\+Enemies\+Killed@{all\+Enemies\+Killed}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{all\+Enemies\+Killed()}{allEnemiesKilled()}}
+{\footnotesize\ttfamily bool Enemy\+Manager\+::all\+Enemies\+Killed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Evaluate if all the enemies are killed or not. 
+
+\mbox{\Hypertarget{class_enemy_manager_a317b11ce52e67c7b760b2b81755fd95f}\label{class_enemy_manager_a317b11ce52e67c7b760b2b81755fd95f}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!check\+Enemy\+Collisions@{check\+Enemy\+Collisions}}
+\index{check\+Enemy\+Collisions@{check\+Enemy\+Collisions}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{check\+Enemy\+Collisions()}{checkEnemyCollisions()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::check\+Enemy\+Collisions (\begin{DoxyParamCaption}\item[{\hyperlink{class_player}{Player} \&}]{current\+Player }\end{DoxyParamCaption})}
+
+
+
+Check the needed \hyperlink{class_enemy}{Enemy} collisions to the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Player} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_manager_af740dd63780a06fde9a5dd72330624da}\label{class_enemy_manager_af740dd63780a06fde9a5dd72330624da}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!draw\+Enemies@{draw\+Enemies}}
+\index{draw\+Enemies@{draw\+Enemies}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{draw\+Enemies()}{drawEnemies()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::draw\+Enemies (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{\+\_\+cur\+Window }\end{DoxyParamCaption})}
+
+
+
+Draw the enemies to the provided window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+cur\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_manager_ae551aa23d45b17e6c9b3d5b12e39ab26}\label{class_enemy_manager_ae551aa23d45b17e6c9b3d5b12e39ab26}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!draw\+Enemy\+Bullets@{draw\+Enemy\+Bullets}}
+\index{draw\+Enemy\+Bullets@{draw\+Enemy\+Bullets}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{draw\+Enemy\+Bullets()}{drawEnemyBullets()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::draw\+Enemy\+Bullets (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window $\ast$}]{\+\_\+cur\+Window }\end{DoxyParamCaption})}
+
+
+
+Draw the enemy bullets to the provided window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+cur\+Window} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_manager_a4b6f8823d43203930ab98035fe808a55}\label{class_enemy_manager_a4b6f8823d43203930ab98035fe808a55}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!generate\+Random\+Time@{generate\+Random\+Time}}
+\index{generate\+Random\+Time@{generate\+Random\+Time}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{generate\+Random\+Time()}{generateRandomTime()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::generate\+Random\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a0632e71c86c73e74708d34df6d1fefba}\label{class_enemy_manager_a0632e71c86c73e74708d34df6d1fefba}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!get\+First\+Bullet\+Pos@{get\+First\+Bullet\+Pos}}
+\index{get\+First\+Bullet\+Pos@{get\+First\+Bullet\+Pos}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{get\+First\+Bullet\+Pos()}{getFirstBulletPos()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f Enemy\+Manager\+::get\+First\+Bullet\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_enemy_manager_abafa080764d42fbc020c33e48c7afb2f}\label{class_enemy_manager_abafa080764d42fbc020c33e48c7afb2f}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!random\+Events@{random\+Events}}
+\index{random\+Events@{random\+Events}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{random\+Events()}{randomEvents()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::random\+Events (\begin{DoxyParamCaption}\item[{const float \&}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+
+
+Any random events which need to take place, based on the passed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+Time} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_manager_a206ef948ffa7e4d518da91dad493efe6}\label{class_enemy_manager_a206ef948ffa7e4d518da91dad493efe6}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!remove\+Inactive\+Enemies@{remove\+Inactive\+Enemies}}
+\index{remove\+Inactive\+Enemies@{remove\+Inactive\+Enemies}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{remove\+Inactive\+Enemies()}{removeInactiveEnemies()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{class_enemy}{Enemy} $>$ Enemy\+Manager\+::remove\+Inactive\+Enemies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a217800f39e93529dc7c912857f5a4228}\label{class_enemy_manager_a217800f39e93529dc7c912857f5a4228}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!set\+First\+Bullet\+Pos@{set\+First\+Bullet\+Pos}}
+\index{set\+First\+Bullet\+Pos@{set\+First\+Bullet\+Pos}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{set\+First\+Bullet\+Pos()}{setFirstBulletPos()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::set\+First\+Bullet\+Pos (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a5aacf80c75d457dfc2274c5f3be3ca96}\label{class_enemy_manager_a5aacf80c75d457dfc2274c5f3be3ca96}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!set\+First\+Enemy\+Position@{set\+First\+Enemy\+Position}}
+\index{set\+First\+Enemy\+Position@{set\+First\+Enemy\+Position}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{set\+First\+Enemy\+Position()}{setFirstEnemyPosition()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::set\+First\+Enemy\+Position (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a6258b25ccc4866129f9bfe176ee22c1f}\label{class_enemy_manager_a6258b25ccc4866129f9bfe176ee22c1f}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!set\+Generated\+Clock\+Time@{set\+Generated\+Clock\+Time}}
+\index{set\+Generated\+Clock\+Time@{set\+Generated\+Clock\+Time}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{set\+Generated\+Clock\+Time()}{setGeneratedClockTime()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::set\+Generated\+Clock\+Time (\begin{DoxyParamCaption}\item[{float}]{clock\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a37036db8aad73493103815dc45c6339d}\label{class_enemy_manager_a37036db8aad73493103815dc45c6339d}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!spawn\+Enemies@{spawn\+Enemies}}
+\index{spawn\+Enemies@{spawn\+Enemies}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{spawn\+Enemies()}{spawnEnemies()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::spawn\+Enemies (\begin{DoxyParamCaption}\item[{int \&}]{current\+Level }\end{DoxyParamCaption})}
+
+
+
+Spawn enemies based on the current level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Level} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_manager_aecc9136f37db0fb4ce451c3849ecde5d}\label{class_enemy_manager_aecc9136f37db0fb4ce451c3849ecde5d}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!spawn\+Enemy\+Tank@{spawn\+Enemy\+Tank}}
+\index{spawn\+Enemy\+Tank@{spawn\+Enemy\+Tank}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{spawn\+Enemy\+Tank()}{spawnEnemyTank()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::spawn\+Enemy\+Tank (\begin{DoxyParamCaption}\item[{const float \&}]{elapsed\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_afee94a1383c9ec47a8a8ebb4fa4a2f7b}\label{class_enemy_manager_afee94a1383c9ec47a8a8ebb4fa4a2f7b}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!the\+Enemies@{the\+Enemies}}
+\index{the\+Enemies@{the\+Enemies}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{the\+Enemies()}{theEnemies()}}
+{\footnotesize\ttfamily std\+::vector$<$ \hyperlink{class_enemy}{Enemy} $>$ \& Enemy\+Manager\+::the\+Enemies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The current active enemies. 
+
+\mbox{\Hypertarget{class_enemy_manager_a8a3caf890d121478e41dcc192a8aa4a2}\label{class_enemy_manager_a8a3caf890d121478e41dcc192a8aa4a2}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!update\+Enemies@{update\+Enemies}}
+\index{update\+Enemies@{update\+Enemies}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{update\+Enemies()}{updateEnemies()}}
+{\footnotesize\ttfamily void Enemy\+Manager\+::update\+Enemies (\begin{DoxyParamCaption}\item[{const float \&}]{elapsed\+Time }\end{DoxyParamCaption})}
+
+
+
+Update the enemies based on the elapsed time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elapsed\+Time} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_enemy_manager_ab0dfb92601feacf2de9b92c2a11468bf}\label{class_enemy_manager_ab0dfb92601feacf2de9b92c2a11468bf}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!\+\_\+collision\+Detector@{\+\_\+collision\+Detector}}
+\index{\+\_\+collision\+Detector@{\+\_\+collision\+Detector}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+collision\+Detector}{\_collisionDetector}}
+{\footnotesize\ttfamily \hyperlink{class_collisions}{Collisions} Enemy\+Manager\+::\+\_\+collision\+Detector\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_aa1907b3a1c7068e8feca0f8462ea8a6d}\label{class_enemy_manager_aa1907b3a1c7068e8feca0f8462ea8a6d}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!\+\_\+cur\+Enemies@{\+\_\+cur\+Enemies}}
+\index{\+\_\+cur\+Enemies@{\+\_\+cur\+Enemies}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+cur\+Enemies}{\_curEnemies}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{class_enemy}{Enemy}$>$ Enemy\+Manager\+::\+\_\+cur\+Enemies\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a3d77691b9f7e4af466de4eeb0982a7d0}\label{class_enemy_manager_a3d77691b9f7e4af466de4eeb0982a7d0}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!\+\_\+elapsed\+Clock\+Time@{\+\_\+elapsed\+Clock\+Time}}
+\index{\+\_\+elapsed\+Clock\+Time@{\+\_\+elapsed\+Clock\+Time}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+elapsed\+Clock\+Time}{\_elapsedClockTime}}
+{\footnotesize\ttfamily float Enemy\+Manager\+::\+\_\+elapsed\+Clock\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_a10472fca1f8ea20212b47512ce22382e}\label{class_enemy_manager_a10472fca1f8ea20212b47512ce22382e}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!\+\_\+enemy\+Bullet\+Manager@{\+\_\+enemy\+Bullet\+Manager}}
+\index{\+\_\+enemy\+Bullet\+Manager@{\+\_\+enemy\+Bullet\+Manager}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+enemy\+Bullet\+Manager}{\_enemyBulletManager}}
+{\footnotesize\ttfamily \hyperlink{class_bullet_manager}{Bullet\+Manager} Enemy\+Manager\+::\+\_\+enemy\+Bullet\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_ade1b38d513c67ab3d461639c1d7c7bad}\label{class_enemy_manager_ade1b38d513c67ab3d461639c1d7c7bad}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!\+\_\+enemy\+Mover@{\+\_\+enemy\+Mover}}
+\index{\+\_\+enemy\+Mover@{\+\_\+enemy\+Mover}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+enemy\+Mover}{\_enemyMover}}
+{\footnotesize\ttfamily \hyperlink{class_enemy_movement}{Enemy\+Movement} Enemy\+Manager\+::\+\_\+enemy\+Mover\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_enemy_manager_acc7728a6a32d399ca416558f7b769090}\label{class_enemy_manager_acc7728a6a32d399ca416558f7b769090}} 
+\index{Enemy\+Manager@{Enemy\+Manager}!\+\_\+generated\+Clock\+Time@{\+\_\+generated\+Clock\+Time}}
+\index{\+\_\+generated\+Clock\+Time@{\+\_\+generated\+Clock\+Time}!Enemy\+Manager@{Enemy\+Manager}}
+\subsubsection{\texorpdfstring{\+\_\+generated\+Clock\+Time}{\_generatedClockTime}}
+{\footnotesize\ttfamily float Enemy\+Manager\+::\+\_\+generated\+Clock\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_enemy_manager_8h}{Enemy\+Manager.\+h}\item 
+C\+:/\+Users/\+Dr\+Doom/\+Documents/\+Project/\+Game\+\_\+\+Project -\/ Copy/\hyperlink{_enemy_manager_8cpp}{Enemy\+Manager.\+cpp}\end{DoxyCompactItemize}
