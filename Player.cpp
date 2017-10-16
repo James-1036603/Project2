@@ -9,8 +9,8 @@ Player::Player(const sf::Vector2f& displaySize, const float& radius, BulletManag
     _objSprite.setTexture(_objTexture);//set object texture
 
     //Starting position
-    _curPosition.x = 960-radius;
-    _curPosition.y = 540;
+    _curPosition.x = displaySize.x/2-radius;
+    _curPosition.y = displaySize.y/2;
 
     _circleRadius = radius;
     _curAngle = PI;

@@ -1,0 +1,28 @@
+digraph "Engine"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Engine\n|- _window\l- _backgroundSprite\l- _backgroundTexture\l- _height\l- _width\l|+ Engine()\l+ ~Engine()\l+ start()\l- drawScreen()\l- input()\l- update()\l- draw()\l- progressGame()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_gameMusic" ,arrowhead="odiamond"];
+  Node2 [label="{GameMusic\n|- _gameMusic\l|+ GameMusic()\l+ ~GameMusic()\l+ loadFromFile()\l+ play()\l+ changeVolume()\l+ toggleMusic()\l- pause()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_music.html"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_theEnemies" ,arrowhead="odiamond"];
+  Node3 [label="{EnemyManager\n|- _curEnemies\l- _elapsedClockTime\l- _generatedClockTime\l|+ EnemyManager()\l+ ~EnemyManager()\l+ spawnEnemies()\l+ updateEnemies()\l+ drawEnemies()\l+ drawEnemyBullets()\l+ checkEnemyCollisions()\l+ allEnemiesKilled()\l+ theEnemies()\l+ randomEvents()\l+ setFirstEnemyPosition()\l+ getFirstBulletPos()\l+ setFirstBulletPos()\l+ addEnemyToVector()\l+ setGeneratedClockTime()\l- removeInactiveEnemies()\l- generateRandomTime()\l- spawnEnemyTank()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_enemy_manager.html"];
+  Node4 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -_enemyMover" ,arrowhead="odiamond"];
+  Node4 [label="{EnemyMovement\n||+ EnemyMovement()\l+ ~EnemyMovement()\l+ MoveEnemyScout()\l+ MoveEnemySoldier()\l+ MoveEnemyRogue()\l+ MoveEnemyTank()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_enemy_movement.html"];
+  Node5 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -_enemyBulletManager" ,arrowhead="odiamond"];
+  Node5 [label="{BulletManager\n||+ BulletManager()\l+ ~BulletManager()\l+ deleteInactiveBullets()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_bullet_manager.html"];
+  Node6 -> Node3 [color="grey25",fontsize="10",style="solid",label=" -_collisionDetector" ,arrowhead="odiamond"];
+  Node6 [label="{Collisions\n||+ Collisions()\l+ ~Collisions()\l+ checkPlayerCollisions()\l+ checkEnemyCollisions()\l- checkPlayerToEnemy()\l- checkEnemyBulletsToPlayer()\l- checkEnemyPositionToPLayer()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_collisions.html"];
+  Node7 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_thePlayer" ,arrowhead="odiamond"];
+  Node7 [label="{PlayerManager\n|- font\l- text\l|+ PlayerManager()\l+ ~PlayerManager()\l+ updatePlayer()\l+ checkPlayerCollisionss()\l+ playerShoot()\l+ drawPlayerToWindow()\l+ drawPlayerBullets()\l+ playerIsAlive()\l+ movePlayer()\l+ theCurrentPlayer()\l+ setPlayerPosition()\l+ getFirstBulletPos()\l+ setFirstBulletPos()\l+ getPlayerHealth()\l- SetTextAndFont()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_manager.html"];
+  Node5 -> Node7 [color="grey25",fontsize="10",style="solid",label=" -_playerBulletMananger" ,arrowhead="odiamond"];
+  Node8 -> Node7 [color="grey25",fontsize="10",style="solid",label=" -_playerMover" ,arrowhead="odiamond"];
+  Node8 [label="{PlayerMovement\n||+ PlayerMovement()\l+ ~PlayerMovement()\l+ MovePlayerClockwise()\l+ MovePlayerCounterClockwise()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_movement.html"];
+  Node6 -> Node7 [color="grey25",fontsize="10",style="solid",label=" -_collisionDetector" ,arrowhead="odiamond"];
+  Node9 -> Node7 [color="grey25",fontsize="10",style="solid",label=" -_curPlayer" ,arrowhead="odiamond"];
+  Node9 [label="{Player\n|- _curPosition\l- _objSprite\l- _objTexture\l- _speed\l- _playerLives\l- _rightPressed\l- _leftPressed\l- _circleRadius\l- _curAngle\l- _playerBullets\l- _displaySize\l|+ Player()\l+ ~Player()\l+ getSprite()\l+ moveRight()\l+ moveLeft()\l+ stopRight()\l+ stopLeft()\l+ update()\l+ getPlayerBullets()\l+ drawBullets()\land 8 more...\l- isAlive()\l- updateBullets()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player.html"];
+  Node5 -> Node9 [color="grey25",fontsize="10",style="solid",label=" -_playerBulletManager" ,arrowhead="odiamond"];
+  Node8 -> Node9 [color="grey25",fontsize="10",style="solid",label=" -_playerMover" ,arrowhead="odiamond"];
+  Node10 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_gameLevels" ,arrowhead="odiamond"];
+  Node10 [label="{Level\n|- _currentLevel\l- font\l- text\l|+ Level()\l+ ~Level()\l+ currentLevel()\l+ nextLevel()\l+ maxLevel()\l+ drawLevelsToWindow()\l- setTextAndFont()\l- levelToText()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_level.html"];
+}

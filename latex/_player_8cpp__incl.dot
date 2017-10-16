@@ -1,0 +1,30 @@
+digraph "Player.cpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="Player.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 [label="Player.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_8h.html",tooltip="Player class has the needed member functions for the player, such as their position, sprite, speed, rotation and their bullets active on the screen. The player&#39;s movement is determined by the current input. THe player is able to shoot as well. "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="SFML/System.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Bullet.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_bullet_8h.html",tooltip="A class that will contain the characteristics of the needed bullet, such as its position, damage, speed, rotation, sprite, owner and so forth. "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="BulletMovement.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_bullet_movement_8h.html"];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="cmath",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="SFML/Graphics.hpp",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="BulletManager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_bullet_manager_8h.html",tooltip="This class will manage any needed functions of the bullet. In this instance, it removes any inactive ..."];
+  Node8 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="PlayerMovement.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_movement_8h.html",tooltip="The movement of the player. The player will either move clockwise or counter clockwise along the radi..."];
+  Node9 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+}

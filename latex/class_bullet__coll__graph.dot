@@ -1,0 +1,7 @@
+digraph "Bullet"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Bullet\n|- _bulletPos\l- _bulletSprite\l- _bulletTexture\l- _speed\l- _rotation\l- _damage\l- _isAlive\l- _bulletOwner\l|+ Bullet()\l+ ~Bullet()\l+ getSprite()\l+ updateBullet()\l+ bulletIsAlive()\l+ getBulletDamage()\l+ setInActive()\l+ getBulletPos()\l+ getSpeed()\l+ setActive()\l+ setBulletPosition()\l- Bullet()\l- move()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_default" ,arrowhead="odiamond"];
+}

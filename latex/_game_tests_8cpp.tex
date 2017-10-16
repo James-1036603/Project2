@@ -1,0 +1,237 @@
+\hypertarget{_game_tests_8cpp}{}\section{Game\+Tests.\+cpp File Reference}
+\label{_game_tests_8cpp}\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$doctest.\+h$>$}\newline
+{\ttfamily \#include $<$S\+F\+M\+L/\+System.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}Engine.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Enemy.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bullet.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bullet\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Bullet\+Movement.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Enemy\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Player\+Manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Level.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Game\+Tests.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_game_tests_8cpp_a623b8690a262536536a43eab2d7df03d}{D\+O\+C\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+A\+IN}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+sf\+::\+Vector2f \hyperlink{_game_tests_8cpp_ac0230399c621da4679687e37351dba76}{display\+Size} (1920, 1080)
+\item 
+\hyperlink{_game_tests_8cpp_a709164fa833d7cc1f393979f777e3f23}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Bullet Initialised Correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_acf57be8cc7d7a4bc366089925958e014}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Bullet Texture Found\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a30ed40a47451dfa4c3f3599ca7dd75f8}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Player \hyperlink{class_bullet}{Bullet} Moved Correct Amount\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_af263c01b9c9dd7e15d79174ec19481b6}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy \hyperlink{class_bullet}{Bullet} Moved Correct Amount\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_ac1676580a8914fc2f9147c9ad6c15036}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Bullet Manager removes inactive bullets\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a5a229ca81413841faa5bb54a78c7f36f}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Player is initialised correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a84d5fd87353d411cf69c035cd70d019d}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Player found correct texture\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a27e9ec9b439f8eb3f962c87a592a4212}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Player moves along circular path\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a3b9ce02f533e5d62d3224179c3887046}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Player can shoot a bullet\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_ac87f2e51f8d8d8b573ff00bab759904c}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Scout \hyperlink{class_enemy}{Enemy} is initialised correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_ab0325a928e8369b8156e7d3c98d718fc}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Soldier \hyperlink{class_enemy}{Enemy} is initialised correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_af8742e2bb7d6ed3aebececdd0e6fd0ba}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Rogue \hyperlink{class_enemy}{Enemy} is initialised correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a8b21cd9408f01d655627084b0416f80c}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Tank \hyperlink{class_enemy}{Enemy} isinitialised correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a86437667f4da8d9b8ce4f4b3a4d597a2}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy Can Shoot\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_ae9b9245016929cfabfbf640ad8399afe}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy Soldier Moves Correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_aac211d4172f7cfc5965570ac493303fc}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy Soldier moves correctly along path of 60 degrees\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a1311c11d79fcebd704d52442ebdac8d6}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy Rogue moves correctly along path of 60 degrees\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a4b4488481b5e2a083dfd15151e4dbe73}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy Tank moves correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a68040719ae13c47d19d4e08e14ef69da}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Player bullet impacts enemy, enemy takes damage or is killed\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a3b732bcaf865b5488be315aee89813de}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy bullet impacts player, player takes damage or is killed\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a27f20a9e1f20bf557a7685a1e0e82222}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Enemy colliding with player will damage the player\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_a8fc630acc9c3a907bb4ba2aa1e137a53}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Levels are initialised and incremented correctly\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_ad31d83ed3344ff1c2b16756402d2183b}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Maximum level will return true after level 10\char`\"{})
+\item 
+\hyperlink{_game_tests_8cpp_aaa4fdfc697159fce9b3614ef9fd661b6}{T\+E\+S\+T\+\_\+\+C\+A\+SE} (\char`\"{}Check that a tank is generated after a set time\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_game_tests_8cpp_a623b8690a262536536a43eab2d7df03d}\label{_game_tests_8cpp_a623b8690a262536536a43eab2d7df03d}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!D\+O\+C\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+A\+IN@{D\+O\+C\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+A\+IN}}
+\index{D\+O\+C\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+A\+IN@{D\+O\+C\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+A\+IN}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{D\+O\+C\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+A\+IN}{DOCTEST\_CONFIG\_IMPLEMENT\_WITH\_MAIN}}
+{\footnotesize\ttfamily \#define D\+O\+C\+T\+E\+S\+T\+\_\+\+C\+O\+N\+F\+I\+G\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+\_\+\+W\+I\+T\+H\+\_\+\+M\+A\+IN}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_game_tests_8cpp_ac0230399c621da4679687e37351dba76}\label{_game_tests_8cpp_ac0230399c621da4679687e37351dba76}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!display\+Size@{display\+Size}}
+\index{display\+Size@{display\+Size}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{display\+Size()}{displaySize()}}
+{\footnotesize\ttfamily sf\+::\+Vector2f display\+Size (\begin{DoxyParamCaption}\item[{1920}]{,  }\item[{1080}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a709164fa833d7cc1f393979f777e3f23}\label{_game_tests_8cpp_a709164fa833d7cc1f393979f777e3f23}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [1/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Bullet Initialised Correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_acf57be8cc7d7a4bc366089925958e014}\label{_game_tests_8cpp_acf57be8cc7d7a4bc366089925958e014}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [2/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Bullet Texture Found\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a30ed40a47451dfa4c3f3599ca7dd75f8}\label{_game_tests_8cpp_a30ed40a47451dfa4c3f3599ca7dd75f8}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [3/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Player \hyperlink{class_bullet}{Bullet} Moved Correct Amount\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_af263c01b9c9dd7e15d79174ec19481b6}\label{_game_tests_8cpp_af263c01b9c9dd7e15d79174ec19481b6}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [4/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy \hyperlink{class_bullet}{Bullet} Moved Correct Amount\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_ac1676580a8914fc2f9147c9ad6c15036}\label{_game_tests_8cpp_ac1676580a8914fc2f9147c9ad6c15036}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [5/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Bullet Manager removes inactive bullets\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a5a229ca81413841faa5bb54a78c7f36f}\label{_game_tests_8cpp_a5a229ca81413841faa5bb54a78c7f36f}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [6/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Player is initialised correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a84d5fd87353d411cf69c035cd70d019d}\label{_game_tests_8cpp_a84d5fd87353d411cf69c035cd70d019d}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [7/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Player found correct texture\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a27e9ec9b439f8eb3f962c87a592a4212}\label{_game_tests_8cpp_a27e9ec9b439f8eb3f962c87a592a4212}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [8/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Player moves along circular path\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a3b9ce02f533e5d62d3224179c3887046}\label{_game_tests_8cpp_a3b9ce02f533e5d62d3224179c3887046}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [9/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Player can shoot a bullet\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_ac87f2e51f8d8d8b573ff00bab759904c}\label{_game_tests_8cpp_ac87f2e51f8d8d8b573ff00bab759904c}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [10/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Scout \hyperlink{class_enemy}{Enemy} is initialised correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_ab0325a928e8369b8156e7d3c98d718fc}\label{_game_tests_8cpp_ab0325a928e8369b8156e7d3c98d718fc}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [11/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Soldier \hyperlink{class_enemy}{Enemy} is initialised correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_af8742e2bb7d6ed3aebececdd0e6fd0ba}\label{_game_tests_8cpp_af8742e2bb7d6ed3aebececdd0e6fd0ba}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [12/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Rogue \hyperlink{class_enemy}{Enemy} is initialised correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a8b21cd9408f01d655627084b0416f80c}\label{_game_tests_8cpp_a8b21cd9408f01d655627084b0416f80c}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [13/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Tank \hyperlink{class_enemy}{Enemy} isinitialised correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a86437667f4da8d9b8ce4f4b3a4d597a2}\label{_game_tests_8cpp_a86437667f4da8d9b8ce4f4b3a4d597a2}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [14/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy Can Shoot\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_ae9b9245016929cfabfbf640ad8399afe}\label{_game_tests_8cpp_ae9b9245016929cfabfbf640ad8399afe}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [15/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy Soldier Moves Correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_aac211d4172f7cfc5965570ac493303fc}\label{_game_tests_8cpp_aac211d4172f7cfc5965570ac493303fc}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [16/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy Soldier moves correctly along path of 60 degrees\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a1311c11d79fcebd704d52442ebdac8d6}\label{_game_tests_8cpp_a1311c11d79fcebd704d52442ebdac8d6}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [17/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy Rogue moves correctly along path of 60 degrees\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a4b4488481b5e2a083dfd15151e4dbe73}\label{_game_tests_8cpp_a4b4488481b5e2a083dfd15151e4dbe73}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [18/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy Tank moves correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a68040719ae13c47d19d4e08e14ef69da}\label{_game_tests_8cpp_a68040719ae13c47d19d4e08e14ef69da}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [19/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Player bullet impacts}]{enemy,  }\item[{enemy takes damage or is killed\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a3b732bcaf865b5488be315aee89813de}\label{_game_tests_8cpp_a3b732bcaf865b5488be315aee89813de}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [20/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy bullet impacts}]{player,  }\item[{player takes damage or is killed\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a27f20a9e1f20bf557a7685a1e0e82222}\label{_game_tests_8cpp_a27f20a9e1f20bf557a7685a1e0e82222}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [21/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Enemy colliding with player will damage the player\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_a8fc630acc9c3a907bb4ba2aa1e137a53}\label{_game_tests_8cpp_a8fc630acc9c3a907bb4ba2aa1e137a53}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [22/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Levels are initialised and incremented correctly\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_ad31d83ed3344ff1c2b16756402d2183b}\label{_game_tests_8cpp_ad31d83ed3344ff1c2b16756402d2183b}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [23/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Maximum level will return true after level 10\char`\"{}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_game_tests_8cpp_aaa4fdfc697159fce9b3614ef9fd661b6}\label{_game_tests_8cpp_aaa4fdfc697159fce9b3614ef9fd661b6}} 
+\index{Game\+Tests.\+cpp@{Game\+Tests.\+cpp}!T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}}
+\index{T\+E\+S\+T\+\_\+\+C\+A\+SE@{T\+E\+S\+T\+\_\+\+C\+A\+SE}!Game\+Tests.\+cpp@{Game\+Tests.\+cpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+C\+A\+S\+E()}{TEST\_CASE()}\hspace{0.1cm}{\footnotesize\ttfamily [24/24]}}
+{\footnotesize\ttfamily T\+E\+S\+T\+\_\+\+C\+A\+SE (\begin{DoxyParamCaption}\item[{\char`\"{}Check that a tank is generated after a set time\char`\"{}}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,6 @@
+digraph "Collisions"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Collisions\n||+ Collisions()\l+ ~Collisions()\l+ checkPlayerCollisions()\l+ checkEnemyCollisions()\l- checkPlayerToEnemy()\l- checkEnemyBulletsToPlayer()\l- checkEnemyPositionToPLayer()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

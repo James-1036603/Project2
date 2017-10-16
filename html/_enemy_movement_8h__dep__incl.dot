@@ -1,0 +1,44 @@
+digraph "EnemyMovement.h"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node4 [label="EnemyMovement.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Enemy.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_8h.html",tooltip="Enemy class, which has 4 types of enemies. Each enemy has a postion, sprite, speed, rotation, bullet damage and the amount of steps taken. The enemy is moved based on its current type. "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Collisions.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_collisions_8h.html",tooltip="A class to evaluate the needed collisions. Currently they are enemy bullets to player, player bullets to enemy, enemy position to player. "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Collisions.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_collisions_8cpp.html"];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PlayerManager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_manager_8h.html",tooltip="The playermanager will maintain all updates and events to the player, such as player input..."];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="Engine.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_engine_8h.html",tooltip="The engine is an instance of the game itself. The engine is the interface to the player, with the play window and player input. "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="Draw.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_draw_8cpp.html"];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Engine.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_engine_8cpp.html"];
+  Node9 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="GameTests.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_game_tests_8cpp.html"];
+  Node9 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Input.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_input_8cpp.html"];
+  Node9 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="main.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html"];
+  Node9 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="Update.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_update_8cpp.html"];
+  Node8 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="PlayerManager.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_player_manager_8cpp.html"];
+  Node6 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="EnemyManager.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_manager_8h.html",tooltip="Manager class for an enemy. This class will maintain the amount of enemies in the game..."];
+  Node17 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="EnemyManager.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_manager_8cpp.html"];
+  Node17 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="Enemy.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_8cpp.html"];
+  Node5 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="EnemyMovement.cpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_enemy_movement_8cpp.html"];
+}

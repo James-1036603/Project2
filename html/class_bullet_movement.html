@@ -67,49 +67,341 @@ $(function() {
 <div class="title">BulletMovement Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_bullet_movement_8h_source.html">BulletMovement.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for BulletMovement:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bullet_movement__coll__graph.png" border="0" usemap="#_bullet_movement_coll__map" alt="Collaboration graph"/></div>
+<!-- MAP 0 -->
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a828d99972323657caf3dafa00e3a9e5e"><td class="memItemLeft" align="right" valign="top"><a id="a828d99972323657caf3dafa00e3a9e5e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BulletMovement</b> (const sf::Vector2f &amp;bulletStartingPosition)</td></tr>
+<tr class="memitem:a828d99972323657caf3dafa00e3a9e5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a828d99972323657caf3dafa00e3a9e5e">BulletMovement</a> (const sf::Vector2f &amp;bulletStartingPosition)</td></tr>
 <tr class="separator:a828d99972323657caf3dafa00e3a9e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33b6ad498331352d366e2dab6bc2c712"><td class="memItemLeft" align="right" valign="top"><a id="a33b6ad498331352d366e2dab6bc2c712"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>MovePlayerBullet</b> (sf::Vector2f *curPos, const float &amp;elapsedTime, bool &amp;bulletSatus)</td></tr>
+<tr class="memitem:a81e3816f8089dd796ed1ac03a3d9c683"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a81e3816f8089dd796ed1ac03a3d9c683">~BulletMovement</a> ()</td></tr>
+<tr class="separator:a81e3816f8089dd796ed1ac03a3d9c683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b6ad498331352d366e2dab6bc2c712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a33b6ad498331352d366e2dab6bc2c712">MovePlayerBullet</a> (sf::Vector2f *curPos, const float &amp;elapsedTime, bool &amp;bulletSatus)</td></tr>
 <tr class="separator:a33b6ad498331352d366e2dab6bc2c712"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7109a6098374d23e8dc2360d6546b7c"><td class="memItemLeft" align="right" valign="top"><a id="ae7109a6098374d23e8dc2360d6546b7c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>MoveEnemyBullet</b> (sf::Vector2f *curPos, const float &amp;elapsedTime, bool &amp;bulletSatus, const float &amp;rotation, const float &amp;speed)</td></tr>
+<tr class="memitem:ae7109a6098374d23e8dc2360d6546b7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#ae7109a6098374d23e8dc2360d6546b7c">MoveEnemyBullet</a> (sf::Vector2f *curPos, const float &amp;elapsedTime, bool &amp;bulletSatus, const float &amp;rotation, const float &amp;speed)</td></tr>
 <tr class="separator:ae7109a6098374d23e8dc2360d6546b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4dddd135a0d89dbb8d7b4ec076264f16"><td class="memItemLeft" align="right" valign="top"><a id="a4dddd135a0d89dbb8d7b4ec076264f16"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getGradient</b> ()</td></tr>
+<tr class="memitem:a4dddd135a0d89dbb8d7b4ec076264f16"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a4dddd135a0d89dbb8d7b4ec076264f16">getGradient</a> ()</td></tr>
 <tr class="separator:a4dddd135a0d89dbb8d7b4ec076264f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9716be6fffd1b7f58e5b3be24062e5b"><td class="memItemLeft" align="right" valign="top"><a id="ab9716be6fffd1b7f58e5b3be24062e5b"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getIntercept</b> ()</td></tr>
+<tr class="memitem:ab9716be6fffd1b7f58e5b3be24062e5b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#ab9716be6fffd1b7f58e5b3be24062e5b">getIntercept</a> ()</td></tr>
 <tr class="separator:ab9716be6fffd1b7f58e5b3be24062e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a84efe87d137c1d0b9e14de5a5c9c7938"><td class="memItemLeft" align="right" valign="top"><a id="a84efe87d137c1d0b9e14de5a5c9c7938"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>gradient</b> ()</td></tr>
+<tr class="memitem:a84efe87d137c1d0b9e14de5a5c9c7938"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a84efe87d137c1d0b9e14de5a5c9c7938">gradient</a> ()</td></tr>
 <tr class="separator:a84efe87d137c1d0b9e14de5a5c9c7938"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a165576c782ea8432c14ee86456ff97c4"><td class="memItemLeft" align="right" valign="top"><a id="a165576c782ea8432c14ee86456ff97c4"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>yIntercept</b> ()</td></tr>
+<tr class="memitem:a165576c782ea8432c14ee86456ff97c4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a165576c782ea8432c14ee86456ff97c4">yIntercept</a> ()</td></tr>
 <tr class="separator:a165576c782ea8432c14ee86456ff97c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a80f3b6b7f248b1bfecc4845319bc91fc"><td class="memItemLeft" align="right" valign="top"><a id="a80f3b6b7f248b1bfecc4845319bc91fc"></a>
-sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>_bulletStartPos</b></td></tr>
+<tr class="memitem:a80f3b6b7f248b1bfecc4845319bc91fc"><td class="memItemLeft" align="right" valign="top">sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a80f3b6b7f248b1bfecc4845319bc91fc">_bulletStartPos</a></td></tr>
 <tr class="separator:a80f3b6b7f248b1bfecc4845319bc91fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21abb8a9b6d5d1d6cd5e079648ade529"><td class="memItemLeft" align="right" valign="top"><a id="a21abb8a9b6d5d1d6cd5e079648ade529"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_gradient</b></td></tr>
+<tr class="memitem:a21abb8a9b6d5d1d6cd5e079648ade529"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a21abb8a9b6d5d1d6cd5e079648ade529">_gradient</a></td></tr>
 <tr class="separator:a21abb8a9b6d5d1d6cd5e079648ade529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d20043e5da44b2585b78e0be9d9ad66"><td class="memItemLeft" align="right" valign="top"><a id="a8d20043e5da44b2585b78e0be9d9ad66"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>_yIntercept</b></td></tr>
+<tr class="memitem:a8d20043e5da44b2585b78e0be9d9ad66"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bullet_movement.html#a8d20043e5da44b2585b78e0be9d9ad66">_yIntercept</a></td></tr>
 <tr class="separator:a8d20043e5da44b2585b78e0be9d9ad66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a828d99972323657caf3dafa00e3a9e5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a828d99972323657caf3dafa00e3a9e5e">&#9670;&nbsp;</a></span>BulletMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BulletMovement::BulletMovement </td>
+          <td>(</td>
+          <td class="paramtype">const sf::Vector2f &amp;&#160;</td>
+          <td class="paramname"><em>bulletStartingPosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81e3816f8089dd796ed1ac03a3d9c683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e3816f8089dd796ed1ac03a3d9c683">&#9670;&nbsp;</a></span>~BulletMovement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BulletMovement::~BulletMovement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4dddd135a0d89dbb8d7b4ec076264f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dddd135a0d89dbb8d7b4ec076264f16">&#9670;&nbsp;</a></span>getGradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BulletMovement::getGradient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9716be6fffd1b7f58e5b3be24062e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9716be6fffd1b7f58e5b3be24062e5b">&#9670;&nbsp;</a></span>getIntercept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BulletMovement::getIntercept </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84efe87d137c1d0b9e14de5a5c9c7938"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84efe87d137c1d0b9e14de5a5c9c7938">&#9670;&nbsp;</a></span>gradient()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BulletMovement::gradient </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae7109a6098374d23e8dc2360d6546b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7109a6098374d23e8dc2360d6546b7c">&#9670;&nbsp;</a></span>MoveEnemyBullet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletMovement::MoveEnemyBullet </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f *&#160;</td>
+          <td class="paramname"><em>curPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>elapsedTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bulletSatus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>rotation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33b6ad498331352d366e2dab6bc2c712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b6ad498331352d366e2dab6bc2c712">&#9670;&nbsp;</a></span>MovePlayerBullet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BulletMovement::MovePlayerBullet </td>
+          <td>(</td>
+          <td class="paramtype">sf::Vector2f *&#160;</td>
+          <td class="paramname"><em>curPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float &amp;&#160;</td>
+          <td class="paramname"><em>elapsedTime</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bulletSatus</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a165576c782ea8432c14ee86456ff97c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a165576c782ea8432c14ee86456ff97c4">&#9670;&nbsp;</a></span>yIntercept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BulletMovement::yIntercept </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a80f3b6b7f248b1bfecc4845319bc91fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80f3b6b7f248b1bfecc4845319bc91fc">&#9670;&nbsp;</a></span>_bulletStartPos</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2f BulletMovement::_bulletStartPos</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21abb8a9b6d5d1d6cd5e079648ade529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21abb8a9b6d5d1d6cd5e079648ade529">&#9670;&nbsp;</a></span>_gradient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BulletMovement::_gradient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d20043e5da44b2585b78e0be9d9ad66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d20043e5da44b2585b78e0be9d9ad66">&#9670;&nbsp;</a></span>_yIntercept</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float BulletMovement::_yIntercept</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_bullet_movement_8h_source.html">BulletMovement.h</a></li>
-<li>BulletMovement.cpp</li>
+<li><a class="el" href="_bullet_movement_8cpp.html">BulletMovement.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

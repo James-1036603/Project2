@@ -61,6 +61,9 @@ $(function() {
 &#160;
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>addEnemyToVector()
+: <a class="el" href="class_enemy_manager.html#a73b9e07b84f4c25f88d09744aa373f3b">EnemyManager</a>
+</li>
 <li>allEnemiesKilled()
 : <a class="el" href="class_enemy_manager.html#a9395ad36205c9653b4511859fb82179a">EnemyManager</a>
 </li>
@@ -77,6 +80,9 @@ $(function() {
 <li>BulletManager()
 : <a class="el" href="class_bullet_manager.html#a4aae3d492898b93dd5730dc28f2cc910">BulletManager</a>
 </li>
+<li>BulletMovement()
+: <a class="el" href="class_bullet_movement.html#a828d99972323657caf3dafa00e3a9e5e">BulletMovement</a>
+</li>
 </ul>
 
 
@@ -84,15 +90,27 @@ $(function() {
 <li>changeVolume()
 : <a class="el" href="class_game_music.html#adafedd8d8c1b98efbac108c8f8b826ac">GameMusic</a>
 </li>
+<li>checkBounds()
+: <a class="el" href="class_enemy.html#ab446b847a18890227905674734f7017e">Enemy</a>
+</li>
+<li>checkEnemyBulletsToPlayer()
+: <a class="el" href="class_collisions.html#a421f805635d151a14481d5993fa3e9dc">Collisions</a>
+</li>
 <li>checkEnemyCollisions()
 : <a class="el" href="class_collisions.html#aa628e8ae15bab7e085e4962be22ff16e">Collisions</a>
 , <a class="el" href="class_enemy_manager.html#a317b11ce52e67c7b760b2b81755fd95f">EnemyManager</a>
+</li>
+<li>checkEnemyPositionToPLayer()
+: <a class="el" href="class_collisions.html#a7ea0eaf049794a750a9115ff47eb3c45">Collisions</a>
 </li>
 <li>checkPlayerCollisions()
 : <a class="el" href="class_collisions.html#a990174c72f4771e6c2a8c014bd873513">Collisions</a>
 </li>
 <li>checkPlayerCollisionss()
 : <a class="el" href="class_player_manager.html#ac4bad97c7d281a47a876d7cee5f864bd">PlayerManager</a>
+</li>
+<li>checkPlayerToEnemy()
+: <a class="el" href="class_collisions.html#a5c4cd9f8f690d0ba92fe5aabfb8d88fa">Collisions</a>
 </li>
 <li>Collisions()
 : <a class="el" href="class_collisions.html#a006630da4b62b10ebf123c6333c2b198">Collisions</a>
@@ -106,6 +124,9 @@ $(function() {
 <h3><a id="index_d"></a>- d -</h3><ul>
 <li>deleteInactiveBullets()
 : <a class="el" href="class_bullet_manager.html#a834ec287e01fc2ed7c5d3885e4b380c6">BulletManager</a>
+</li>
+<li>draw()
+: <a class="el" href="class_engine.html#a1b654dc41dfbcb5072147f33142b726e">Engine</a>
 </li>
 <li>drawBullets()
 : <a class="el" href="class_enemy.html#ac0e1068fc766428d69d55b18e0fce0ca">Enemy</a>
@@ -125,6 +146,9 @@ $(function() {
 </li>
 <li>drawPlayerToWindow()
 : <a class="el" href="class_player_manager.html#a8dfbc91721f7c9cfeae80ae7fa89602e">PlayerManager</a>
+</li>
+<li>drawScreen()
+: <a class="el" href="class_engine.html#a19be6708b8b65c5cfd8c13305f1e3c7f">Engine</a>
 </li>
 </ul>
 
@@ -149,30 +173,76 @@ $(function() {
 <li>GameMusic()
 : <a class="el" href="class_game_music.html#a3636a483e9a9d86ff5700f4a13662dcb">GameMusic</a>
 </li>
+<li>generateRandomTime()
+: <a class="el" href="class_enemy_manager.html#a4b6f8823d43203930ab98035fe808a55">EnemyManager</a>
+</li>
+<li>generateRotation()
+: <a class="el" href="class_enemy.html#a66c71c54afd65734ed82983882a940e6">Enemy</a>
+</li>
 <li>getBulletDamage()
 : <a class="el" href="class_bullet.html#a588467f138b5c65d018bf04ab2ca2931">Bullet</a>
+</li>
+<li>getBulletPos()
+: <a class="el" href="class_bullet.html#a22bc1ccf27f5ff8fe939616ca10b1489">Bullet</a>
+</li>
+<li>getDamageForBullet()
+: <a class="el" href="class_enemy.html#a73e88b0f1e68650e6ea536c53a3cf920">Enemy</a>
 </li>
 <li>getEnemyBullets()
 : <a class="el" href="class_enemy.html#a849b23a3f78625911b0969506426d4da">Enemy</a>
 </li>
+<li>getEnemyPos()
+: <a class="el" href="class_enemy.html#a9f5b6b7b70f7f3532e82eebcab2e26e8">Enemy</a>
+</li>
+<li>getFirstBulletPos()
+: <a class="el" href="class_enemy_manager.html#a0632e71c86c73e74708d34df6d1fefba">EnemyManager</a>
+, <a class="el" href="class_player_manager.html#a1e058a4c38ae4b17a8541feb40247d06">PlayerManager</a>
+</li>
+<li>getGradient()
+: <a class="el" href="class_bullet_movement.html#a4dddd135a0d89dbb8d7b4ec076264f16">BulletMovement</a>
+</li>
+<li>getHealth()
+: <a class="el" href="class_player.html#a1f61cee0029ef492d13e289f34e7764b">Player</a>
+</li>
+<li>getIntercept()
+: <a class="el" href="class_bullet_movement.html#ab9716be6fffd1b7f58e5b3be24062e5b">BulletMovement</a>
+</li>
 <li>getPlayerBullets()
 : <a class="el" href="class_player.html#a39c13745f2cd7f6c17be23965b08dfac">Player</a>
+</li>
+<li>getPlayerHealth()
+: <a class="el" href="class_player_manager.html#a1e1d29acf1a54f18fafe6a2a91c67ee7">PlayerManager</a>
+</li>
+<li>getPlayerPos()
+: <a class="el" href="class_player.html#aab8a89629ae8acaf8c1dc4b2e9f052c6">Player</a>
 </li>
 <li>getShot()
 : <a class="el" href="class_enemy.html#a2faee7be0abbf8d473ecd6d7ee084e60">Enemy</a>
 , <a class="el" href="class_player.html#a13e6164daf86c00800992d756339fe51">Player</a>
+</li>
+<li>getSpeed()
+: <a class="el" href="class_bullet.html#ac1d1af57b11dae435ca8d951e85b7079">Bullet</a>
+, <a class="el" href="class_enemy.html#a342051a8cf9fe6e329774e37af486fca">Enemy</a>
+, <a class="el" href="class_player.html#a515920b9f3992375f179ca17ee750dc1">Player</a>
 </li>
 <li>getSprite()
 : <a class="el" href="class_bullet.html#aa313bc0e2c9fd200c526cb6fe320462c">Bullet</a>
 , <a class="el" href="class_enemy.html#a8f769acc8f473846d11eaabf504a1089">Enemy</a>
 , <a class="el" href="class_player.html#aabef659f696be314cdb705a1ce77ec2a">Player</a>
 </li>
+<li>gradient()
+: <a class="el" href="class_bullet_movement.html#a84efe87d137c1d0b9e14de5a5c9c7938">BulletMovement</a>
+</li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
+<li>input()
+: <a class="el" href="class_engine.html#aa59920acbc4379a9672265904bc08b98">Engine</a>
+</li>
 <li>isAlive()
 : <a class="el" href="class_enemy.html#a2801f42818600b19a7381dd2d1635af8">Enemy</a>
+, <a class="el" href="class_player.html#a3966588630ad0a127c9250f985865392">Player</a>
 </li>
 </ul>
 
@@ -180,6 +250,9 @@ $(function() {
 <h3><a id="index_l"></a>- l -</h3><ul>
 <li>Level()
 : <a class="el" href="class_level.html#a7a696c928ca5d5354db6e50e46d0f67d">Level</a>
+</li>
+<li>levelToText()
+: <a class="el" href="class_level.html#a0d5d67c406bf3ee9eb5be34718345b40">Level</a>
 </li>
 <li>loadFromFile()
 : <a class="el" href="class_game_music.html#a47a770430dc1213a4b31ab0353549018">GameMusic</a>
@@ -193,6 +266,9 @@ $(function() {
 </li>
 <li>move()
 : <a class="el" href="class_bullet.html#a1ea29046b26f40abb9f94ca2ccd5d215">Bullet</a>
+</li>
+<li>MoveEnemyBullet()
+: <a class="el" href="class_bullet_movement.html#ae7109a6098374d23e8dc2360d6546b7c">BulletMovement</a>
 </li>
 <li>MoveEnemyRogue()
 : <a class="el" href="class_enemy_movement.html#a6e09641ef866d6a45c6ef342c905bc14">EnemyMovement</a>
@@ -211,6 +287,9 @@ $(function() {
 </li>
 <li>movePlayer()
 : <a class="el" href="class_player_manager.html#a95358a4f97cf343f5d5d01a440c5dc76">PlayerManager</a>
+</li>
+<li>MovePlayerBullet()
+: <a class="el" href="class_bullet_movement.html#a33b6ad498331352d366e2dab6bc2c712">BulletMovement</a>
 </li>
 <li>MovePlayerClockwise()
 : <a class="el" href="class_player_movement.html#a9975a1cdcd2243f3b142cd94230118bc">PlayerMovement</a>
@@ -232,6 +311,9 @@ $(function() {
 
 
 <h3><a id="index_p"></a>- p -</h3><ul>
+<li>pause()
+: <a class="el" href="class_game_music.html#a763d190d8727abe9eb47acddc5cf0008">GameMusic</a>
+</li>
 <li>play()
 : <a class="el" href="class_game_music.html#a88151bbcf754b0dc87e75cf5949b7602">GameMusic</a>
 </li>
@@ -250,6 +332,9 @@ $(function() {
 <li>playerShoot()
 : <a class="el" href="class_player_manager.html#a7a61c6484a3dd12293d2481c5f61fb71">PlayerManager</a>
 </li>
+<li>progressGame()
+: <a class="el" href="class_engine.html#a54ab8f7be8ce000f7bd83a98d41d6b98">Engine</a>
+</li>
 </ul>
 
 
@@ -257,16 +342,60 @@ $(function() {
 <li>randomEvents()
 : <a class="el" href="class_enemy_manager.html#abafa080764d42fbc020c33e48c7afb2f">EnemyManager</a>
 </li>
+<li>removeInactiveEnemies()
+: <a class="el" href="class_enemy_manager.html#a206ef948ffa7e4d518da91dad493efe6">EnemyManager</a>
+</li>
 </ul>
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>setActive()
+: <a class="el" href="class_bullet.html#adfd1d1a317bd18f9d6aec65630301ae2">Bullet</a>
+</li>
 <li>setBulletInactiveAtPosition()
 : <a class="el" href="class_enemy.html#a02e1cacf8fad39bbcc28271a53637024">Enemy</a>
 , <a class="el" href="class_player.html#a4a72b5ba696e55375ee614ef89a87ade">Player</a>
 </li>
+<li>setBulletPosition()
+: <a class="el" href="class_bullet.html#af6e316869e595d8f0b2af44dd80a8dd6">Bullet</a>
+</li>
+<li>setEnemyPosition()
+: <a class="el" href="class_enemy.html#a6a83e4ff9dab297dbec1644dcc9152c6">Enemy</a>
+</li>
+<li>setFirstBulletPos()
+: <a class="el" href="class_enemy_manager.html#a217800f39e93529dc7c912857f5a4228">EnemyManager</a>
+, <a class="el" href="class_player_manager.html#ae654ee04f5d9820cbb4c6b91161cc7a2">PlayerManager</a>
+</li>
+<li>setFirstEnemyPosition()
+: <a class="el" href="class_enemy_manager.html#a5aacf80c75d457dfc2274c5f3be3ca96">EnemyManager</a>
+</li>
+<li>setGeneratedClockTime()
+: <a class="el" href="class_enemy_manager.html#a6258b25ccc4866129f9bfe176ee22c1f">EnemyManager</a>
+</li>
 <li>setInActive()
 : <a class="el" href="class_bullet.html#afe143dafb173b03b6f35fa9472cbe465">Bullet</a>
+</li>
+<li>setPlayerPosition()
+: <a class="el" href="class_player_manager.html#afbce199fe8a661b8002ae94b8396c7aa">PlayerManager</a>
+</li>
+<li>setPositionOfBullet()
+: <a class="el" href="class_enemy.html#a49e2b8533dc258764e7a0ee5c4990eeb">Enemy</a>
+, <a class="el" href="class_player.html#a3bf9c265d1be1284501b8c03ca5bdfb0">Player</a>
+</li>
+<li>setPositionOfPlayer()
+: <a class="el" href="class_player.html#abeaa59ae6cd6ca74f269f4af28ef8f82">Player</a>
+</li>
+<li>setRotation()
+: <a class="el" href="class_enemy.html#ad02b7dfac0339e110f9aba837a815782">Enemy</a>
+</li>
+<li>setStepsTaken()
+: <a class="el" href="class_enemy.html#a8ddda321d45a2fa6f35272087afe258b">Enemy</a>
+</li>
+<li>setTextAndFont()
+: <a class="el" href="class_level.html#aa726d09473bbb551477994c70e516a99">Level</a>
+</li>
+<li>SetTextAndFont()
+: <a class="el" href="class_player_manager.html#a7f6871a42521409f64c1a335a48c4398">PlayerManager</a>
 </li>
 <li>Shoot()
 : <a class="el" href="class_enemy.html#ab526cfaf13910e15ca1e5e84ef230dd1">Enemy</a>
@@ -274,6 +403,9 @@ $(function() {
 </li>
 <li>spawnEnemies()
 : <a class="el" href="class_enemy_manager.html#a37036db8aad73493103815dc45c6339d">EnemyManager</a>
+</li>
+<li>spawnEnemyTank()
+: <a class="el" href="class_enemy_manager.html#aecc9136f37db0fb4ce451c3849ecde5d">EnemyManager</a>
 </li>
 <li>start()
 : <a class="el" href="class_engine.html#a4d8066dd213a03f5420d1bf60f150ca7">Engine</a>
@@ -306,10 +438,15 @@ $(function() {
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>update()
 : <a class="el" href="class_enemy.html#a541b72a32e4a0217d58d1ee573c2f23a">Enemy</a>
+, <a class="el" href="class_engine.html#af40c099ae4c70e308303ef5220ee9052">Engine</a>
 , <a class="el" href="class_player.html#aaccee569406f6180bd5028d058b8579f">Player</a>
 </li>
 <li>updateBullet()
 : <a class="el" href="class_bullet.html#a241c1ceb808ae0f93e4f66f28bbd525f">Bullet</a>
+</li>
+<li>updateBullets()
+: <a class="el" href="class_enemy.html#a85b0344388ba2e073bd610cf88025037">Enemy</a>
+, <a class="el" href="class_player.html#a66534b1473c5f9288ae8cd7001738ff9">Player</a>
 </li>
 <li>updateEnemies()
 : <a class="el" href="class_enemy_manager.html#a8a3caf890d121478e41dcc192a8aa4a2">EnemyManager</a>
@@ -320,12 +457,22 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_y"></a>- y -</h3><ul>
+<li>yIntercept()
+: <a class="el" href="class_bullet_movement.html#a165576c782ea8432c14ee86456ff97c4">BulletMovement</a>
+</li>
+</ul>
+
+
 <h3><a id="index_0x7e"></a>- ~ -</h3><ul>
 <li>~Bullet()
 : <a class="el" href="class_bullet.html#aaeb5cb41d7db89f49007b08b41f1bfcf">Bullet</a>
 </li>
 <li>~BulletManager()
 : <a class="el" href="class_bullet_manager.html#ae91d473833a2b3cc9bfb6180d3eb0099">BulletManager</a>
+</li>
+<li>~BulletMovement()
+: <a class="el" href="class_bullet_movement.html#a81e3816f8089dd796ed1ac03a3d9c683">BulletMovement</a>
 </li>
 <li>~Collisions()
 : <a class="el" href="class_collisions.html#a39a613fd2a130b096c616f74f776d2f9">Collisions</a>

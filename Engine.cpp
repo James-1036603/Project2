@@ -5,6 +5,7 @@ Engine::Engine():
     _thePlayer(static_cast<sf::Vector2f>(_window.getSize()), 400),
     _gameLevels()
 {
+	srand(time(NULL));
 	//Window Settings
     _window.setMouseCursorVisible(false);
     _window.setFramerateLimit(60);

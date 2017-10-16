@@ -1,0 +1,16 @@
+digraph "PlayerManager"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{PlayerManager\n|- font\l- text\l|+ PlayerManager()\l+ ~PlayerManager()\l+ updatePlayer()\l+ checkPlayerCollisionss()\l+ playerShoot()\l+ drawPlayerToWindow()\l+ drawPlayerBullets()\l+ playerIsAlive()\l+ movePlayer()\l+ theCurrentPlayer()\l+ setPlayerPosition()\l+ getFirstBulletPos()\l+ setFirstBulletPos()\l+ getPlayerHealth()\l- SetTextAndFont()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_playerBulletMananger" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{BulletManager\n||+ BulletManager()\l+ ~BulletManager()\l+ deleteInactiveBullets()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_bullet_manager.html"];
+  Node3 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_playerMover" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 [label="{PlayerMovement\n||+ PlayerMovement()\l+ ~PlayerMovement()\l+ MovePlayerClockwise()\l+ MovePlayerCounterClockwise()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player_movement.html"];
+  Node4 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_collisionDetector" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node4 [label="{Collisions\n||+ Collisions()\l+ ~Collisions()\l+ checkPlayerCollisions()\l+ checkEnemyCollisions()\l- checkPlayerToEnemy()\l- checkEnemyBulletsToPlayer()\l- checkEnemyPositionToPLayer()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_collisions.html"];
+  Node5 -> Node1 [color="grey25",fontsize="10",style="solid",label=" -_curPlayer" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node5 [label="{Player\n|- _curPosition\l- _objSprite\l- _objTexture\l- _speed\l- _playerLives\l- _rightPressed\l- _leftPressed\l- _circleRadius\l- _curAngle\l- _playerBullets\l- _displaySize\l|+ Player()\l+ ~Player()\l+ getSprite()\l+ moveRight()\l+ moveLeft()\l+ stopRight()\l+ stopLeft()\l+ update()\l+ getPlayerBullets()\l+ drawBullets()\land 8 more...\l- isAlive()\l- updateBullets()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_player.html"];
+  Node2 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -_playerBulletManager" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node3 -> Node5 [color="grey25",fontsize="10",style="solid",label=" -_playerMover" ,arrowhead="odiamond",fontname="Helvetica"];
+}

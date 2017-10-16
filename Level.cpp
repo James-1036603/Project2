@@ -50,7 +50,6 @@ void Level::drawLevelsToWindow(sf::RenderWindow* currentWindow)
 void Level::levelToText()
 {
    std::stringstream levelText;//Convert the lives to a string stream (int to string method)
-    levelText <<"Level: "<< _currentLevel;	
-	
-    text.setString(levelText);//Set the text to level
+    levelText <<"Level: "<< _currentLevel;
+    text.setString(levelText.str().c_str());//Set the text to level
 }
