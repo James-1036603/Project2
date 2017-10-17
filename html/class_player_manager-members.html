@@ -5,10 +5,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Member List</title>
+<title>Dessert Wars: Member List</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -21,8 +28,10 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Dessert Wars
+   &#160;<span id="projectnumber">V3.0</span>
    </div>
+   <div id="projectbrief">Gyruss adaptation with soldiers.</div>
   </td>
  </tr>
  </tbody>
@@ -42,6 +51,21 @@ $(function() {
 });
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_player_manager.html','');});
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -56,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">PlayerManager Member List</div>  </div>
@@ -66,25 +89,27 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="class_player_manager.html">PlayerManager</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#ac4bad97c7d281a47a876d7cee5f864bd">checkPlayerCollisionss</a>(std::vector&lt; Enemy &gt; &amp;curEnemies)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_player_manager.html#a503d878624b53851c6fa25559630f544">drawPlayerBullets</a>(sf::RenderWindow *currentWindow)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#a8dfbc91721f7c9cfeae80ae7fa89602e">drawPlayerToWindow</a>(sf::RenderWindow *currentWindow)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getFirstBulletPos</b>() (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getPlayerHealth</b>() (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_player_manager.html#a95358a4f97cf343f5d5d01a440c5dc76">movePlayer</a>(MoveDirection dirToMove)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#ab927a10c2c602c42daf2e11eb8861692">playerIsAlive</a>() const</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_player_manager.html#aa2ce60af19b9d80bd884e2edaea726d6">PlayerManager</a>(const sf::Vector2f &amp;windowSize, const float &amp;radius)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#a7a61c6484a3dd12293d2481c5f61fb71">playerShoot</a>()</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setFirstBulletPos</b>(float x, float y) (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setPlayerPosition</b>(float x, float y) (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_player_manager.html#aa70cd9ab8f7a582c27bef02e12a408e7">theCurrentPlayer</a>()</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#a171946405d72c219802315721e09467d">updatePlayer</a>(const float &amp;elapsedTime)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_player_manager.html#ab53de6b16914b7591fc2bd3038069ac7">~PlayerManager</a>()</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_player_manager.html#a8dfbc91721f7c9cfeae80ae7fa89602e">drawPlayerToWindow</a>(sf::RenderWindow *currentWindow)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getFirstBulletPos</b>() (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>getPlayerHealth</b>() (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#a95358a4f97cf343f5d5d01a440c5dc76">movePlayer</a>(MoveDirection dirToMove)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_player_manager.html#ab927a10c2c602c42daf2e11eb8861692">playerIsAlive</a>() const</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#aa2ce60af19b9d80bd884e2edaea726d6">PlayerManager</a>(const sf::Vector2f &amp;windowSize, const float &amp;radius)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_player_manager.html#a7a61c6484a3dd12293d2481c5f61fb71">playerShoot</a>()</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setFirstBulletPos</b>(float x, float y) (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>setPlayerPosition</b>(float x, float y) (defined in <a class="el" href="class_player_manager.html">PlayerManager</a>)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#aa70cd9ab8f7a582c27bef02e12a408e7">theCurrentPlayer</a>()</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_player_manager.html#a171946405d72c219802315721e09467d">updatePlayer</a>(const float &amp;elapsedTime)</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_player_manager.html#ab53de6b16914b7591fc2bd3038069ac7">~PlayerManager</a>()</td><td class="entry"><a class="el" href="class_player_manager.html">PlayerManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.13
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -22,8 +22,8 @@ Debug/EnemyManager.cpp.o: EnemyManager.cpp EnemyManager.h \
  C:\SFML\include/SFML/System/Vector2.inl \
  C:\SFML\include/SFML/System/Vector3.hpp \
  C:\SFML\include/SFML/System/Vector3.inl Enemy.h EnemyMovement.h Bullet.h \
- BulletMovement.h C:\SFML\include/SFML/Graphics.hpp \
- C:\SFML\include/SFML/Window.hpp C:\SFML\include/SFML/Window/Context.hpp \
+ C:\SFML\include/SFML/Graphics.hpp C:\SFML\include/SFML/Window.hpp \
+ C:\SFML\include/SFML/Window/Context.hpp \
  C:\SFML\include/SFML/Window/Export.hpp \
  C:\SFML\include/SFML/Window/GlResource.hpp \
  C:\SFML\include/SFML/Window/ContextSettings.hpp \
@@ -125,8 +125,6 @@ Enemy.h:
 EnemyMovement.h:
 
 Bullet.h:
-
-BulletMovement.h:
 
 C:\SFML\include/SFML/Graphics.hpp:
 

@@ -27,10 +27,10 @@ class Bullet
 public:
 /**
  * @brief Bullet Constructor
- * @param startingPos Starting position of the bullet
- * @param rotation The rotation which the bullet should adopt
- * @param BulletOwner The owner of the bullet, either player or enemy
- * @param damage Damage for the bullet
+ * @param startingPos 
+ * @param rotation 
+ * @param BulletOwner 
+ * @param damage 
  */
 
     Bullet(const sf::Vector2f& startingPos,  const float& rotation, Owner BulletOwner, int damage = 1);//Bullet will start at players position
@@ -47,7 +47,7 @@ public:
 
     /**
      * @brief Update the bullet over time. This will move the bullet, and evaluate its position on the screen.
-     * @param elapsedTime How much time has passed since the last frame, this will evaluate how many pixels the bullet has to move
+     * @param elapsedTime 
      */
     
     void updateBullet(const float& elapsedTime);

@@ -7,11 +7,10 @@ void Engine::draw()
 	
     //Draw the player
     _thePlayer.drawPlayerToWindow(&_window);
-    _thePlayer.drawPlayerBullets(&_window);
 
     //Draw the enemy
     _theEnemies.drawEnemies(&_window);
-    _theEnemies.drawEnemyBullets(&_window);
+    //_theEnemies.drawEnemyBullets(&_window);
 
     //Draw the Level
     _gameLevels.drawLevelsToWindow(&_window);

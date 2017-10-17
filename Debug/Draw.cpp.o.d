@@ -80,7 +80,7 @@ Debug/Draw.cpp.o: Draw.cpp Engine.h C:\SFML\include/SFML/Graphics.hpp \
  C:\SFML\include/SFML/Audio/SoundFileFactory.inl \
  C:\SFML\include/SFML/Audio/SoundFileReader.hpp \
  C:\SFML\include/SFML/Audio/SoundFileWriter.hpp PlayerManager.h Player.h \
- Bullet.h BulletMovement.h BulletManager.h PlayerMovement.h Enemy.h \
+ Bullet.h BulletManager.h PlayerMovement.h Collisions.h Enemy.h \
  EnemyMovement.h EnemyManager.h Level.h
 
 Engine.h:
@@ -265,11 +265,11 @@ Player.h:
 
 Bullet.h:
 
-BulletMovement.h:
-
 BulletManager.h:
 
 PlayerMovement.h:
+
+Collisions.h:
 
 Enemy.h:
 

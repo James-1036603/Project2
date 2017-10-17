@@ -1,10 +1,11 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefgilmnoprstu~",
+  0: "abcdefghilmnoprstu~",
   1: "bcefglmp",
   2: "bceglp",
   3: "abcdegilmnprstu~",
-  4: "emos"
+  4: "emos",
+  5: "h"
 };
 
 var indexSectionNames =
@@ -13,7 +14,8 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "enums"
+  4: "enums",
+  5: "pages"
 };
 
 var indexSectionLabels =
@@ -22,6 +24,7 @@ var indexSectionLabels =
   1: "Classes",
   2: "Files",
   3: "Functions",
-  4: "Enumerations"
+  4: "Enumerations",
+  5: "Pages"
 };
 

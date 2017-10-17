@@ -1,6 +1,6 @@
-Debug/Bullet.cpp.o: Bullet.cpp Bullet.h BulletMovement.h \
- C:\SFML\include/SFML/System.hpp C:\SFML\include/SFML/Config.hpp \
- C:\SFML\include/SFML/System/Clock.hpp \
+Debug/Bullet.cpp.o: Bullet.cpp Bullet.h C:\SFML\include/SFML/Graphics.hpp \
+ C:\SFML\include/SFML/Window.hpp C:\SFML\include/SFML/System.hpp \
+ C:\SFML\include/SFML/Config.hpp C:\SFML\include/SFML/System/Clock.hpp \
  C:\SFML\include/SFML/System/Export.hpp \
  C:\SFML\include/SFML/System/Time.hpp C:\SFML\include/SFML/System/Err.hpp \
  C:\SFML\include/SFML/System/FileInputStream.hpp \
@@ -22,7 +22,6 @@ Debug/Bullet.cpp.o: Bullet.cpp Bullet.h BulletMovement.h \
  C:\SFML\include/SFML/System/Vector2.inl \
  C:\SFML\include/SFML/System/Vector3.hpp \
  C:\SFML\include/SFML/System/Vector3.inl \
- C:\SFML\include/SFML/Graphics.hpp C:\SFML\include/SFML/Window.hpp \
  C:\SFML\include/SFML/Window/Context.hpp \
  C:\SFML\include/SFML/Window/Export.hpp \
  C:\SFML\include/SFML/Window/GlResource.hpp \
@@ -67,7 +66,9 @@ Debug/Bullet.cpp.o: Bullet.cpp Bullet.h BulletMovement.h \
 
 Bullet.h:
 
-BulletMovement.h:
+C:\SFML\include/SFML/Graphics.hpp:
+
+C:\SFML\include/SFML/Window.hpp:
 
 C:\SFML\include/SFML/System.hpp:
 
@@ -120,10 +121,6 @@ C:\SFML\include/SFML/System/Vector2.inl:
 C:\SFML\include/SFML/System/Vector3.hpp:
 
 C:\SFML\include/SFML/System/Vector3.inl:
-
-C:\SFML\include/SFML/Graphics.hpp:
-
-C:\SFML\include/SFML/Window.hpp:
 
 C:\SFML\include/SFML/Window/Context.hpp:
 

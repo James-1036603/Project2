@@ -24,7 +24,7 @@ public:
     virtual ~BulletManager();
 /**
  * @brief Remove any bullets from the vector which are marked as inactive. Returns a vector of bullets with the active bullets
- * @param bulletVector The bullet vector which needs to be checked
+ * @param bulletVector
  */
 	
     std::vector<Bullet> deleteInactiveBullets(std::vector<Bullet>* bulletVector);

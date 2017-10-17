@@ -26,15 +26,15 @@ public:
 public:
 /**
  * @brief Check the Player orientated collisions
- * @param currentEnemies The active enemies
- * @param currentPlayer	The active player
+ * @param currentEnemies
+ * @param currentPlayer	
  */
 
 	void checkPlayerCollisions(std::vector<Enemy>& currentEnemies, Player& currentPlayer);
 /**
  * @brief Check the Enemy orientated collisions
- * @param currentEnemies The active enemies
- * @param currentPlayer The active player
+ * @param currentEnemies 
+ * @param currentPlayer 
  */
 	
 	void checkEnemyCollisions(std::vector<Enemy>& currentEnemies, Player& currentPlayer);

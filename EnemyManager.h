@@ -38,11 +38,8 @@ public:
      * @param _curWindow
      */
     void drawEnemies(sf::RenderWindow* _curWindow);
-    /**
-     * @brief Draw the enemy bullets to the provided window
-     * @param _curWindow
-     */
-    void drawEnemyBullets(sf::RenderWindow* _curWindow);//Draw the enemy bullets to the window
+   
+    
 	/**
 	 * @brief Check the needed Enemy collisions to the player
 	 * @param currentPlayer
@@ -99,6 +96,7 @@ private:
 	float _generatedClockTime;	
 	void generateRandomTime();//Generate a number for which the clock has to count to before a event
 	void spawnEnemyTank(const float& elapsedTime);
+	void drawEnemyBullets(sf::RenderWindow* _curWindow);//Draw the enemy bullets to the window
 };
 
 #endif // ENEMYMANAGER_H

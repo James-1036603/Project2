@@ -31,9 +31,9 @@ public:
 /**
  * @brief Constructor for enemy
  * @param displaySize The size of the current display
- * @param BulMan Bullet manager, to remove any inactive bullets
- * @param EnemyMover The movement of the enemy
- * @param enemyType The type of enemy. Either SCOUT, SOLDIER, ROGUE, or TANK
+ * @param BulMan 
+ * @param EnemyMover 
+ * @param enemyType 
  */
 	
     Enemy(const sf::Vector2f& displaySize, BulletManager* BulMan, EnemyMovement* EnemyMover, EnemyType enemyType);
@@ -67,7 +67,7 @@ public:
     EnemyType typeOfEnemy();
     /**
      * @brief Update the enemy based on the amount of passed time.
-     * @param elapsedTime How much time has passed
+     * @param elapsedTime 
      */
     void update(const float& elapsedTime);//Called once per frame
     /**
@@ -76,13 +76,13 @@ public:
     std::vector<Bullet> getEnemyBullets();
 /**
  * @brief Draw the enemy's bullets to the provided window
- * @param currentWindow The active window to draw to
+ * @param currentWindow 
  */
 	
     void drawBullets(sf::RenderWindow* currentWindow);
 /**
  * @brief Set the bullet to inactive at the provided index
- * @param index The index of the bullet to be marked as inactive
+ * @param index 
  */
 	void setBulletInactiveAtPosition(int index);
 
@@ -139,12 +139,8 @@ private:
     static Enemy _defaultScout;//Static enemy for Scout
     static Enemy _defaultSoldier;//Static enemy for Soldier
     static Enemy _defaultRogue;//Static enemy for Rogue
-	static Enemy _defaultTank;//Static enemy for Tank
-	   
-
-    sf::Vector2f _displaySize;//When the enemy goes off the screen
-
-    
+	static Enemy _defaultTank;//Static enemy for Tank 
+    sf::Vector2f _displaySize;//When the enemy goes off the screen    
     void generateRotation();//Generate a random angle for the sprite
     void updateBullets(const float& elapsedTime);
     void checkBounds();//Check if the enemy has moved out of bounds

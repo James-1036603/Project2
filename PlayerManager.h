@@ -50,11 +50,6 @@ public:
      */
     void drawPlayerToWindow(sf::RenderWindow* currentWindow);
     /**
-     * @brief Draw the player's bullets to the provided window
-     * @param currentWindow
-     */
-    void drawPlayerBullets(sf::RenderWindow* currentWindow);
-    /**
      * @brief Evaluate that the player is alive or not
      */
     bool playerIsAlive() const;
@@ -95,6 +90,7 @@ private:
 	BulletManager _playerBulletMananger;
 	Collisions _collisionDetector;	
     void SetTextAndFont();
+	void drawPlayerBullets(sf::RenderWindow* currentWindow);
 };
 
 #endif // PLAYERMANAGER_H

@@ -44,6 +44,7 @@ void PlayerManager::drawPlayerToWindow(sf::RenderWindow* currentWindow)//Draw pl
     currentWindow->draw(_curPlayer.getSprite());
 	_curPlayer.drawBullets(currentWindow);
     currentWindow->draw(text);//Draw the lives to the screen
+	PlayerManager::drawPlayerBullets(currentWindow);
 }
 
 void PlayerManager::drawPlayerBullets(sf::RenderWindow* currentWindow)//Draw player bullets to window

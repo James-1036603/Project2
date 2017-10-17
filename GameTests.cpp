@@ -54,10 +54,11 @@ TEST_CASE("Bullet Manager removes inactive bullets")
 {
 	std::cout<<"Test 5"<<"\n";
 	Bullet bullet1(sf::Vector2f(50.0f,50.0f),0, Owner::ENEMY);
-	bullet1.setActive(false);
 	std::vector<Bullet> bulletVector = {bullet1};
-	CHECK(bulletVector.size() == 1);
 	BulletManager bulletManager1;
+	bulletVector = bulletManager1.deleteInactiveBullets(&bulletVector);
+	CHECK(bulletVector.size() == 1);
+	bulletVector[0].setActive(false);
 	bulletVector = bulletManager1.deleteInactiveBullets(&bulletVector);
 	CHECK(bulletVector.size() == 0);
 }

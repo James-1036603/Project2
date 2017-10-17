@@ -2,7 +2,6 @@ var searchData=
 [
   ['_7ebullet',['~Bullet',['../class_bullet.html#aaeb5cb41d7db89f49007b08b41f1bfcf',1,'Bullet']]],
   ['_7ebulletmanager',['~BulletManager',['../class_bullet_manager.html#ae91d473833a2b3cc9bfb6180d3eb0099',1,'BulletManager']]],
-  ['_7ebulletmovement',['~BulletMovement',['../class_bullet_movement.html#a81e3816f8089dd796ed1ac03a3d9c683',1,'BulletMovement']]],
   ['_7ecollisions',['~Collisions',['../class_collisions.html#a39a613fd2a130b096c616f74f776d2f9',1,'Collisions']]],
   ['_7eenemy',['~Enemy',['../class_enemy.html#ac0eec4755e28c02688065f9657150ac3',1,'Enemy']]],
   ['_7eenemymanager',['~EnemyManager',['../class_enemy_manager.html#afe3583e45273d5509e59467d06a3feb6',1,'EnemyManager']]],

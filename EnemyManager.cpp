@@ -42,6 +42,7 @@ void EnemyManager::updateEnemies(const float& elapsedTime)
 void EnemyManager::drawEnemies(sf::RenderWindow* _curWindow)
 {
     for(auto curEnemy : _curEnemies) _curWindow->draw(curEnemy.getSprite());
+	EnemyManager::drawEnemyBullets(_curWindow);
 
 }
 
